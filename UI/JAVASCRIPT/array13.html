@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>demon on array manipulations</h3>
+    <script>
+        const arr=[11,21,31,41,51,61,71,81,91];
+        document.write(`Arr => ${arr}<br>`);
+        //splice(start_index,no_of_elements)   -> deltion operation in array   , no_of_elements->which element you want to delete
+        let temp = arr.splice(6,2); // temp store the deleted data
+        document.write(`after del => ${arr}<br>`);
+        document.write(`deleted data are => ${temp}<br>`);
+
+        
+        //splice(start_index,no_of_elements,new_inserting_elements) -> when we delete data some gap comes for filling that gap we insert elements that is called updation
+        arr.splice(1,2,10,20);
+        document.write(`after updation => ${arr}<br>`);
+
+        //splice(start_index,0,new_inserting_elements) -> insertion  
+        arr.splice(5,0,111,222,333);
+        document.write(`after insertion => ${arr}<br>`);
+
+    </script>
+</body>
+</html>

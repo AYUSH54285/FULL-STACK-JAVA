@@ -1,0 +1,57 @@
+<!--
+a tag
+=> anchor used to create hyperlinks
+=> hyperlinks are used to move from one WP to another WP
+	(navigations)
+=> paired tag & inline element
+  Syn:
+		<a attrs> text </a>
+		<a attrs> img </a>
+
+=> target attribute used for open the link in same webpage(target="_self") or differnet webpage(target="_blank")
+		
+links => internal(within page moving like from top to bottom after clicking), external(move to different webpage)
+-->
+
+<!--
+img tag
+it is unpaired tag
+used to display images on webpage
+1 image tag is used for 1 image
+it support all type of images
+src=> this attribute used for providing the image path or link
+
+absolute path => If we write the complete address of the tag then it is absolute path
+relative path => if we write not complete address then it is called relative path
+-->
+
+<!-- example on a tag -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My 8th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on hyperlinks</h3>
+	<a href="ex1.html"> goto page1 </a>
+	<a href="ex2.html"> goto page2 </a>
+	<br>
+	<a href="https://www.facebook.com/login.php"> facebook </a>
+	<br>
+	<a href="https://www.msn.com/en-in/autos/news/from-renault-triber-to-kia-carens-5-budget-friendly-suv-mpvs-with-three-rows-of-seating-under-15-lakh/ar-AA1CsWpT?ocid=msedgntp&pc=U531&cvid=653b210e4c614ae9a88f88c73ba05813&ei=64">
+	  <img src="images/car.webp" width="200px" height="120px">
+	</a>
+	<br> <br>
+	<a href="https://com.bappam.gift/bo-v1tvo/The-Diplomat-2025-tuGb-telugu-movie-watch-online.html">
+	  <img src="images/movie.jpg" width="120" height="180">
+	</a>
+	<BR>
+	
+	<a href="https://www.google.com" target="_self">google</a>
+	<br>
+	<a href="https://www.youtube.com" target="_blank">youtube</a>
+	  <!-- default is "_self"
+			_top	framename	  --> 
+  </body>
+</html>

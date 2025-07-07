@@ -1,0 +1,114 @@
+<!--
+
+🧾 Function Types
+1. Named functions
+2. Function expressions
+3. Arrow functions
+4. Immediately Invoked Function Expressions (IIFE)
+
+🏗️ How to Define a Function
+function functionName(parameters) {
+  // body
+  return value;
+}
+
+📞 Function Calling
+functionName();           // No arguments
+functionName(arg1, arg2); // With arguments
+
+=> Where to Call:
+1. Inside <script> tag
+2. Inside another function
+3. Via HTML event attributes (like onclick)
+
+🔒 Local & Global Variables
+Local: Declared inside function, accessible only within.
+Global: Declared outside all functions, accessible anywhere.
+
+Example:
+let userName = "Siva";
+function showMessage() {
+  let message = "Hello, " + userName;
+  alert(message);
+}
+
+⚠️ Variable Shadowing
+If a local variable has the same name as a global, local one is used.
+let userName = "Siva";
+function showMessage() {
+  let userName = "Kumar"; // shadows the global variable
+  alert("Hello " + userName); // Kumar
+}
+
+🧩 Parameters & Arguments
+Declaration:
+function greet(name, age) { //FORAML PARAMETERS OR ARGUMENTS
+  console.log("Hello " + name + ", age: " + age);
+}
+Calling:
+greet("Ayush", 25); //ACTUAL PARAMETERS OR PARAMETERS
+
+🆗 Default Parameters
+function showMessage(from, text = "no data given") {
+  alert(from + ": " + text);
+}
+
+=> Old Style (Pre-ES6):
+text = text || 'no data given';
+
+🔙 Return Statement
+Sends a value back to where the function was called.
+function sum(a, b) {
+  return a + b;
+}
+let result = sum(5, 10);
+
+=> Empty Return
+return; // returns undefined
+
+❌ Important Gotcha
+Don't place a line break after return.
+return x + y; // will return undefined
+✅ Correct:
+return (
+  x + y
+);
+
+🔁 Self-Descriptive Functions Example
+function showPrimes(n) {
+  for (let i = 2; i < n; i++) {
+    if (!isPrime(i)) continue;
+    alert(i);
+  }
+}
+
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) return false;
+  }
+  return true;
+}
+
+-->
+<!--
+NOTE : => whenever function calling then the browser search the function in present html then it will go to outside
+=> every function should be run from stack frame, for call the function, function should be in stack frame 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="namedfuns.js"></script>
+</head>
+<body>
+    <h3>demo on named funcitons</h3>
+    <script>
+        let r=add(10,20); // calling , we can also pass the variables like add(x,y) it will receive the data based on "position notations and named notations"
+        document.write(`sum is ${r}<br>`);
+        // we can call function as many times
+        document.write(`15 is Prime ${isPrime(15)}<br>`);  // when we call the function it serach the funciton then it search first localy within the html then serch into external js code for function
+        document.write(`73 is Prime ${isPrime(73)}<br>`);
+    </script>
+</body>
+</html>

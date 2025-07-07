@@ -1,0 +1,92 @@
+<!--
+table-> used to draw a table, means it grouping no of rows 
+	caption->to set the main heading of the table
+	tr-> table row, used to draw a row,means it grouping no of columns
+		th->table heading, used to set column headings
+		td->table data, used to print data in column
+
+since HTML4:
+		thead -> table head section
+		tbody -> table body section
+		tfoot -> table footer section
+=> these are SEMENTIC TAGS:
+		1.Makes your code easier to read and maintain
+		2.Improves SEO (search engines understand the structure better)
+		3.Helps with accessibility (screen readers can navigate easily)
+		4.Replaces vague <div> and <span> with meaningful structure
+
+
+
+structure => table->(thead,tbody,tfoot)->caption,tr->th,td
+
+-> all these 8 are paired tags
+-> table, tr, caption, thead, tbody, &tfoot are block level elemets 
+-> th&td are inline elements 
+
+Common Semantic Tags               Tag Meaning
+
+<header>	-> Defines the top section (like page or section header)
+<nav>	-> Contains navigation links
+<main>	-> Main content of the page (unique section)
+<section>	-> Groups related content into a section
+<article>	-> Self-contained content (like a blog post or news item)
+<aside>	->Side content (like ads or sidebars)
+<footer>->	Bottom section (page or section footer)
+<figure>	->Container for images, code, or illustrations
+<figcaption>	->Caption for a <figure>
+<mark>	-> Highlights text
+<time> ->	Represents time or date
+<address>	->Contact info
+
+-->
+<!-- example on tables -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>My 17th Webpage</title>
+	<link rel="icon" href="logo.png">
+</head>
+
+<body>
+	<table>
+		<caption>
+			DETAILS
+		</caption>
+		<tr>
+			<th>
+				Serial no
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Course
+			</th>
+		</tr>
+		<tr>
+			<td>
+				1
+			</td>
+			<td>
+				Ayush
+			</td>
+			<td>
+				JFS
+			</td>
+		</tr>
+		<tr>
+			<td>
+				2
+			</td>
+			<td>
+				sathvika
+			</td>
+			<td>
+				JFS
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

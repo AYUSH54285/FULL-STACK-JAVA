@@ -1,0 +1,55 @@
+<!-- 
+Audio tag 
+The <audio> is one of the HTML5 elements added to allow 
+embedding audio files to a web page. Since not all browsers 
+support all audio formats, the audio file is encoded using special 
+codecs. 
+The <source> tag or the src attribute is used to indicate the 
+variations of the same audio file. The path to an audio file can 
+contain absolute or relative URLs. 
+Syn:- 
+<audio attributes></audio> 
+OR 
+<audio attributes> 
+<source src="filename" type="audio/type"> 
+</audio> 
+Attribute     
+Definition 
+src URL => Specifies the path to the audio file. 
+controls  Displays the control panel (start button, scroll, volume 
+control). 
+If the controls attribute is missing, the audio file will not be 
+displayed on the page. 
+autoplay Plays the audio file automatically after loading the 
+page. 
+Repeat the audio file from the beginning after its 
+loop              
+completion. 
+muted  Mutes the sound when the audio file is played. 
+-->
+
+
+<!-- html5 semantic tags -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>38th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on audio & source tags</h3>
+	
+	<audio controls>
+	  <source src="files/Fear.mp3"  type="audio/mp3">
+	</audio>
+	
+	<audio controls src="files/Hunter Vantaar.mp3"></audio>
+	<br>
+	
+	<audio controls muted loop autoplay>
+	  <source src="files/Mastaaru.mp3" type="audio/mp3">
+	</audio>	
+	
+	
+  </body>
+</html>

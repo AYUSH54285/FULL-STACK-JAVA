@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .c{
+            width:200px;
+            height:200px;
+            border-radius:15px;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>demo on deleting elements and adding elements in structure </h3>
+    <!--first div tag-->
+    <div id="d1">
+        <span>welcome</span>
+        <p>hello world</p>
+        <button onclick="document.querySelector('div').remove()">Delete element</button> <!--anything(any tag) deletion possible including head and body tag-->
+    </div>
+    <!-- second div tag-->
+    <div id="d2">
+        <button id="bt">add element</button>
+    </div> 
+    <script>
+        document.querySelector("#bt").onclick=function (){
+            const i= document.createElement("img"); // in background we create a element with "new HTMLImageElement()";
+            // document.write(i); for confirmation of image creation
+            i.src=`images/xyz.jpeg`;
+            i.classList.add('c');
+            document.body.appendChild(i); // targetElement.appendChild(object);  for showing the object in webpage
+            //for adding the img object in first div tag
+            document.querySelector("#d1").appendChild(i);
+        }
+    </script>
+</body>
+</html>

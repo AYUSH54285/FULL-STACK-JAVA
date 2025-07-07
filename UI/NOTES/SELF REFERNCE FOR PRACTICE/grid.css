@@ -1,0 +1,32 @@
+/* defining styles for grid */
+.grid-box{
+	display:grid;	/* N-rows X 1-col */
+	grid-template-columns:auto auto auto auto;
+		/* Or 200px 300px   Or   30% 40% 30% */
+	/* column-gap:30px;
+	row-gap:10px;	OR */
+	grid-gap:40px;
+	grid-template-rows:150px 150px 150px;
+	
+	background:#dadada;
+	padding:10px;
+	text-align:center;
+ 	font-size:150%;
+}
+
+.grid-box section{
+	background:#ff66ff;
+	border-radius:15px;
+	transition:all 500ms;
+}
+
+.grid-box section:hover{
+	transform:scale(1.1);
+	background:rgb(254,3,241);	
+}
+.grid-box:hover > section:not(:hover){
+	filter:blur(4px);
+	transform:scale(0.95);
+}
+
+

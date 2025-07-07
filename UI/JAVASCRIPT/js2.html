@@ -1,0 +1,38 @@
+<!--
+Internal script:
+
+1.Internal script is nothing but html code and js code both are placed in same file, but not in the same line.
+2.internal script must be implemented inside <script> tag, <script> is a paired tag.
+3.internal script can be implement in head and body section both.
+=> scripting in head sec 
+    head is the first executed part of html, hence javascript is also executed first. 
+    <head>
+        <script type="text/javascript"> //type="text/javascript" is optional now beacuse the new browser are smart 
+            js statements
+        </script>
+    </head>
+=> scripting in body section
+<body>
+    <h1>Demo on internal script</h1>
+    <script type="text/javascript">
+        document.writeln("msg from body sec")
+    </script>
+</body>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script type="text/javascript"> 
+        document.writeln("msg from head sec") // it is a printing function in js and it help the user to print data on screen
+    </script>
+</head>
+<body>
+    <h1>Demo on internal script</h1>
+    <script type="text/javascript">
+        document.writeln("msg from body sec")
+    </script>
+</body>
+</html>

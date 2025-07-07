@@ -1,0 +1,25 @@
+<!-- animations -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+	<style>
+ 		@keyframes  loading
+		{
+			100%{ transform:rotate(360deg); }
+		}
+		.load{
+			width:200px;
+			height:200px;
+			border:20px solid blue;
+			border-top-color:cyan;
+			border-radius:50%;
+			animation:loading 1.5s infinite linear;
+		}
+	</style>
+ </head>
+ <body align="centeR">
+		<h1>loading animation</h1>
+		<div class="load"></div>	
+ </body>
+</html>

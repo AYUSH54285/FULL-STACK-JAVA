@@ -1,0 +1,18 @@
+/* 
+    defining styles for flex app
+*/
+#heading{
+    background:linear-gradient(to right, blue, hotpink);
+    color:#fff;
+}
+.flex-box{
+    display:flex;
+    flex-direction:row; /* row-reverse , column-reverse  */
+    flex-wrap:nowrap;    /*wrap*/
+    /* gap:10px; */
+    justify-content:space-evenly; /*start,  end, center, space-between(n-1), space-around(n), space-evenly(n+1)  here n is number of items*/
+}
+.flex-item{
+    width:20%;
+    box-shadow:0 0 3px black;
+}

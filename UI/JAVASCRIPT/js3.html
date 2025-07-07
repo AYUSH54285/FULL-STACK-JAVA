@@ -1,0 +1,63 @@
+<!-- 
+external scripting :
+=> external script is nothing but html code and javascript code designed in separate files 
+=> type js code in sep file and save that file with "filename.js" 
+=> re-use  
+=> while writing an external script don’t use <script> tag and event attribute. 
+   Note: external file should be saved with an extension “.js” 
+=> we can access external script by using <script> tag from html. 
+=> from either head nor body section 
+=> we can attach any number of script tag inside the html code
+
+Syn:  
+<script src="filename.js"> </script> 
+
+Note:
+=> In js file no html tags are allowed.
+=> In js file no css are allowed.
+=> In js file no <script> tag are allowed.
+=> important: Code should be typed in the form of function/block/constructor/class 
+
+Note: we can attach any number of script tag to any html code or vice versa. but one script file link with the html file at a time.
+Note: we can't run js file seperately if we do this then it will print as written
+
+Execution process : code is parsed by js parser(convert high level code into level code) and that trnaslated code is handsover
+ to js execution engine then it will do memory allocation and exection is done and output is generated and then memory deallocation
+  and whole resposibility is of JS execution engine.
+
+
+| Step                  | Done by                       | Description                      |
+| --------------------- | ----------------------------- | -------------------------------- |
+| Parsing               | JS Parser                     | Converts code to AST             |
+| Compilation           | Interpreter / JIT Compiler    | Converts AST to bytecode         |
+| Execution             | JS Execution Engine           | Runs code and manages memory     |
+| Output + Deallocation | JS Engine + Garbage Collector | Returns output and cleans memory |
+
+
+Object:
+=> We have some predefind/readymade objects in js and some main objects are window, document, console, history, location, navigation etc.
+=> object is an instance of class(dynamic memory block).
+=> object is group of properties(store data) and methods(opertions).
+    h.innerText = 'javascript'; //assigning the values
+    ducument.write()
+=> object are used to communicate/interact with something(window object help us to interact with browsers)
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script src="myscript.js"></script> <!--linking done-->
+</head>
+<body>
+    <h3>Demo on external script</h3>
+    <script>
+            myfun1();
+            // myfun2();
+    </script>
+    <button onclick="myfun2()">call fun2</button>
+</body>
+</html>

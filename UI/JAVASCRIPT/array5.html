@@ -1,0 +1,33 @@
+<!-- JS Arrays-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>demo on nested arrays</h3>
+        <script>
+            const A = [
+                [10,20,30],
+                [true,false],
+                ['rama','sama','gama','bhama']
+            ];
+
+            document.write(`A   =>    ${A}<br>`);
+            document.write(`A[0]   =>   ${A[0]}<br>`);
+            document.write(`A[2]   =>   ${A[1]}<br>`);
+            document.write(`A[3]   =>  ${A[3]}<br>`);
+
+
+            for(let i=0;i<A.length ;i++){
+                for(let j=0 ; j<A[i].length ; j++){
+                    document.write(`${A[i][j]}  &nbsp; `);
+                }
+                document.write(`<br>`);
+            }
+
+            console.table(`<br>`);
+
+        </script>
+    </body>
+</html>

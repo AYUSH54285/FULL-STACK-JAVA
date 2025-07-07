@@ -1,0 +1,43 @@
+/* defining styles for loan calc */
+.container{
+  width:270px;
+  background:#000;
+  color:#FFF;
+  padding:25px;
+  box-shadow:0 0 15px hotpink;
+  border-radius:10px;
+  margin:5% 40%;
+}
+.container span{
+  color:#F00;	
+}
+.container h2{
+  text-align:center;
+  text-decoration:1px wavy underline;
+}
+.container label{
+  font-size:18px;
+}
+.container input{
+  border:none;
+  outline:none;  
+  font-size:18px;
+}
+.container button{
+  border:none;
+  outline:none;  
+  font-size:18px;	
+  background:#00F;
+  color:#FFF;
+  width:180px;
+  height:30px;
+  border-radius:5px;
+  transition:600ms;
+}
+button:hover{
+  background:#F00;
+  border-radius:15px;
+}
+.container output{
+  color:yellow;
+}

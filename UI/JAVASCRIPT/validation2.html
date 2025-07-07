@@ -1,0 +1,60 @@
+<!-- example on form validations -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Validations</title>
+	<style>
+		span{ color:red; }
+	</style>
+  </head>
+  <body>
+	<!-- validation @submition -->
+	<h2>Reset Password Form</h2>
+	<form action="resetpw.jsp" method="post">
+	  <label>New Password</label> <bR>
+	  <input type="password" id="npwd" name="npwd"/>
+	  <span id="errnp"></span>
+	  <br> <br>
+	  <label>Retype Password</label> <bR>
+	  <input type="password" id="cpwd" name="cpwd"/>
+	  <span id="errcp"></span>
+	  <br> <br>
+	  <input type="submit" name="sb" value="Reset Password"/>
+	</form>
+ 	<script>
+	  //password checking
+	  document.forms[0].onsubmit=function(frm) {
+		const npwd =document.querySelector("#npwd");
+		const cpwd =document.querySelector("#cpwd");
+		let ch,upper=false,lower=false,dig=false,sym=false;
+		let pw=npwd.value;
+		//extracting 1-by-1 char from password
+		for(let i=0; i<pw.length; i++)
+		{
+		  ch=pw[i];	//it returns ith position char
+		  //checking char
+		  if(ch>='0'&&ch<='9')
+			dig=true;
+		  else if(ch>='A'&&ch<='Z')
+			upper=true;
+		  else if(ch>='a'&&ch<='z')
+			lower=true;
+		  else
+			sym=true;
+		}
+		if(upper===false||lower===false||dig===false||sym===false||pw.length<8)  {
+			document.querySelector("#errnp").innerText="plz set a valid password";
+			npwd.style.borderColor="red";
+			frm.preventDefault();
+		}
+		//checking password & confirm password same or not
+		if(npwd.value!==cpwd.value)  {
+			document.querySelector("#errcp").innerText="both passwords should be same";
+			cpwd.style.borderColor="red";
+			frm.preventDefault();
+		}
+	  }		
+	</script> 
+  </body>
+</html>

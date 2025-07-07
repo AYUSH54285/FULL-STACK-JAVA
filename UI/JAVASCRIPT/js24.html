@@ -1,0 +1,37 @@
+<!--example on JS Control Statements-->
+<h3>demo on switch case</h3>
+<script>
+    
+    //js provide extra features in switch as compare to other programming languages
+    // it sup all datatypes
+
+    let i;
+    i=1.5;   //i=true;  //i="ram";   //i=10; 
+    switch(i){
+        case 1.5:
+            document.write('Yes<br>');
+            break;
+        default:
+            document.write('No<br>');
+    }
+
+    // it supports conditions also
+    let j=10;
+    switch(j>=0){
+        case true:
+            document.write("+ve <br>");
+            break;
+        default:
+            document.write("-ve <br>");
+    } 
+
+    // it supports to use variables within the "case"
+    let x=10, y=20, n=10;
+    switch(n){
+        case x: document.write(x);
+                break; // break is used for controlling the flow of switch block
+        case y: document.write(y);
+                break;
+        default: document.write('none');
+    }
+</script>

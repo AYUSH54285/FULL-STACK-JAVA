@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="logo.png">
+        <meta charset="UTF-8">
+        <style>
+            @keyframes loading
+            {
+                100%{
+                    transform:rotate(360deg);
+                }
+            }
+            .load{
+                width:200px;
+                height:200px;
+                border:20px solid blue;
+                border-top-color:white;
+                border-radius:50%;
+                animation: loading 1s infinite ease-in-out; /* ease-in-out ->  slow noraml slow*/
+            }
+            
+        </style>
+    </head>
+    <body align="center">
+        <h3>loading animations</h3>
+        <div class="load"></div>
+    </body>
+</html>

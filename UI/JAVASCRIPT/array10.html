@@ -1,0 +1,40 @@
+<!--
+push() – Adds element(s) to the end of an array
+Returns the new length of the array
+
+pop() – Removes the last element from an array
+Returns the removed value
+
+
+
+-->
+
+
+<!-- JS Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+  </head>
+  <body>
+	<h3>demo on push & pop methods</h3>		 
+	<script>
+	  const arr=[];
+	  arr.push(10);
+	  arr.push(20);
+	  arr.push(30);
+	  let c=arr.push(40);
+	  
+	  document.write(`Arr	=>	${arr}<br>`);
+	  document.write(`${c}<br>`);
+	  
+	  let x=arr.pop();
+	  document.write(`1st pop	${x}<br>`);
+	  document.write(`2nd pop	${arr.pop()}<br>`);
+ 	  
+	  arr.push(11,22,33);
+	  document.write(`Arr	=>	${arr}<br>`);  
+    </script>
+  	
+  </body>	
+</html>

@@ -1,0 +1,36 @@
+<!-- id selector
+=> used to defiend/ to apply style for 1 instances
+=> same as inline styles
+syn:     
+    #id-name{
+        prop: val;
+    }
+
+
+mapping: 
+    <tag id="id-name" .....></tag> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #id1{
+            border-radius: 50%; 
+        }
+        #id2{
+            border-radius: 20px;
+        }
+        #id3{
+            border-radius: 10px 50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Demo on ID selector</h3>
+    <img src="images\abc.jpeg" id="id1">
+    <img src="images\pqr.jpeg" id="id2">
+    <img src="images\xyz.jpeg" id="id3">
+    <!-- <img src="images\xyz.jpeg" id="id3 id1"> this is invalid beacuse we can not define multiple id in one tag -->
+</body>
+</html>

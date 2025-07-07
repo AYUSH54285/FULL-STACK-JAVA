@@ -1,0 +1,90 @@
+<!-- drop down menu creation -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drop_Down</title>
+		<style>
+			nav {
+				 background:linear-gradient(blue,black);
+				 text-align:center;
+				 width:100%;
+				 opacity:.7;
+			}
+			nav ul
+			{
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				position:relative;
+			}
+			nav ul li a
+			{
+				color:white;
+				font-size:22px;
+				text-decoration:none;
+				display:block;
+				padding:20px;
+				width:100px;
+			}
+			nav ul li
+			{
+				display:inline-block;
+			}
+			nav ul ul
+			{
+				display:none;
+				background:black;
+				position:absolute;
+			}
+			nav ul li :hover
+			{
+				background-color:black;
+			}
+			nav ul li:hover>ul
+			{
+				display:block;
+			}
+			nav ul li ul li
+			{
+				display:block;
+			}
+			nav ul li ul li a
+			{
+				width:270px;
+				text-align:left;
+			}
+			nav ul li ul li a:hover
+			{
+				background:lightblue;
+				color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<!-- main menu -->
+			<ul>
+			    <li><a href="#">WOMEN</a>
+					<!-- sub menu items for WOMEN item -->
+					<ul>
+						 <li><a href="#">Kurtas &amp; Suits</a></li>
+						 <li><a href="#">Tunics &amp; Tops</a></li>
+						 <li><a href="#">Leggings &amp; Churidars</a></li>
+						 <li><a href="#">Skirts &amp; Palazzos</a></li>
+						 <li><a href="#">Dress Materials</a></li>
+					</ul>
+				</li>
+				<li><a href="#">KIDS</a>
+					<!-- sub menu items for KIDS item -->
+					<ul>
+						 <li><a href="#">T-Shirts</a></li>
+						 <li><a href="#">Shirts</a></li>
+						 <li><a href="#">Trousers</a></li>
+						 <li><a href="#">Pyjamas</a></li>
+ 						 <li><a href="#">Track Pants &amp; Sweater </a></li>
+					</ul>
+				</li>
+			</ul>	
+		</nav>
+	</body>
+</html>

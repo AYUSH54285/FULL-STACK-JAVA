@@ -1,0 +1,28 @@
+<!--
+
+NOTE: In these 7 opertors(-, *, /, %, **, ++, --) we don't need the parse opertor to convert the varible into int, it will automatically parse the varible into integer
+-> excluding (+)
+-->
+
+<!--HTML with JS implementations-->
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div align="center">
+            <h3> Arithematic Calculator</h3>
+            <input type="number" id="fn" placeholder="First Number"><br>
+            <input type="number" id="sn" placeholder="Second Number"><br>
+            <input type="text" id="res" placeholder="Result" readonly><br><!-- not want to enter the value here-->
+            <button type="button" onclick="res.value = +fn.value + +sn.value">+</button>
+            <button type="button" onclick="res.value = fn.value - sn.value">-</button>
+            <button type="button" onclick="res.value = fn.value * sn.value">*</button>
+            <button type="button" onclick="res.value = fn.value / sn.value">/</button>
+            <button type="button" onclick="res.value = fn.value % sn.value">%</button>
+            <button type="button" onclick="res.value = (fn.value) ** (sn.value)">**</button>  
+        </div>
+
+    </body>
+</html>

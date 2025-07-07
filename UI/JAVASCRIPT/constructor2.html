@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Book.js"></script>
+</head>
+<body>
+    <h3>demo on non-parameters constructor</h3>
+    <script>
+        const b1 = new Book();
+        b1.getBook();
+
+        new Book().getBook()
+    </script>
+</body>
+</html>
+
+
+
+<!-- example on constructor functions -->
+<Html>
+<head>
+  <title>constructor</title>
+	<script src="Book.js"></script>
+</head>
+<body>
+	<h3>demo on  non-parameter constructor</h2>
+	<script>
+	  //const book =Book();  <==	its invalid operation
+	  const firstBook = new Book();  //calling constructor
+	  const secondBook = new Book(); 
+	  const thirdBook = new Book(); 
+
+	  document.write(`${firstBook.name} ${firstBook.author} ${firstBook.price} ${firstBook.year}<br>`);           
+	  document.write(`${secondBook.name} ${secondBook.author} ${secondBook.price} ${secondBook.year}<br>`);
+	  document.write(`${thirdBook.name} ${thirdBook.author} ${thirdBook.price} ${thirdBook.year}<br>`);
+	</script>
+</body>
+</html>

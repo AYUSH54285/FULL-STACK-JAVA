@@ -1,0 +1,25 @@
+<!-- example on css animations -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>CSS Transition</title>
+	<style>
+		h1{
+			display:inline-block;
+			transition:transform 2s linear; 
+			margin:100px;
+		}
+		#hh1:hover{ transform:skew(40deg, 25deg); }
+		#hh2:hover{ transform:scale(2.6); }
+		#hh3:hover{ transform:rotateZ(360deg); }
+	</style>
+ </head>
+ <body>
+		<h3>demo on applying multiple transforms</h3>
+		<div style="text-align:center;">
+			<h1 id="hh1">Apple</h1>
+			<h1 id="hh2">Mango</h1>
+			<h1 id="hh3">Orange</h1>
+		</div>
+ </body>
+</html>

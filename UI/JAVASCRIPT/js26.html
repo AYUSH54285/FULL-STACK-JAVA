@@ -1,0 +1,55 @@
+<!-- finding grade of student
+	Avg		Grade
+	90-100	A+
+	80-89	A
+	70-79	B+
+	60-69	B
+	50-59	C
+	40-49	D
+	0-39	Fail
+Note: min marks in each sub is 40
+-->
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="grade.css">
+        <script src="grade.js"></script>
+    </head> 
+    <body>
+        <table>
+            <caption>Marks Report</caption>
+            <tr>
+                <th>Roll No</th> <td><input type="text" id="rno"></td>
+            </tr>
+                        <tr>
+                <th>Name</th> <td><input type="text" id="sna"></td>
+            </tr>
+                        <tr>
+                <th>Marks:</th> 
+            </tr>
+            <tr>
+                <th>HTML</th> <td><input type="text" id="html" maxlength="3"></td>
+            </tr>
+            <tr>
+                <th>CSS</th> <td><input type="text" id="css" maxlength="3"></td>
+            </tr
+            ><tr>
+                <th>JavaScript</th> <td><input type="text" id="js" maxlength="3"></td>
+            </tr>
+            <tr>
+                <th>BootStrap</th> <td><input type="text" id="bs" maxlength="3"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><button onclick="getResult()">Get Result</button></td>
+            </tr>
+            <tr align="right">
+                <td colspan="2">
+                    <output id="total"></output><br>
+                    <output id="average"></output><br>
+                    <output id="grade"></output><br>
+                </td>
+            </tr>
+        </table>
+    </body>   
+</html>

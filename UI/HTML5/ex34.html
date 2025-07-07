@@ -1,0 +1,67 @@
+<!-- 
+mark: 
+
+The <mark> element is used to mark a part of the text which 
+has relevance. It can be used to highlight a text for showing 
+emphasis, highlight search terms in search results to provide 
+context, or distinguish a new content added by the user by 
+showing it differently 
+Paired tag & inline 
+Syn: <mark> text </mark> 
+
+bdi : bi directional isolation
+
+The <bdi> element is used to isolate bidirectional text when a 
+language with a right-to-left directionality, such as Arabic or 
+Hebrew, is used inline with left-to-right languages 
+Paired tag & inline 
+Syn: 
+<bdi> text </bdi> 
+
+base tag :
+
+this tag is used to specify a base URI or URL to use for all relative links 
+contained within an HTML document. 
+Only one “base” element can be specified within a document, and it 
+must be placed within “head” element.  
+We can also specify how other links should open using the target 
+attribute. 
+=> used with particular cases like anchor and img tag
+Its unpaired tag 
+Syn: <base href=”base-url” target=”target”/>
+
+output tag :
+=> it is used with js otherwise it look like span tag
+=> this tag used to print data/output value on same page after using js. 
+=> it is paired & inline element. 
+Syn  <output attributes> text </output> -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>34th Webpage</title>
+        <link rel="icon" href="logo.png">
+        <base href="https://everwallpaper.com/cdn/shop/files/">  <!--one program has one base tag--> 
+    </head>
+    <body>
+        <h3>Demo on mark(for highlighting),bdiI(bi directional isolation),output,base tags</h3>
+        <p>
+            The summary tag defines a visible heading for the details element. The heading can be clicked to view/hide the details.
+
+            <mark>Note:</mark>  The summary element should be the first child element of the details element.            
+        </p>
+        <bdi>hello</bdi>
+        <output></output> <!-- output tag is used with Java script without JS it works same like span tag
+        and it will give the output in the same page-->
+        <br>
+        <!-- <button onclick="document.write('button pushed')">Click button</button> --> <!--after clicking it will give result in different web page-->
+        <button onclick="op.value ='pushed button'">Click button</button>
+        <br>
+        <output id="op">Hi</output> <!-- after click hi  will replace with pushed button in same page-->
+        <img src="X10585_0a2468e2-22b0-4545-b4e8-57f6d242ae89.jpg?v=1687246246&width=200">
+        <img src="X13921.jpg?v=1718705451&width=200">
+        <img src="X13915.jpg?v=1718705357&width=200">
+        <img src="20250303-140928.webp?v=1740982242&width=200">
+        200+ img
+    </body>
+</html>

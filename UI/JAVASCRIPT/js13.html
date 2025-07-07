@@ -1,0 +1,64 @@
+<!--
+JavaScript dialog boxes:  
+JavaScript has 3 kinds of dialog boxes. 
+1.Alert box 
+2.Confirm box 
+3.Prompt box
+
+
+Alert box: 
+-> An alert box is often used if you want to make sure information comes through the 
+user. When an alert box pops up, the user will have to click "ok" to proceed.     
+            window.alert("message"/expr);
+
+Confirm box: 
+-> It is often used, if you want the user to verify and accept something. When a confirm 
+box pops up, the user will have to click either "ok" or "cancel" to proceed. If the user 
+clicks "ok" the box returns “true”. If the user clicks "cancel" the box returns "false". 
+        Syntax:   
+            var = window.confirm("message"); 
+Prompt Box:  
+-> It is used to, if you want the user to input a value while entering a page. When a 
+prompt box pops up the user will have to click either "ok" or "cancel" to proceed 
+after entering an input value. If the user clicks "ok" the box returns the value/empty. 
+If the user clicks "cancel" the box returns "null".
+        Syntax:   
+            var = window.prompt("sometext", defaultvalue);
+NOTE: html not allowed in alert,confrim and prompt functions
+
+NOTE : there are mainly 9 global functions in JS -> alert(), prompt(), confirm(), 
+    parseInt(), parseFloat(), setTimeout(), clearTimeout(), setInterval(), clearInterval()
+NOTE : all the functions inside the window object are called global functions
+-->
+
+
+
+
+<!--example on JS dialogs-->
+<h3>demo on alert, confirm & prompt functions</h3>
+<script>
+    window.alert("hello world");
+    /* alert(15*22);
+    alert("<h3>Welcome</h3>"); // html not allowed in alert,confrim and prompt functions
+    */ 
+
+    
+  
+    let x =window.confirm("do you want to logout?");
+    document.write(x,'<br>');
+ /* if(x==true){
+        Logout Page
+    }
+    else{
+        Nothing
+    }
+ */
+
+    let n = window.prompt("enter name:");  // when we click on cancel it will give null
+    let a = prompt("enter age",'1');// 1 is default value for not empty
+    document.write(n," age is ",a);
+
+
+    // there are mainly 9 global functions in JS -> alert(), prompt(), confirm(), 
+    // pareInt(), parseFloat(), setTimeout(), clearTimeout(), setInterval(), clearInterval()
+</script>

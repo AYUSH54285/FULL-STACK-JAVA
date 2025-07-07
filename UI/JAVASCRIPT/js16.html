@@ -1,0 +1,43 @@
+<!--
+parse operator("+"):
+we use "+" opertor for parsing into int ex ->   let x = +firstNum.value;
+we can parse value(+10) or variable(+x)
+NOTE: we can not use "+" operator with string, it will give NaN
+
+
+-->
+
+
+
+<!--HTML with JS Implementations-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS</title>
+</head>
+<body>
+    <h3>Finding sum of 2 numbers</h3>
+    <label for="firstNum">First Number</label>
+    <input type="text" id="firstNum"><br>
+    
+    <label for="secondNum">Second Number</label>
+    <input type="text" id="secondNum"><br>
+
+    <button type="button" onclick="addition()">Addition</button><br>
+    <output id="op"></output>
+
+    <script>
+        //function definition
+        function addition(){
+            let x,y,res; //local vars
+            //data collecting
+            x=+firstNum.value; //id.value
+            y=+secondNum.value;
+            res=x+y;
+            // alert("result is "+res);
+            // Note: parse operator -> use + before the string and it will take as number ex- +"100" => 100
+            op.value ="Addition is "+res;
+        }
+    </script>
+</body>
+</html>

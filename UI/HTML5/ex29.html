@@ -1,0 +1,43 @@
+<!--
+textarea:
+=>"textarea" tag is used to create a multi-line textbox. 
+use case: comments, address, feedback, delivery instr, ... 
+=>its paired tag& inline tag 
+=>it creates a multi-line text box, with default sizes (2row & 20 
+col) 
+Syn:  <textarea attributes> 
+			init value 
+	</textarea> 
+
+attributes: 
+=>rows : it rep no.of lines to display @time, if more lines of data 
+entered  
+automatically scrollbar is activated. 
+=>cols : it rep no.of chars per line 
+maxlength : it rep total no.of chars allowed in textbox. 
+=>Note: user can resize the textarea, at runtime in the browser.
+
+-->
+
+<!-- example on textarea tag -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>29th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on multiline text box</h3>
+	<label>Comments:</label><br>
+	<textarea></textarea>  
+	<br>
+	
+	<label>Full Address</label><br>
+	<textarea id="addr" name="addr"  maxlength="5"></textarea>
+	<br>
+
+	<label>Description</label><br>
+	<textarea id="desc" name="description" rows="6" cols="50"></textarea>
+ 
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!--
+In this example:
+The <ul> element represents an unordered list, which serves as the menu bar.
+The <li> elements represent individual items in the menu.
+The <a> elements create hyperlinks for each menu item.
+Icons from Font Awesome are used with the <i> element inside the <a> element.
+The fas class represents the solid style of the icon.
+The CSS is used for basic styling, including adjusting the spacing between the icon and text.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+	li a i {
+      margin-right: 8px; /* Adjust the spacing between the icon and text */
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+	<!-- fas, fa-home, fa-info-circle, fa-cogs and fa-envelope are predefine selector -->
+<li><a href="#home"><em class="fas fa-home"></em> Home</a></li>
+  <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+  <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+  <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+</ul>
+
+</body>
+</html>

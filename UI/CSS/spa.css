@@ -1,0 +1,40 @@
+/* defining styles for SPA */
+
+.menubar{
+    width:100%;
+    background:#000;
+    margin-bottom:10px;
+    text-align:center;
+  }
+  .menubar a{
+    color:#FFF;
+    text-decoration:none;
+    font-size:20px;  
+    display:inline-block;
+    width:120px;
+  }
+  .menubar a:hover{
+    background:#00F;	
+  }
+  
+  section{
+    width:90%;
+    height:500px;
+    margin:auto;  
+  }
+  
+  iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    background:lightgray;
+  }
+  
+  footer{
+    background:#111;
+    color:#EEE;  
+    margin-top:10px;
+  }
+  footer div{
+    columns:2;	
+  }

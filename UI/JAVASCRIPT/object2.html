@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>demo on object literal with method</h3>
+    <script>
+        //Object creation with method
+        const maths = {
+            //named method
+             sum(x,y){
+                return x+y;
+            },
+            //expressional method
+            product:function(x,y){
+                return x*y;
+            },
+            mod:(x,y)=>{
+                return x%y;
+            }
+        }
+
+        document.write(`sum is ${maths.sum(1,2)}<br>`)
+        document.write(`product is ${maths.product(1,2)}<br>`)
+        document.write(`modulo is ${maths.mod(4,2)}<br>`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>Demo on Document object</h3>
+    <!-- all the tags are element and all the tags of html are document object
+     these object are used for dynamically updates the content-->
+    <h1 id="head1">Hello World</h1>
+    <img src="images/pqr.jpeg" width="200">
+    <img src="images/pqr.jpeg" width="200">
+    <img src="images/pqr.jpeg" width="200">
+
+    <script>
+        document.write(`${document}<br>`);
+
+        const ob1 = document.getElementById("head1");
+        document.write(`${ob1} =>${ob1.tagName}<br>`);
+
+        const ob2 = document.getElementsByTagName("img");
+        document.write(`${ob2}<br>`);
+
+        for(let i of ob2){
+            document.write(`${i}<br>`);
+        }
+
+        // only these 5 tags are available with document properties, remaining with document methods
+
+        const ob3=document.head;
+        document.write(`${ob3} =>${ob3.tagName}<br>`);
+
+        const ob4=document.body;
+        document.write(`${ob4} =>${ob4.tagName}<br>`);
+
+        const ob5 = document.images;
+        document.write(`${ob5}<br>`);
+
+        const ob6 = document.forms;
+        document.write(`${ob6}<br>`);
+
+        const ob7 = document.links;
+        document.write(`${ob7}<br>`);
+
+
+    </script>
+</body>
+</html>

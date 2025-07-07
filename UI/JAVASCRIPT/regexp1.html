@@ -1,0 +1,21 @@
+<!-- JS Validations -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="logo.png"/>
+  </head>
+  <body>
+    <h3>demo on RegExp</h3>
+	<input type="text" id="una">
+	<button onclick="checkName()">Check name</button>
+	<script>
+	  function checkName()
+	  {
+	    //const exp=new RegExp(/siva/);
+		const exp=/siva/i;
+		alert( exp.test(una.value) );	  
+	  }	
+	</script>
+  </body>
+</html>
+ 

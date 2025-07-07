@@ -1,0 +1,227 @@
+<!--
+input tag:
+=> input tag is used to create form elements(input elements)
+=> these elements are used to take input/accept data from users(runtime value)
+=> input is un-paired tag and inline element
+syn:
+	<input attributes>
+
+NOTE: by default input tag creates "text field"
+	<input>
+	<input type="">
+	<input type="unknown">
+	<input type="text">
+
+type => it reps which type of control you want to create.And if we are not specified by default it creates a textbox. 
+Common type Values of <input>:
+type="text"
+To accept single-line text input like name, address, etc.
+<input type="text" name="username" placeholder="Enter your name">
+
+type="password"
+To input text where characters are hidden (masked as •••).
+<input type="password" name="pass" placeholder="Enter password">
+
+type="number"
+To input only numeric values.
+min, max, step for numeric constraints
+<input type="number" min="1" max="10" step="1">
+
+type="email"
+To accept email address, with format validation.
+<input type="email" required> 
+
+type="url"
+To accept website URLs with https://... format.
+<input type="url" placeholder="https://example.com">
+
+type="tel"
+To accept telephone numbers (no format validation).
+<input type="tel" pattern="[0-9]{10}"> here 10-digit mobile number (only digits)
+
+type="date"
+Opens a calendar picker for selecting a date.
+<input type="date">
+
+type="time"
+Lets user select time (HH:MM).
+<input type="time">
+
+type="datetime-local"
+Combines date and time input.
+<input type="datetime-local">
+
+type="month"
+To select a specific month & year.
+<input type="month">
+
+type="week"
+Select a week number from the year.
+<input type="week">
+
+type="file"
+To upload files from local system.
+<input type="file" accept="image/*">
+accept="image/*" (only images)
+
+type="checkbox"
+Allows multiple selections from options.
+<input type="checkbox" name="skill" value="HTML"> HTML
+<input type="checkbox" name="skill" value="CSS"> CSS
+
+type="radio"
+Allows only one option in a group.
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+All options must share the same name to work as a group.
+
+type="submit"
+Submits the form data to server.
+<input type="submit" value="Send">
+
+type="reset"
+Clears all form fields.
+<input type="reset" value="Clear Form">
+
+type="button"
+Creates a clickable button that performs action with JavaScript.
+<input type="button" value="Click Me" onclick="alert('Hello!')">
+
+type="hidden"
+Stores invisible data sent to the server.
+<input type="hidden" name="userid" value="12345">
+Use Case: Session tracking
+
+type="color"
+Opens a color picker.
+<input type="color" value="#00ff00">
+
+type="range"
+Creates a slider to select numeric values.
+<input type="range" min="0" max="100" step="5">
+
+type="image"
+Submit form using an image as the button.
+<input type="image" src="submit.png" width="100">
+
+
+
+
+HTML <input> Attributes – Detailed Explanation with Examples:
+1. name
+When a form is submitted, the name attribute of each form element (e.g., <input>, <textarea>, <select>) 
+becomes a key in the data that is sent to the server. The corresponding value is the data entered by the user in that form element. 
+
+For example, if you have an input field with name="username", 
+and the user enters "john.doe", the server will receive a pair like username=john.doe. 
+
+not unique.
+<input type="text" name="username">
+
+2. id
+Assigns a unique identifier to an element. Used in client-side 
+scripting (like JavaScript) or for linking <label> elements.
+
+it is unique.
+<input type="text" id="userId">
+<label for="userId">User ID</label>
+
+3. value
+Sets the default value for the input field.
+<input type="text" value="JohnDoe">
+
+4. readonly
+Makes the input non-editable. Value can be submitted but not modified by user.
+<input type="text" value="Read only text" readonly>
+
+5. size
+Purpose: Specifies the visible width (number of characters) of the input.
+<input type="text" size="30">
+
+6. disabled
+Purpose: Disables the input field. Cannot be edited or submitted.
+<input type="text" value="Can't type here" disabled>
+
+7. placeholder
+Purpose: Displays prompt text when the field is empty. Helpful for hints.
+<input type="text" placeholder="Enter your name">
+
+8. maxlength
+Purpose: Sets a maximum number of characters allowed.
+<input type="text" maxlength="10" placeholder="Max 10 chars">
+
+9. required
+Purpose: Makes the field mandatory. Form won't submit if empty.
+<input type="email" required placeholder="Enter your email">
+
+10. autofocus
+Purpose: Automatically sets cursor focus on this field when the page loads.
+<input type="text" autofocus placeholder="Cursor appears here first">
+
+11. tabindex
+Purpose: Defines the tab order of input fields when pressing the Tab key.
+<input type="text" tabindex="2" placeholder="Second field">
+<input type="text" tabindex="1" placeholder="First field">
+
+12. min
+Purpose: Sets the minimum value for type="number", type="date", etc.
+<input type="number" min="10" placeholder="Min 10">
+
+13. max
+Purpose: Sets the maximum value.
+<input type="number" max="100" placeholder="Max 100">
+
+14. step
+Purpose: Sets the increment/decrement step for numeric input.
+<input type="number" step="5" placeholder="Steps of 5: 5, 10, 15...">
+
+15. pattern
+Purpose: Applies a regex pattern to validate input.
+<input type="tel" pattern="[7-9]{1}[0-9]{9}" placeholder="Enter 10-digit Indian mobile number">
+Accepts: 9876543210
+Rejects: 1234567890
+
+-->
+<!-- example on "input" tag -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>21th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on text fields</h3>
+	<input type="text" autofocus>
+	
+	<!-- input eles attributes -->
+	<input type="text" size="50">
+	<br>
+	<input type="text" maxlength="10" >
+	<br>
+	<input type="text" id="x1" name="x2">
+	<br>
+	<input type="text" placeholder="enter first number">
+	<br>
+	<label>enter lastname</label> <br>
+	<input type="text">
+	<br>
+	<input type="text" required> *
+	<br>
+	<input type="text" value="1000"> 
+	<br>
+	<input type="text" value="mangos" readonly> 
+							<!-- disable -->
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+  </body>
+</html>

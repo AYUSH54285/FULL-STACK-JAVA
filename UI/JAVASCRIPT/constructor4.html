@@ -1,0 +1,57 @@
+<!-- exmaple on Bill Preparation  -->
+<html>
+  <head>
+	<title>Shoping</title>
+	<script src="Product.js"></script>
+  </head>
+ <body>
+	<input type="text" id="pn" name="pn" placeholder="enter product name" style="text-transform:uppercase;">
+	&nbsp;&nbsp;
+	<input type="text" id="inv" name="inv" placeholder="enter quantity">
+	&nbsp;&nbsp;
+	<input type="text" id="up" name="up" placeholder="enter unit price">
+	&nbsp;&nbsp;
+	<button onclick="addProduct()">Add to Cart</button>
+	&nbsp;&nbsp;
+	<button onclick="generateBill()">Generate Bill</button>
+	
+  <script>
+    //array of object 
+	var products = new Array();  //for storing of products
+		 
+	function addProduct()		//udf
+	{
+		/* products[index] = new Product( pn.value, inv.value, up.value);	
+					OR
+		    products.unshift( new Product( pn.value, inv.value, up.value) )		
+					OR		*/
+		products.push( new Product( pn.value, inv.value, up.value) );		//adding product to collection
+		pn.value="";	  
+		inv.value="";	
+		up.value="";		//clear all values
+		pn.focus();	//placing cursor 
+		//alert("Done!");
+   }
+  	
+ 	  function generateBill() //udf
+	  {
+	    let slno=1, prodAmt=0, billAmt=0, cgst, sgst, finalAmt;
+				 
+		for(let p of products) //extracting 1-by-1 product
+        {
+		   prodAmt = p.inventory * p.unit_price;
+		   document.write(`${slno} &nbsp;&nbsp;&nbsp; ${p.name} &nbsp;&nbsp;&nbsp;  ${p.inventory}  &nbsp;&nbsp;&nbsp; ${p.unit_price} &nbsp;&nbsp;&nbsp; &#8377;${prodAmt}<br>`);		
+		   billAmt += prodAmt;  
+ 		   slno++;
+	     }
+		 sgst = billAmt*18/100;
+		 cgst = billAmt*12/100;
+		 finalAmt = billAmt+sgst+cgst;
+		 document.write(`Bill Amount : &#8377;${billAmt} <br>`);
+		 document.write(`SGST	: &#8377;${sgst} <br>`);
+		 document.write(`CGST		: &#8377;${cgst} <br>`);
+		 document.write(`Total Bill Amount : &#8377;${finalAmt} <br>`);
+	  }
+  </script>
+</bodY>
+</html>

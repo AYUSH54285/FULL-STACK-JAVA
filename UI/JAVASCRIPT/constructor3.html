@@ -1,0 +1,25 @@
+<!-- example on constructor 	function -->
+<Html>
+  <head>
+	<title>constructor</title>
+	<script src="Books.js"></script>
+  </head>
+  <body>
+	<h2> demo on parameterized constructor function</h2>
+	<script>
+	  let firstBook = new Book("Html", 2014, "Tim", 500); //calling const
+ 	  const secondBook = new Book("JavaScript", 2013, "Branden", 600); 
+	  const thirdBook = new Book("CSS", 2010, "W3C", 300);
+
+	  document.write(`${firstBook.name} ${firstBook.author} ${firstBook.price} ${firstBook.year}<br>`);           
+	  document.write(`${secondBook.name} ${secondBook.author} ${secondBook.price} ${secondBook.year}<br>`);
+	  document.write(`${thirdBook.name} ${thirdBook.author} ${thirdBook.price} ${thirdBook.year}<br>`);
+
+		//constructor overloading
+	  const b4 = new Book();
+	  const b5 = new Book("Java");
+	  const b6 = new Book("Oracle",2020);
+	  const b7 = new Book("angular",2022,"RR");
+	</script>
+</body>
+</html>

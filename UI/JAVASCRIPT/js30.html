@@ -1,0 +1,31 @@
+<!-- HTML with JS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+  </head>
+  <body>
+	<h3>Printing Multiplication Table</h3>
+    <input type="text" id="tn" placeholder="Table Number">
+    <button type="button" onclick="printTable()">Print Table</button>
+    <br>
+    <output id="op"></output>
+    <script>
+        function printTable(){
+            let n,res;
+            n=+tn.value;
+            if(isNaN(n)===false){
+                for(let i=1 ; i<=10 ; i++){
+                    res = n*i;
+                    op.innerHTML = op.innerHTML + n+"*"+i+"="+res+"<br>"; // Set (change or add) HTML content inside an element.
+                }
+            }
+            else{
+                alert("invalid input");
+                tn.value=""; // Clears the input field.
+                tn.focus() //Puts the cursor back in the box so the user can try again
+            }
+        }
+    </script>
+  </body>	
+</html>  

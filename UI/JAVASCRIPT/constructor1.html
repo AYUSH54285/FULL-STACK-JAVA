@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function Sample(){ //constructor
+            document.write("Sample Invoked")
+        }
+    </script>
+</head>
+<body>
+    <h3>Constructor functions</h3>
+    <script>
+        Sample();// in this case constructor is mssing only function is executing
+        const ob = Sample();// in this case constructor is mssing only function is executing
+        document.write(ob,'<br>');
+
+        const ob2 = new Sample();//valid
+        document.write(ob2,'<br>')
+    </script>
+</body>
+</html>
+
+
+
+<!-- example on OOPs -->
+<Html>
+<head>
+  <title>constructor</title>
+	<script>
+	  function Sample()  //constructor
+	  {				
+        document.write("Constructor function invoked");		
+	  }
+	</script>
+</head>
+<body>
+	<h1> demo on constructor function </h1>
+	<script>
+		 Sample();  //constructor invoked but object not created 			
+		 let ob1 = Sample();  //constructor invoked but object not created 
+		 const ob2 = new Sample();  //constructor invoked and object created 
+		 new Sample();  //Anonymous object (1time usage)
+	</script>
+</body>
+</html>

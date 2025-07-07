@@ -1,0 +1,33 @@
+
+ <!--  
+   alert()
+confirm()
+prompt()
+parseInt()
+parseFloat()
+
+these are DOM(document obejct model functions)
+
+setTimeout()
+setInterval()
+clearTimeout()
+clearInterval()
+
+all these are called BOM(browser object model functions ), 
+they are also called TIMER FUCNTIONS becasue they are based on time, 
+these are also called LAZY FUNCTIONS because it respond lately after calling.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>demo on timer functions</h3>
+    <script>
+        window.setTimeout(function(){alert("msg from timeout")},"5000");
+        window.setInterval(function(){alert("meg from timeout")},"5000");           
+    </script>
+</body>
+</html>

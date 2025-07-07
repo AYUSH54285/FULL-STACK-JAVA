@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>demo on attributes manipulation </h3>
+    <img src="images/pqr.jpeg" width="300" height="200">
+    <script>
+        // we want to change the image
+        // const i=document.images[0]; 
+        // or
+        const i=document.querySelector("img");
+        i.onmouseover=()=>{
+                            i.src="images/xyz.jpeg";
+                            i.border="10";
+                        }
+                        //i.setAttributes("src","images/xyz.jpeg");
+        i.onmouseout=()=>{
+                            i.src="images/pqr.jpeg";
+                        }
+
+
+        //for accsssing the data
+        console.log(i.src);
+        //for removing the attribute
+        i.removeAttribute("height");
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- example on custom animations -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>CSS Animations</title>
+	<style>
+		@keyframes moving
+		{
+			0%{ transform:translate(1px, 20px);  }
+			100%{transform:translate(1300px, 20px) rotate(720deg);  }
+		}
+		 div{
+			text-align:center;
+			width:150px;
+			height:150px;
+			border-radius:50%;
+			background:#ff00ff;
+		}
+		div:hover{
+			transition:moving 5s linear;
+			animation-name:moving;
+			animation-duration:5s;
+		}
+	</style>
+ </head>
+ <body>
+		<h3>demo on rotating animation</h3>
+		<div><h1>Siva Kumar<h1></div>
+ </body>
+</html>

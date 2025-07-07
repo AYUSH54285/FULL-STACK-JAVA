@@ -1,0 +1,81 @@
+<!--  For Custom Animation we use Keyframes and custom animation can call from anywhere not like predefined animtion which can not use anywhere
+  
+// 1st syntax -> it is 2 steps animation
+@keyframes aniname // "aniname" is custom animation name
+  {
+    from{
+        prop:val;    // before animation 
+        ......
+    }
+    to{
+        prop:val;  // after animation
+        ......
+    }
+  }
+
+// 2nd syntax -> it is multi steps animation and we can take as 0 to 100 %
+@keyframes aniname // "aniname" is custom animation name
+{
+    x%{prop : val; ----}
+    y%{prop : val; ----}    
+    z%{prop : val; ----} 
+
+}
+
+How to use this ?
+selector{
+    animation-name: aniname; // compulsory to use
+    animation-duration: Ns; // compulsory to use
+    animation-iteration: 1/N/infinite;   // not compulsory to use
+    animation-direction: normal/reverse/alternate; // not compulsory to use
+    animation-delay: Ns; // not compulsory to use
+}
+
+  -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="logo.png">
+        <meta charset="UTF-8">
+        <style>
+           @keyframes colourchange
+           {
+              from{
+                background:red;
+              }
+              to{
+                background:blue;
+              }
+            }
+            body{
+              animation-name:colourchange;
+              animation-duration:3s;
+              animation-iteration-count:infinite;   /* number of times animation comes*/
+              animation-direction:alternate;   /* reverse means ->    to -> from , alternate->    to <=> from */
+              animation-delay:5s;
+            }  
+        </style>
+    </head>
+    <body>
+        <h3>demo on animations</h3>
+    </body>
+</html>
+
+@keyframes colors
+{
+  0%{          /* this percentage is the total time at that stage example 0s 3s 7s 10s*/
+    background:blue;
+  }
+  30%{
+    background:green;
+  }
+  70%{
+    background:red;
+  }
+  100%{
+    background:yellow;
+  }
+}
+body{
+  
+}

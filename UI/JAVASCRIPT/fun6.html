@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script async>
+
+        /*
+            EXPLANATION OF DEFAULT PARAMETERS IN JS:
+
+            1) If a function is called with fewer arguments than defined parameters,
+            the missing ones become 'undefined'.
+
+            2) Example:
+                function fun1(x, y, z) { }
+                fun1(10, 20); // Here, x = 10, y = 20, z = undefined
+
+            3) If you do x + y + z, it becomes NaN (because undefined + number = NaN).
+
+            4) To prevent NaN, we assign **default values** to parameters:
+                function add(x = 0, y = 0, z = 0) { return x + y + z; }
+
+            5) This technique is called **default parameters** in JavaScript (introduced in ES6).
+
+            6) Defaults are assigned **left to right** in the parameter list.
+        */
+       
+       const add = function(x=0,y=0,z=0){
+                        return x+y+z;
+                    }
+
+        const power = (x,y=1)=>{
+                        return x**y;
+                    }
+    </script>
+</head>
+<body>
+    <h3>demo on default parameters (JS6)</h3> 
+    <script>
+        
+
+        document.write(`${add(10,20,30)}<br>`);
+        document.write(`${add()}<br>`);
+        document.write(`${add(10,20)}<br>`);
+        document.write(`${add(10)}<br>`);      
+        
+        document.write(`${power(2,5)}<br>`);                
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+Buttons
+-------
+Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+
+Bootstrap has a base ".btn" class that sets up basic styles such as padding and content alignment.
+class list:
+btn, btn-primary, btn-secondary, btn-success, btn-danger, btn-warning, btn-info, btn-light, btn-dark, btn-link
+
+
+Outline buttons 
+---------------
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the .btn-outline-* ones to remove all background images and colors on any button.
+class list:
+btn-outline-primary, btn-outline-secondary, btn-outline-success, btn-outline-danger, btn-outline-warning, btn-outline-info, btn-outline-light, btn-outline-dark
+
+Button Sizes 
+------------
+Fancy larger or smaller buttons? 
+Add .btn-lg or .btn-sm for additional sizes.
+
+
+Block buttons 
+-------------
+Create responsive stacks of full-width, by using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+class list:
+d-grid, gap-0 to gap-5 (apply on container only)
+
+ 
+ 
+Responsive buttons 
+-------------------
+Here we create a responsive variation, starting with vertically stacked buttons until the md breakpoint, where ".d-md-block" replaces the ".d-grid" class, thus nullifying the "gap-2" utility. Resize your browser to see them change.
+class list:
+d-grid gap-2 d-md-block  (apply on container only)
+
+
+custom buttons
+--------------
+we also can adjust the width of your block buttons with grid column width classes. For example, for a half-width “block button”, use .col-6. Center it horizontally with .mx-auto, too.
+class list:
+d-grid gap-2, col-6 to col-12,  mx-auto (apply on container only)
+
+Grid => 12cols
+		DW = 1200px => 100px/col
+		col-4 = 100px*4
+
+
+Alerts
+------
+Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+Bootstrap has a base ".alert" class that sets up basic styles such as padding and content alignment.
+class list:
+alert, alert-primary, alert-secondary, alert-success, alert-danger, alert-warning,  alert-info, alert-light, alert-dark
+
+
+
+Alert with Link 
+----------------
+Use the .alert-link utility class to quickly provide matching colored links within any alert.
+
+
+Alert with additional elements 
+-------------------------------
+Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p class="alert-data">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+
+
+Dropdowns
+---------
+Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
+
+Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is an intentional design decision.
+
+Dropdowns are built on a third party library, Popper, which provides dynamic positioning and viewport detection. Be sure to include popper.min.js before Bootstrap’s JavaScript or use bootstrap.bundle.min.js / bootstrap.bundle.js which contains Popper. 
+class list:
+dropdown, dropup, dropstart, dropend (for container)
+	dropdown-toggle (for bt)
+	data-bs-toggle="dropdown" (bt)
+		dropdown-menu, dropdown-menu-dark (for ul)
+			dropdown-item, active (for li(a/bt) )
+			dropdown-divider (for hr)
+	
+ 
+Carousel
+--------
+A slideshow component for cycling through elements—images or slides of text—like a carousel.
+class list:
+  carousel,  slide,carousel-fade (for container)
+  data-bs-ride="carousel" (for container)
+  
+	carousel-inner (for sub-cont)
+	data-bs-interval="2000"
+	
+	  carousel-item,active (for nested cont)
+ 
+	  carousel-control-prev,carousel-control-prev-icon,
+	  
+	  carousel-control-next,carousel-control-next-icon,
+	  (for arrow)
+	  	  
+	  carousel-caption,d-none,d-md-block (for captions)
+	  
+	  carousel-indicators,active	(for indicators)
+	  
+	  
+Layout
+-------
+Give your forms some structure—from inline to horizontal to custom grid implementations—with our form layout options.	
+class list:
+	form-input, form-check, form-radio, form-select, form-label
+	
+
+
+Cards
+-----
+Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.
+class list:
+  card, text-center, text-end, mb-3, w-25, w-50... (for main div)
+  text-bg-dark,text-bg-primary (colors for main div)
+	card-img-top, card-img-bottom, card-img   (for img)
+	card-body, card-img-overlay (for sub div)
+	  card-title (for heading)
+	  card-text (for for p/div)
+	  btn btn-primary (for a)	

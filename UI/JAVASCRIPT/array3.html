@@ -1,0 +1,46 @@
+<!-- JS Arrays -->
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>demo on arrays</h3>
+        <script>
+            //storing diff types of data
+            let data=['siva',44,true,5.10, new Date()]; // if you want to write own date then new Date("data/month/year")
+            document.write(`data => ${data}<br>`);
+
+            //dynamic array
+            let a=[11,22,33,44,55,66,77,88,99];
+            document.write(`A   =>   ${a}<br>`); //9
+            a.length=5; // size reduce 
+            document.write(`A   =>   ${a}<br>`); //5
+            a.length=7; // increase size then last 2 index is empty
+            a[5]=101;
+            a[6]=202;
+            document.write(`A => ${a}<br>`);
+            //a.length=0; 
+
+            // constant array
+            const b=[10,20,30];
+            document.write(`B => ${b}<br>`);
+            b[1]=22; //modify
+            b[3]=44; //add new cell
+
+            document.write(`B  => ${b}<br>`);
+            //b=[1,2,3]; error beacuse re-define is not possible in array
+
+            //dynamic values
+            const c=[];
+
+            let n=+prompt("enter no of elements?");
+
+            for(let i=0 ; i<n ; i++){
+                c[i]=prompt(`enter a[${i}] value`);
+            }
+
+            document.write(`C  => ${c}`);
+        </script>
+    </body>
+ </html>

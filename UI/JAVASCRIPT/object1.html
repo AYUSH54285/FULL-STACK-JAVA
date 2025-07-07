@@ -1,0 +1,161 @@
+<!--
+Object Oriented Programming in JavaScript 
+
+We have two types of OOP languages: 
+1.  class-based Object-Oriented Programming   
+ex: java, .net, python, cpp etc... 
+
+2.  prototype-based(object based) Object-Oriented Programming 
+ex:  javascript, typescript, perl, php, ... 
+
+●  Object represents a physical component. 
+●  Object is a real-time entity. 
+o  We can see         
+o  We can touch 
+o  We can use
+Ex:  
+  P, img, button, text, div, a, h1, li,etc... 
+
+●  Object is an instance of a class, nothing but memory block (one copy 
+of class) 
+  “Object” is a predefine class; every class/object should be derived from “Object” 
+class prototype. 
+●  Object is a collection of members:       
+1.  Properties (variables or fields)    
+2. methods(functions)     
+●  Properties:details about the object. Properties are the variables which are 
+stored inside the Object. Properties are used to store data about specific 
+person,product or thing. 
+     Ex: array.length=5  
+●  Methods:to perform manipulations on the properties. Methods are the 
+functions stored inside the object.  Methods read values from properties, 
+write values into properties, to perform logical operations. 
+Ex:  array.sort(), array.push(), array.indexOf()
+
+NOTE -> differenece between method and functions
+1. Functions contains the normal logic
+2. Methods use the properties for logic
+
+Note: objects are used to data maintenance 
+
+Array    Object 
+Sequence   random 
+Index base  properties (key) 
+    [ ]     { } 
+
+Example: 
+Car is an object:        Person is an object:   
+-properties             -properties 
+▪  Car model: I20      > name: siva   
+▪  Car colour : white    > age: 50 
+▪  Car no: 5579      > gen: male 
+
+-methods                 -methods 
+▪  Start()               > sleep()  
+▪  Change gear()         > eat() 
+▪  Stop()                >talk() 
+●  In the above example the “car” object has three properties called “car model, car colour, car no”, 
+which have respective values.
+
+
+=> “Object” is a predefine class;every class/object should be derived from “Object” class prototype. 
+=> Creating objects: 
+We can create objects in 2ways: - 
+1. with object literals   
+2. by using new & constructor function  
+
+Object literals       
+●  Object literals are represented as curly braces {}, which can include properties and methods. 
+●  The property and values are separated with:symbol     
+●  The method-name and body are separated with :symbol 
+Syntax:        
+const refname={ 
+“property”:value, "property":value,  ..., 
+        methods  
+           } 
+ Note: 
+Methods we can write in any of 3 forms, i.e like normal function or expression or arrow 
+     
+how to access? 
+  refname.property   
+  refname.property=value 
+  refname.method-name() 
+ 
+Note: 
+-> Object is one of predefined class. 
+-> Every js class and every js object should be derived from an Object class prototype.
+
+PROTOTYPING : adding new things in alrady existing Obejct is called prototyping
+-->
+
+
+
+<!-- JS Objects-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>Demo on object literals</h3>
+    <script>
+        //object declaration
+        const ob ={}; //empty object
+        document.write(`${ob}<br>`); //JavaScript implicitly calls: ob.toString() And for plain objects ({}), the default toString() method inherited from Object.prototype returns: , it will give ClassName Object
+        //[object Object] where object is datatype and Object is ClassName
+        document.write(`${document}<br>`);
+        // [object HTMLDocument] -> here class name is HTMLDocument is also derived from Object Class. we can check in console.
+        document.write(`${window}<br>`);
+        //[object Window] -> Window Class is also derived from Object Class
+
+        ob.x=100; // object is already created and later we are adding properties and this type is called prototyping
+        // PROTOTYPING : adding new things in alrady existing Obejct is called prototyping
+
+        ob.y=200;
+
+        ob.m1=function(){  //adding function using expressional functions in Object and inside object it is called method
+            document.write(`hi, I am method`)
+        }
+
+        document.write(`${ob.x}<br>`);
+        document.write(`${ob.y}<br>`);
+        ob.m1();
+
+        //Object initialisation
+        const stud = {
+            //properties
+            slno:11, //we don't need to declare with datatype it will be done by js dynamically
+            name:'ram',
+            course:'html'
+        }
+
+        document.write(`<br> ${stud}<br>`);
+        document.write(`Slno ${stud.slno}<br>`);
+        document.write(`Name ${stud.name}<br>`);
+        document.write(`Course ${stud.course}<br>`);
+        
+
+        //Object initilisation
+        const emp={
+            //properties
+            "id":101,"name":'sam',"job":'sse',"sal":100000 // here we use "". it is our choice
+        };
+        document.write(`<br> ${emp}<br>`);
+
+        // everything in html when it comes to JS it is called objects , here we create a <img src=  width=   height=   alt=>
+        // creating image object 
+        const img={src:'images/pqr.jpeg', width:200, height:150, title:'A',alt:'ABC'};
+        document.write(`${img} <br>`)
+
+        // Object class have two methods keys and values and both stored all properties in the form of Array
+        let k=Object.keys(img); //Object.keys(refernece of Object)
+        let v = Object.values(img); 
+
+        document.write(k,'<br>')
+        document.write(`${v}<br>`)
+
+        
+    </script>
+</body>
+</html>

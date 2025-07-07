@@ -1,0 +1,46 @@
+<!-- 
+Selectors
+=> selector is style rule
+=> selector is block 
+=> are used to define styles for elements
+=> we can define either internal or external
+  syn:  
+        selector{
+            property: value;
+            property: value;
+            ...
+        }
+
+Types:   *              #      .     space      >          []         ,          :                 ::
+        Universal, tag, id , class, child, direct child, attribute, group, pseudo classes, psudo elements...
+ -->
+
+<!-- 
+Universal Selector 
+=> used to define/to apply same styles for all elements -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Document</title>
+    <style>
+        *{
+            border:2px solid red;
+            color: blue;
+        }
+    </style>
+ </head>
+ <body>
+    <h3>Demo on universal selector</h3>
+    <h1>Apple</h1>
+    <h3>Mango</h3>
+    <p>Orange</p>
+    <div>grape</div>
+    <ol>colour
+        <li>red</li>
+        <li>blue</li>
+        <li>yello</li>
+    </ol>
+ </body>
+ </html>

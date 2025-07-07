@@ -1,0 +1,110 @@
+<!-- 
+JavaScript string with escape sequences: An escape character consists of backslash 
+"\" symbol with an alphabet. The following are frequently using escape characters.         
+1. \n : inserts a new line 
+2. \t : inserts a tab space 
+3. \r : carriage return 
+4. \b : backspace 
+5. \f : form feed 
+6. \' : single quote 
+7. \”: double quote 
+8. \\ : Backslash                  
+Note: JS not supported properly these sequences chars. 
+
+JS Naming Conventions 
+JS => mixed case 
+    ⇨ Naming conventions means where we have to use uppercase and where we have to use lowercase  
+    ⇨ While working/using predefined items we must follow these guidelines. 
+class name   should follow the TitleCase/Capitalize case 
+ex:  Date, Array,  NodeList,  HTMLCollection,   HTMLHeadElement 
+
+fun/method/variable -> 1st word is lowercase, rest of words(2-n) are TitleCase/Capitalize 
+              ex:   
+              vars -> length,  value, innerText,   textAlign 
+              funs -> alert(), prompt(), parseInt(), setInterval() 
+              methods  .write()  .log() 
+                          .getElementById() 
+                          .querySelectorAll() 
+
+constants  total name in uppercase 
+Ex: PI, EXP, SIZE 
+
+Reserved words  total name in lowercase 
+Ex: typeof, if, else, switch, var, let, const, for, new, this, ... 
+
+
+JavaScript Reserved Words: 
+The following are reserved words in JavaScript. They cannot be used as JavaScript variables, 
+functions, methods, loop labels, or any object names. 
+
+abstract, boolean, break, byte, case, catch, char, class, const, continue, debugger, 
+default, delete, do, double, else, enum, export, extends, false, final, finally, float, 
+for, function, goto, if, implements, import, instanceof, int, interface, let, long, 
+native, new, null, package, private, protected, public, return, short, static, super, 
+switch, synchronized, this, throw, throws, transient, true, try, typeof, var, void, 
+volatile, while, with. 59 
+
+
+Working with Variables :
+-----------------------
+=> Variable is a reference name of a memory block. 
+=> Variables are created or stored in RAM (stack area). 
+=> Variables are used to store/to hold a value for reuse purpose and automatically substitute values in steps. 
+=> How to declare a variable? 
+ we can define variables in JS Three ways, those are:    
+       > by using "var”   
+                          Syn:   var  varname;  declaration  
+                                      var  varname=value;   // initialization 
+ 
+        > by using "let" (since js6)                     
+                           Syn:   let  varname; 
+                                  let  varname=value;  
+ 
+        > by using "const" (since js6) 
+                           Syn:   const  varname=value; // initialization 
+ 
+Where do we declare variables? 
+=> We can declare variables in open script tag (global), within function (local) or within block (block level). 
+
+Rules for variable naming :
+--------------------------
+=> Name should start with an alphabet (a to z or A to Z), underscore (_), or dollar ( $ ) sign.          
+=> After the first character we can use digits (0 to 9).   
+=> Variables are case sensitive. For example, a and A are different variables. 
+=> Spaces not allowed, means name should be a single word. 
+=> Special chars (symbols) are not allowed in name, except _ and $.       
+
+NOTE: 
+=> in js default value of any variable is "undefined" whether it is var,let,const
+-->
+
+<!--example on Js variables-->
+<h3>demo on var, let & const</h3>
+<script>
+    var a;  // var declaration
+    document.writeln(a); // it will give undefiened
+    a=100;  // assign
+    document.writeln(a);
+
+
+    var b=200 // var initialization
+    document.writeln(b);
+
+
+    let x;   // var dec
+    x=101;
+    document.writeln(x);
+
+    let y=202; // var init
+    document.writeln(y);
+
+
+    a=1010; //update
+    y=2020; //update
+    document.writeln(a);
+    document.writeln(y);
+
+    const PI = 3.14; // var init and try to use UPPER CASE for const variables.
+    document.writeln(PI);
+
+</script>

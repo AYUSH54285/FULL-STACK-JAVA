@@ -1,0 +1,33 @@
+<!-- exmaple on inheritance -->
+<html>
+  <head>
+	<script>
+			function One()  //constructor function (grand-parent )
+			{
+			  document.write(`One constructor<br>`);
+			}
+
+			function Two()   //constructor function (Parent )
+			{ 
+			  One.call();  //inheritance 
+			  document.write(`Two constructor<br>`);
+			}
+
+			function Three()   //constructor function (child )
+			{
+			  Two.call();	  //inheritance
+			  document.write(`Three constructor<br>`);
+			}
+		</script>
+	</head>	
+<body>
+  <h1>demo on multilevel inheritance</h1>
+  <script>
+	//creating object 
+	//new One();   mem  only for 1 
+    //new Two();	  mem for 2&1
+	new Three();	//mem for 3,2,1
+	const ob2=new Three();		//mem for 3,2,1
+  </script>
+</bodY>
+</html>

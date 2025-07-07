@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="tb" placeholder="enter any number"><br>
+    <button type="button" onclick="addElement()">Add Element</button>
+    <button type="button" onclick="display()">View Elements</button>
+    <button type="button" onclick="search()">Search Element</button>
+    <br>
+    <strong>Elements:</strong> <br>
+	<output id="op"></output>
+
+    <script>
+        const arr=[];
+
+        //storing data
+        function addElement(){
+            arr.push(tb.value);
+            tb.value=""; //clearing the textbox
+            tb.focus(); // the curosr is coming back to text box once again
+        }
+        //dispaying elements
+        function display(){
+            op.value = arr;
+        }
+        function search(){
+            let x = arr.includes(tb.value);
+            if(x===true){
+                alert("Element is Present");
+            }
+            else{
+                alert("Not Present")
+            }
+        }
+    </script>
+</body>
+</html>

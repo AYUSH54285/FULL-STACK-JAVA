@@ -1,0 +1,89 @@
+<!-- example on form validation -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Validations</title>
+	<style>
+		span{color:red;}
+	</style>
+  </head>
+  <body>
+	<!-- validations while moving cursor/while pressing "tab" -->
+	<h2>Registration Form</h2>
+	<form>
+	  <label>Fullname</label> <bR>
+	  <input type="text" id="fullName" name="fullName"/>
+	  <span id="errfna"></span>
+	  <br>
+	  <label>Contact number</label> <br>
+	  <input type="text" id="phone" name="phone" maxlength="10"/>
+	  <span id="errph"></span>
+	  <br>
+	  <input type="submit" name="sb"/>
+	</form>
+ 	<script>
+	  //checking fullname while pressing tab key
+	  const fna=document.querySelector("#fullName");
+	  fna.onblur=function() 
+	  {
+		console.log("fna blur");
+		let name=fna.value.toLowerCase(); //converting name to lowercase
+		let i, ch, flag=false;
+		//extracting char-by-char
+		for(i=0; i<name.length; i++)
+		{
+			ch=name[i];		 
+			if(!(ch>='a'&&ch<='z')) //checking is it alphabet or not
+			{
+				flag=true;
+				break;
+			}
+		}
+		if(flag===true)
+		{
+		  document.querySelector("#errfna").innerText="plz enter valid name";
+		  fna.style.borderColor="red";
+		}		
+		else {
+		  document.querySelector("#errfna").innerText="";
+		  fna.style.borderColor="black";
+		}
+	  }
+
+      //chekcing phone number while pressing tab key
+	  const phone=document.querySelector("#phone");
+	  phone.onblur=function()
+      {
+		console.log("phone blur");
+		let ph=phone.value;
+		let i, ch, flag=false;
+		for(i=0; i<ph.length; i++)
+		{
+			ch=ph[i];		 
+			if(!(ch>='0'&&ch<='9'))
+			{
+				flag=true;
+				break;
+			}
+		}
+		if(flag===true)
+		{
+		  document.querySelector("#errph").innerText="plz enter valid phone number";
+		  phone.style.borderColor="red";
+		}		
+		else {
+		  document.querySelector("#errph").innerText="";
+		  phone.style.borderColor="black";
+		}
+	  }
+
+	  fna.onfocus=function(){
+		console.log("fna focus");
+	  }	  
+	  phone.onfocus=function(){
+		console.log("phone focus");
+	  }	  	 
+	</script> 
+  </body>
+</html>

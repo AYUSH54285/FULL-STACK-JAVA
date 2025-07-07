@@ -1,0 +1,46 @@
+<!--
+Associative Arrays:
+If you use a named index when accessing an Array, javascript will redefine 
+the array to a standard object, and some array methods and properties will 
+produce undefined or incorrect results.
+                      a[0]=10              a["X"]=10
+                      a[0]                 a[x]
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>demo on Associative Arrays</h3>
+        <script>
+            const arr = [];
+            arr["ht"] =60; //name Associative
+            arr["css"]=80;
+            arr["js"]=80;
+            arr["bs"]=77;
+
+            document.write(`${arr["ht"]}<br>`);
+            document.write(`${arr["css"]}<br>`);
+            document.write(`${arr["js"]}<br>`);
+            document.write(`${arr["bs"]}<br>`);
+            
+            document.write(`length of the array : ${arr.length}`);   //  it will give 0 length becasue it not index so it will not behave like proper array, it is like object with some property of array not all
+            document.write(`<br>`)
+
+            let x=10,y=20;
+            const arr2 =[x,y];
+            document.write(`${arr2}<br>`);
+        </script>
+    </body>
+</html>
+
+<!--
+
+Final Tips:
+
+Use arrays when you have ordered, numeric data: [10, 20, 30]
+
+Use objects(Associative array) when you have named values or key-value pairs: { name: "Ayush", score: 90 }
+-->

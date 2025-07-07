@@ -1,0 +1,61 @@
+<!-- 
+Video tag :
+The <video> is one of the HTML5 elements added to allow 
+embedding video files to a web page. Since not all browsers 
+support all audio formats, the audio file is encoded using special 
+codecs. 
+The <source> tag or the src attribute is used to indicate the 
+variations of the same audio file. The path to an audio file can 
+contain absolute or relative URLs. 
+Syn:- 
+<video attributes></video> 
+OR 
+<video attributes> 
+<source src="filename" type="video/mp4"> 
+... 
+</video> 
+Attribute     
+Definition 
+src URL => Specifies the path to the video file. 
+controls => Displays the control panel (start button, scroll, volume 
+control). 
+=> If the controls attribute is missing, the video file will not be 
+displayed on the page. 
+=> autoplay Plays the audio file automatically after loading the 
+page. 
+=> loop              
+	Repeats continuously the audio file from the 
+	beginning after its completion. 
+muted => Mutes the sound when the audio file is played. 
+width =>  width of video player 
+height => height of video player 
+poster => to set wall poster/paper of video  
+-->
+
+<!-- html5 semantic tags -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>39th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on video & source tags</h3>
+
+	<video controls>
+	   <source src="files/videoplayback.mp4" type="video/mp4">
+	</video>
+ 	
+	<video controls src="files/salaar.mp4"></video>
+	
+	<video controls muted loop autoplay>
+	   <source src="files/Naatu Naatu.mp4" type="video/mp4">
+	</video>
+	
+ 	<video controls poster="images/pqr.jpeg" width="700" height="320">
+	   <source src="files/Komuram Bheemudo.mp4" type="video/mp4">
+	   <track lang="en" src="filename">
+	</video>
+  
+  </body>
+</html>

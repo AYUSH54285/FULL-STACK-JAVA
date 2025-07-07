@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Book.js">
+        
+    </script>
+</head>
+<body>
+    <script>
+        /*
+        1. currently we are working on non static properties and methods,
+        2. for accessing the non staitc method or proeprties we can use reference of object like:
+        ref.prop -> here we using object name so prop is non static variable
+        ref.method() 
+        3. for finding the variable is static or not we can use Class Name like:
+        Math.PI -> here Math is class then PI is static method
+        Math.log()
+        */
+        const stud={
+            //properties initialising
+            rno:30,
+            name:'siva',
+            total_marks:350,
+
+            //expressional method
+            getResult:function()
+            { 
+                if(this.total_marks>=400){ //this -> this is a predefined reference variable
+                    return "pass";
+                }  
+                else{
+                    return "fail";
+                } 
+            }
+        }
+        // in JS while using properties, calling methods => with in object/class =>use always this keyword
+        // in JS while using properties, calling methods => Outside object/class =>use always own refernce variable 
+        document.write(`Rollno ${stud.rno}<br>`);
+        document.write(`Name ${stud.name}<br>`);
+        document.write(`Total_Marks ${stud.total_marks}<br>`);
+        document.write(`Result ${stud.getResult()}<br>`);
+        
+        /*
+        Constructor function 
+        => In JavaScript construcutor is a function, it takes a newly created object(new keyword) and initialises that offset
+        => consrtructor create the value not object, object is created by new keyword and address is created, constructor taking that address and initialising that to object
+        => when new object is created then the address is shared to the constructor.
+        => 1sr char shoud be capital
+        => new used for calling the constructor 
+        => no return statement.
+        syn: 
+            function Constructor_name(params){
+                prop init
+                methods
+            }
+
+        refvar = new Constructor_name();
+        */
+    </script>
+    <h3>Construcutor Functions</h3>
+    <script>
+        function Sample(){
+            document.write(`Hello I am Constructor<br>`);
+        }
+        
+        Sample();//Invalid
+        const ob = Sample();//Invalid
+        document.write(ob,'<br>');
+
+        const ob2 = new Sample(); //valid
+        document.write(ob2,'<br>');
+
+        new Sample();//anonymous object
+
+        //defining construcutor
+        const b1 = new Book();
+        b1.getBook();
+
+
+        //constructor with parameter
+        const b2 = new Book('html',2025,"ayush",500);
+        b2.getBook();
+    </script>
+</body>
+</html>
+
+

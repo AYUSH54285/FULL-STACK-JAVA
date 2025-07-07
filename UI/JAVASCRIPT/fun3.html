@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="arrowfuns.js"></script>
+    </head>
+    <body>
+        <h3>demo on arrow functions (JS6)</h3>
+        <script>
+            document.write(`${myfun}<br>`);
+            myfun();
+            document.write(`<br>${add(10,20)}<br>`);
+            document.write(`<br>${product(10,20)}<br>`);
+            document.write(`<br>${natSum(10)}<br>`);
+            document.write(`<br>${area(5)}<br>`);
+
+            const arr1 = [10,20,30,40];
+            //JS6 , callback
+            arr1.forEach((e,i,a) => {    
+                console.log('EF');  
+                document.write(`${e} => element <br> ${i} => index of that element <br> ${a} => source array<br><br>`)    
+            });
+
+            // same for all funcitons available in fun2
+        </script>
+    </body>
+</html>

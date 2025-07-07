@@ -1,0 +1,42 @@
+<!--example on JS Control Statements-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+
+        </title>
+    </head>
+    <body>
+         <label>Password</label><br>
+         <input type="password" id="pw">
+         <br>
+         <input type="checkbox" id="cb" onchange="showPW()"><label>Show</label>
+         <br>
+         <br>
+         <label>retype Password</label><br>
+         <input type="password" id="rpw">
+         <br>
+         <button type="button" onclick="checkPW()">Reset Password</button>
+
+         <script>
+            function showPW(){
+                if(cb.checked){  //checked is used for checkbox
+                    pw.type="text";
+                }
+                else{
+                    pw.type="password";
+                }
+            }
+
+            function checkPW(){ //checking the pwd and confirm pwd matching or not
+                if(pw.value===rpw.value){ 
+                    alert("Password changed!!")
+                }
+                else{
+                    alert("Password is not matching, Please try again!")
+                }
+            }
+         </script>
+    </body>
+</html>

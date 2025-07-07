@@ -1,0 +1,65 @@
+<!--
+| Loop        | Best For              | Notes                                |
+| ----------- | --------------------- | ------------------------------------ |
+| `for...in`  | Objects               | Iterates keys (strings)              |
+| `for...of`  | Arrays, strings, etc. | Iterates values                      |
+| `forEach()` | Arrays                | Callback-based, no break/continue    |
+| `for`       | Arrays or general use | Full control (index, break/continue) |
+
+forEach():
+array.forEach((element, index, array) => {
+  // code
+});
+
+| Parameter | Meaning                          |
+| --------- | -------------------------------- |
+| `element` | The current element              |
+| `index`   | The index of the current element |
+| `array`   | The full array being looped      |
+
+🔒 Important Notes:
+❌ forEach does not return anything (undefined).
+
+❌ You cannot use break or continue inside forEach.
+
+✅ It’s best used for side effects like logging, DOM updates, etc.
+-->
+
+<!-- JS arrays-->
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>demo on for in loop</h3>
+        <script>
+            const a1 = [10,20,30,40,50];
+
+            for(let i in a1){ //it works on index, index is automatic indexing
+                dosument.write(`${i} => ${a1[i]} <br>`);
+                a1[i]++;
+            }
+
+            let str1="welcome";
+            for(let s in str1){
+                document.write(`${str1[s]} &nbsp; `);
+            }
+
+        </script>
+        <h3>demo on for of loop</h3>
+        <script>
+            const a2=[11,22,33,44];
+
+            for(let e of a2){ // accesssing the value directly and increasing automatically
+                document.write(`${e}<br>`);
+            }
+
+            let str2="hello";
+	        for(let c of str2)
+	            document.write(`${c}<br>`);	
+            
+                
+        </script>
+    </body>
+ </html>

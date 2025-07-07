@@ -1,0 +1,59 @@
+<!-- Attribute selector 
+=> used to defined/to apply same styles for all elements based on specified attribute.
+ syn:
+    [attribute="value"]{    // most preferred
+    }
+
+    [attribute]{
+    }
+
+    tag[attribute]{
+    }
+
+    tag[attribute="value"]{
+    }
+    
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        [type="text"]{
+            color: red;
+        }
+        [type="number"]{
+            color: blue;
+            text-align: right;
+        }
+        h2[height="30"]{
+            color: teal;
+        }
+        h2[height="40"]{
+            color: green;
+        }
+        p[height="40"]{
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+    <h3>demo on attribute selector</h3>
+    <input type="text">
+    <input type="text"> <br>
+    <input type="number">
+    <input type="number"> <br>
+    <h2 height="30">HTML</h2>
+    <h2 height="30">CSS</h2>
+    <h2 height="40">JavaScript</h2>
+    <h2 height="40">BootStrap</h2>
+    <p height="40">Angular</p>
+    <p height="40">ReactJS</p>
+
+</body>
+</html>
+
+
+    

@@ -1,0 +1,29 @@
+<!-- HTML with JS implementations -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS</title>
+	<meta charset="UTF-8">
+	<style>
+		h2{ display:inline; }
+		input{ text-align:center; }
+	</style>
+  </head>	
+  <body>
+	<div align="center">
+		<h3>Temperature Convertor</h3>
+		<input type="number" id="dc" placeholder="Degree Celsius" oninput="fr.value=dc.value*9/5+32">
+		<h2>=</h2>
+		<input type="number" id="fr" placeholder="Fahrenheit" oninput="dc.value=(fr.value-32)*5/9">
+	</div>
+	<hr>
+
+	<div align="center">
+		<h3>Speed Convertor</h3>
+		<input type="number" id="km" placeholder="Kilo Meters" oninput="mi.value=km.value/1.6">
+		<h2>=</h2>
+		<input type="number" id="mi" placeholder="Miles" oninput="km.value=mi.value*1.6">
+	</div>
+	
+  </body>
+</html>

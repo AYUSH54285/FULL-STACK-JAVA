@@ -1,0 +1,36 @@
+<!--  CSS animations  :
+  tansition - control the transition speed
+  transform - change the apperance 
+  animations not applied in inline CSS.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="logo.png">
+        <meta charset="UTF-8">
+        <style>
+            img{
+                width:200px;
+                height:200px;
+                /* transition:property duration,property duration,property duration....   we can add animation in any number of porperty*/
+                transition:500ms;
+            }
+            img:hover{
+                border-radius:50%
+            }
+            button{
+                width:200px;
+                height:35px;
+                transition: background 500ms;
+            }
+            button:hover{
+                background:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>demo on transition</h1>
+        <img src="images/abc.jpeg">
+        <button>Submit</button>
+    </body>
+</html>

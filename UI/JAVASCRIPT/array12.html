@@ -1,0 +1,78 @@
+<!--
+-> Array string almost same, but only one difference between them is manipulation that is strings are immutable
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>demon on array methods</h3>
+    <script>
+        // NOTE - modification is not allowed in string and for modification in string use split then modify string
+        const arr=[10,20,30,40,50,30,60,70,80,30,90,30];
+        let str="notepad plus plus";
+
+        document.write(`Arr => ${arr}<br>`);
+        document.write(`Str => ${str}<br>`);
+
+        //includes() -> seraching 
+        document.write(`20 found? ${arr.includes(20)}<br>`);
+        document.write(`23 found? ${arr.includes(23)}<br>`);
+
+        document.write(`pad found? ${str.includes("pad")}<br>`);
+        document.write(`hi found? ${str.includes("hi")}<br>`);
+
+        document.write(`${[12,24,67].includes(34)}<br>`); //anomynous array -> will vanish from memory and this is a advantage
+        document.write(`${"welcome".includes("me")}<br>`);
+
+        //indexOf() -> return the index after searching and its default start from 0 index
+        document.write(`30@ ${arr.indexOf(30)}<br>`); // return first occurance 
+        document.write(`55@ ${arr.indexOf(55)}<br>`);  // it return -1
+        document.write(`30@ ${arr.indexOf(30,6)}<br>`);  // it starts serching from 6th place
+
+        document.write(`p@ ${str.indexOf("p")}<br>`); // return first occurance 
+        document.write(`z@ ${str.indexOf("z")}<br>`);  // it return -1
+        document.write(`p@ ${str.indexOf("p",7)}<br>`);  // it starts from 7th place
+
+
+        //lastIndexOf() -> it start seerching from last index
+        document.write(`30 last@ ${arr.lastIndexOf(30)}<br>`);  // it start seerching from last index
+        document.write(`p last@ ${str.lastIndexOf("p")}<br>`);  // it start seerching from last index
+
+        //reverse() -> it support array not string(because modification is not allowed in string), and reverse done in same array(modification)
+        arr.reverse();
+        document.write(`after reversing arr ${arr}<br>`);
+
+        //sort() -> used for sorting, not used in string
+        arr.sort();
+        document.write(`after sort arr ${arr}<br>`);
+
+        //for modiftying str first make array
+        const names = ['rama','ramarao','Raman','ramana','Ramakrish'];
+        names.sort();
+        document.write(`after sort names => ${names}<br>`);
+
+
+        //toString -> converting arr into string check in console
+        document.write(`arr => ${arr.toString()}<br>`);
+
+        //join() -> used any thing as a seperator
+        document.write(`join arr =>  ${arr.join('@')}<br>`);  
+        document.write(`join names =>  ${names.join('&#1285661')}<br>`);  
+
+        //split 
+        let a1=str.split();  // converting into array but here single element in array beacsue we are not specifying we want split on which basis
+        let a2=str.split(''); //split into character array
+        document.write(`a1 => ${a1}<br>`);
+        document.write(`a2 => ${a2}<br>`); 
+        a2.reverse();
+        document.write(`a2 => ${a2}<br>`); //reversing of string
+        let a3 = str.split(' ');  // it convert into array where split at " ", and the 3 element in this array
+        document.write(`a3 => ${a3}<br>`);
+
+    </script>
+</body>
+</html>

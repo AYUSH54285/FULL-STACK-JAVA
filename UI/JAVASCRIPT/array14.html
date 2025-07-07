@@ -1,0 +1,27 @@
+<!-- JS Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+  </head>
+  <body>
+	<h3>demo on array methods</h3>		 
+	<script>
+	  const arr=[11,21,31,41,51,61,71,81,91];
+		
+	  let a1=arr.slice(0,4);
+	  let a2=arr.slice(4);
+	  document.write(`a1 =>	${a1}<br>`);
+	  document.write(`a2 =>	${a2}<br>`);
+	  
+	  document.write(`${arr.slice(-2)}<br>`);
+	  
+	  for(let i=1; i<=arr.length; i++)
+	    document.write(`${arr.slice(-i)}<br>`);
+
+	  for(let i=arr.length-1; i>=1; i--)
+	    document.write(`${arr.slice(-i)}<br>`);		
+  
+    </script>  	
+  </body>	
+</html>

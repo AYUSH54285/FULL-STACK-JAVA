@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="logo.png">
+        <meta charset="UTF-8">
+        <style>
+            @keyframes imageslide
+            {
+                0%{          /* this percentage is the total time at that stage example 0s 3s 7s 10s*/
+                    background-image:url(images/abc.jpeg);
+                }
+                25%{
+                    background-image:url(images/logo.png);
+                }
+                50%{
+                    background-image:url(images/pqr.jpeg);
+                }
+                75%{
+                    background-image:url(images/xyz.jpeg);
+                }
+                100%{
+                    background-image:url(images/abc.jpeg);
+                }
+            }
+            #d{
+                width:70%;
+                height:300px;
+                margin:auto;
+                border:10px solid;
+                background-size:100% 100%;
+                animation:imageslide 10s infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>demo on animations</h3>
+        <div id="d">
+            <h1>Hello How are you all!</h1>
+        </div>
+    </body>
+</html>

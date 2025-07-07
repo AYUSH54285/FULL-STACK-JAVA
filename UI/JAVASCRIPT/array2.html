@@ -1,0 +1,35 @@
+<!-- JS Arrays -->
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <h3>demo on array constructor</h3>
+        <script>
+            //array declartion
+            let a = new Array();
+            document.write(`Size of array => ${a.length}<br>`); // empty array but it can expant later
+            document.write(`a => ${a}`); // print whole elements of array
+            a[0]=10;
+            a[1]=25;
+            a[2]=36;
+            document.write(`Size of array => ${a.length}<br>`);
+            document.write(`a => ${a}<br>`);
+            document.write(`a[0] => ${a[0]}<br>`);
+            document.write(`a[3] => ${a[3]}<br>`); // give error because a[3] is not created
+
+            //array declaration with size
+            let b = new Array(5); // if we write like this new Array[5] then it is iniitlization with value 5, 
+            // literal does not support the size but constructuor support the size. 
+            // initially it is 5 but we can change the size later it is not fixed
+
+            console.log(b)
+            // array initilization
+            let c = new Array(10,20,30,40,50); // when we have single value then it is size but when we have multiple value then it is initilization
+
+            let names = new Array('rama','sama','gama','bhama');
+            document.write(`names =>      ${names}<br>`);
+        </script>
+    </body>
+ </html>

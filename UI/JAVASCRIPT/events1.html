@@ -1,0 +1,56 @@
+<!-- example on Event handling
+in js event handling we can perform in 2 ways, those are:
+	> by using addEventListener()
+			=> addEventListener() is one of dom method, its element object's method
+			Syn:-  ele-obj.addEventListener("event-name", task)
+			Note:	event-name => should be w/o on 
+												ex: click, change, dblclick, load, focus, keypress, ...
+						task ==>  which code we want execute
+							code should be in the form of function/functional-expr/arrow-fun
+							fun-name w/o () 
+
+	> by event property
+			=> events are propeties of element object
+			Syn:-  ele-obj.event-name=task;
+			Note:	event-name => should be with on 
+												ex: onclick, onchange, ondblclick, onload, onkeypress, ...
+						task ==>  which code we want execute
+							code should be in the form of function/functional-expr/arrow-fun
+							fun-name w/o () 
+Note: we apply/attach any no.of events on same tag
+-->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<script>
+		function fun1()
+		{
+			alert("Hey, You Pushed me!");
+		}
+		function fun2()
+		{
+			alert("Hey, You Pulled me!");
+		}
+	</script>
+ </head>
+ <body>
+	<h3>demo on dom event handling</h3>
+	<button id="bt1">Push</button>	    
+    <button id="bt2">Pull</button>
+	<script>
+		//1st App
+		const b1=document.getElementById("bt1");
+		b1.addEventListener("click", fun1 );
+		//		OR
+		document.getElementById("bt1").addEventListener("click", fun1 );
+
+		//2nd App
+		const b2=document.getElementById("bt2");
+		b2.onclick=fun2;
+		//OR	
+		document.getElementById("bt2").onclick=fun2;
+	</script>
+  </body>
+</html>  

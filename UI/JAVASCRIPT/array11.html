@@ -1,0 +1,36 @@
+<!--
+| Method      | Action                                | Return Value          |
+| ----------- | ------------------------------------- | --------------------- |
+| `unshift()` | Adds element(s) to **start** of array | New length of array   |
+| `shift()`   | Removes the **first** element         | Removed element value |
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>demo on unshift and shift method</h3>
+    <script>
+        const arr=[];
+        arr.unshift(10);
+        arr.unshift(20);
+        arr.unshift(30);
+        let c =arr.unshift(40);
+
+        document.write(`Arr  => ${arr}<br>`);
+        document.write(`${c}<br>`);
+
+        let x=arr.shift();
+        document.write(`1st pop ${x}<br>`);
+        document.write(`2nd pop ${arr.shift()}<br>`);
+        document.write(`3rd pop ${arr.shift()}<br>`);
+
+        arr.unshift(33,22,11);
+        document.write(`Arr => ${arr}<br>`)
+    </script>
+</body>
+</html>

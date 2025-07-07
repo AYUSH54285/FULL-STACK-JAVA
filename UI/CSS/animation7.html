@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="logo.png">
+        <meta charset="UTF-8">
+        <style>
+            @keyframes heartbeat
+            {
+                0%,100%{
+                    transform:scale(1);
+                }
+                50%{
+                    transform:scale(0.5);
+                    filter:blur(2px);   /* filter is used to fade out the heart when shrink*/
+                }
+                /* 100%{
+                    transform:scale(1);
+                } */
+            }
+            .pulse{
+                display:inline-block;
+                font-size:4em;
+                animation: heartbeat 2s linear infinite;
+            }
+            
+        </style>
+    </head>
+    <body align="center">
+        <h3>pulse animations</h3>
+        <h1 class="pulse">
+            &#x1F496;
+        </h1>
+    </body>
+</html>

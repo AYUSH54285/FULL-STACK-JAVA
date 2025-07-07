@@ -1,0 +1,123 @@
+<!--
+✅ JavaScript Operator Reference Sheet
+1️⃣ Arithmetic Operators
+Used for basic mathematical calculations.
+
+Operator	Description	Example	Result
++	Addition	5 + 2	7
+-	Subtraction	5 - 2	3
+*	Multiplication	5 * 2	10
+/	Division	10 / 2	5
+%	Modulus	5 % 2	1
+**	Exponentiation	2 ** 3	8
+
+2️⃣ Relational / Comparison Operators
+Used for comparing values (returns boolean: true or false).
+
+Operator	Description	Example	Result
+==	Equal (value only)	5 == '5'	true
+!=	Not equal (value only)	5 != '5'	false
+===	Strict equal (value & type)	5 === '5'	false
+!==	Strict not equal	5 !== '5'	true
+>	Greater than	5 > 3	true
+<	Less than	3 < 5	true
+>=	Greater than or equal	5 >= 5	true
+<=	Less than or equal	4 <= 5	true
+
+3️⃣ Logical Operators
+Used for combining or negating boolean expressions.
+
+Operator	Description	Example	Result
+&&	Logical AND	true && false	false
+|| 	Logical OR   true || false    true
+!	Logical NOT	!true	false
+
+4️⃣ Assignment Operators
+Operator	Description	Example	Equivalent
+=	Assign	a = 5	—
++=	Add and assign	a += 2	a = a + 2
+-=	Subtract and assign	a -= 3	a = a - 3
+*=	Multiply and assign	a *= 4	a = a * 4
+/=	Divide and assign	a /= 2	a = a / 2
+%=	Modulus and assign	a %= 2	a = a % 2
+**=	Power and assign	a **= 2	a = a ** 2
+
+5️⃣ String Concatenation Operator
+Concatenates strings using +:
+
+js
+Copy
+Edit
+console.log("Hello" + "World");  // HelloWorld
+console.log("Age: " + 20);       // Age: 20
+console.log(true + "value");     // truevalue
+6️⃣ Unary Operators
+Operator	Description	Example	Result
+++	Increment by 1	a++ / ++a	a = a + 1
+--	Decrement by 1	a-- / --a	a = a - 1
+
+7️⃣ Ternary Operator
+A shorthand for if-else condition:
+
+js
+Copy
+Edit
+let result = (age >= 18) ? "Adult" : "Minor";
+8️⃣ Operator Precedence Table
+Precedence	Operators	Associativity
+1	() (Grouping)	Left to right
+2	. [] () (Member access, call)	Left to right
+3	++ -- (Postfix)	Left to right
+4	++ -- ! typeof (Prefix)	Right to left
+5	** (Exponentiation)	Right to left
+6	* / %	Left to right
+7	+ -	Left to right
+8	<< >> >>>	Left to right
+9	< <= > >= in instanceof	Left to right
+10	== != === !==	Left to right
+11	&	Left to right
+12	^	Left to right
+13	|	left to right
+14	&&	Left to right
+15	||  left to right	
+16	?: (Ternary)	Right to left
+17	=, +=, -=, etc.	Right to left
+18	, (Comma operator)	Left to right
+
+✅ Example Combining Multiple Operators:
+js
+Copy
+Edit
+let x = 10;
+let y = 5;
+let z = x * y + 2 > 50 ? "High" : "Low";  // 10*5+2 = 52 > 50 ⇒ "High"
+
+
+
+-->
+
+
+<!--example on JS-->
+<h3>demo on JS</h3>
+<script>
+    document.write(20-10*5+100/3,'<br>');
+    document.write(20+100/3-15*5,'<br>');
+
+    let x=15, y=9;
+
+    document.write("Sum is "+ x+y + "<br>"); //problem
+
+    document.write("Sum is "+ (x+y) + "<br>"); //Sol 1
+    document.write("Sum is ", x+y ,"<br>"); //Sol 2
+
+    document.write("Sub is "+ x-y + "<br>"); //when we are performing operations on unsupported datatypes then it gives NaN(Not a number)
+    document.write("Sub is "+ (x-y) + "<br>"); //Sol 1
+    document.write("Sub is ",x-y ,"<br>"); //Sol 2
+
+    document.write("Mult is "+ x*y + '<br>');
+    document.write('Res is '+ x>y); // false beacuse undefiend >y
+    document.write('Res is '+ (x>y)); // sol1 
+    document.write('Res is ', x>y); // sol 2
+
+
+</script>

@@ -1,0 +1,172 @@
+<!--
+Expression Function:
+function(args){
+    statements
+}
+
+Arrow Functions:
+(args) => {
+    statements
+}
+ 
+1. both are anynomus funs
+2. both type of functions are reference datatype
+3. we can use these funs using reference variable
+4. both can be use with callbacks( functions inside functions)
+5. callbacks are used to extend the functionality or add logic to existing functions
+6. difference : this keyword is supported in expressiono function while arrow function not support this keyword
+
+fun1(ef/af); -> fun1 is named functions
+fun1 calling anonymous functions and after executing it go to named functions and this cycle continue according to the logic
+-->
+<!--
+
+What is a Callback?
+-> A callback is a function passed as an argument to another function, which is then invoked (called back) inside that function.
+
+✅ In short: Function inside a function, used to execute code after some work is done.
+
+
+🔍 Why Use Callbacks?
+-> To run code after another function finishes.
+-> To handle asynchronous operations (e.g., reading a file, fetching data, waiting for user input).
+-> To make code modular and reusable.
+
+🧠 Types of Callbacks
+1. Synchronous Callback (executed immediately)
+
+function processUserInput(callback) {
+  let name = "Ayush";
+  callback(name);
+}
+
+processUserInput(function(name) {
+  console.log("Welcome " + name);
+});
+
+2. Asynchronous Callback (executed later)
+
+setTimeout(function() {
+  console.log("I am executed after 2 seconds");
+}, 2000);
+🕒 setTimeout is non-blocking, and the callback runs after the delay.
+
+🧪 Callback Example: Calculator
+
+function calculate(a, b, callback) {
+  return callback(a, b);
+}
+function add(x, y) {
+  return x + y;
+}
+let result = calculate(5, 3, add);
+console.log(result); // 8
+
+
+💡 Callback with Arrow Function
+
+calculate(4, 2, (a, b) => a * b); // returns 8
+
+⚠️ Callback Hell (a downside)
+When many nested callbacks are used, it becomes messy and hard to read:
+loginUser("ayush", () => {
+  getUserProfile(() => {
+    fetchFriends(() => {
+      showTimeline();
+    });
+  });
+});
+☠️ Known as "callback hell" or "pyramid of doom".
+
+🔧 Modern alternatives: Promises, async/await.
+
+✅ Summary
+Feature	Description
+Callback	A function passed to another function
+Purpose	    Run a function after another finishes
+Types	    Synchronous, Asynchronous
+Alternatives	Promises, async/await
+
+
+-->
+
+<!--
+| Method      | Purpose                                      | Returns              | Modifies Original? |
+| ----------- | -------------------------------------------- | -------------------- | ------------------ |
+| `forEach()` | Executes a function for each item            | `undefined`          | ❌ No               |
+| `map()`     | Transforms each item and returns a new array | ✅ New array          | ❌ No               |
+| `filter()`  | Filters items based on a condition           | ✅ New filtered array | ❌ No               |
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="exprfuns.js"></script>
+    </head>
+    <body>
+        <h3>demo on expressional function</h3>
+        <script>
+            document.write(`${add}<br>`); //printing of function
+
+            document.write(`${add(12,34)}<br>`); //calling
+            document.write(`${product(15,25)}<br>`); //calling
+
+
+            //forEach() used in array and collections 
+            //forEach is a named function and it is expecting an anonymous function from us
+            //forEach() fetching the data from array and that array proving the parameters to the anonymous function 
+            // forEach is a named function and it is returning parameters beacause every named function returned parameters  
+            const arr1 = [10,20,30,40];
+            //JS6, callback
+            arr1.forEach(function(){    //anonymous function is defined under the named function,  
+                console.log('EF');      // how many times arr1 executing the number of times anonymous function executing
+            });
+
+
+            arr1.forEach(function(e,i,a){    // The Array.prototype.forEach() method automatically provides up to three arguments to the callback function:
+                console.log('EF');  //And These are not passed by you, they are provided internally by JavaScript when forEach() runs.
+                document.write(`${e} => element <br> ${i} => index of that element <br> ${a} => source array<br><br>`)    
+            });
+
+
+            let s=0;
+            //callback
+            arr1.forEach(function(e){  // sum is performing by anonymous function but fetching the data is done by forEach
+                s+=e;
+            });
+            document.write(`sum  ${s}<br>`);
+            
+            const arr2 = [9,25,100,60,3];
+            document.write(`${arr2} before sort<br>`)
+            arr2.sort();  // it will not sort correctly for number beacuse sort done like character-by-character.
+            document.write(`${arr2} after sort<br>`)  // 100,25,3,60,9 => as we can see that it is correct for string(lexicographically), hence this is the problem
+
+            //here is the solution of this 
+            arr2.sort(function(i,j){ //a[i],a[j]
+                return j-i; // for descending order sort
+            });
+            document.write(`arr2 => ${arr2}<br>`);
+
+            const arr3 = [10,4,20,60,55,9,13];
+            document.write(`arr3 => ${arr3}<br>`);
+
+            //callback(JS6)
+            let a1 = arr3.map(function(e){      // map wil create a new array and it will not impact the original array
+                        return ++e;
+                    });
+
+            document.write(`a1 => ${a1}<br>`); //new array
+            document.write(`arr3 => ${arr3}<br>`); //not changed in original array
+
+            //NOTE-   if the error is this Array.filter (<anonymous>) then it is callback function
+
+            //callback(JS6)
+            let a2 = arr3.filter(function(e){//It creates a new array with only those elements that pass the test implemented by the provided function.
+                    if(e%2===0)
+                        return e;
+            });
+            document.write(`a2 => ${a2}<br>`);
+
+        </script>
+    </body>
+</html>

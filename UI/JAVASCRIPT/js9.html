@@ -1,0 +1,54 @@
+<!--
+JS does not provide any datatypes like int,string etc. but in background it is using datatypes 
+JavaScript datatypes:
+1.Primitive datatypes
+2.Non-Primitive datatypes
+
+Primitive datatypes                                Non-Primitive datatypes
+-> pdt types allow storing data directly              ->  stroing reference/address
+-> pdt allow us to store only 1 value @ time          ->  N-values(any datatypes like a container)
+-> use stack area (allocting as per internal instructions) ->  use heap area (allocting as per internal instructions)
+-> Not shareable (accessing the data into another program) ->shareable
+-> popularly known as non-reference datatypes         -> reference data types
+-> predefined data types                              -> user defined datatypes
+
+Primitive data types: (decalred with only var, let and const only)
+    -> string(having quotations like "",'',``), number(used for small integer), boolean(true or false), undefined(if data not assigned then datatype is undefiend), null(called object internally), 
+    symbol(immutable <not changeable> type of data having symbol datatype), BigInt(used for big integer and if we have to put n in last for making datatype Bigint)
+
+Non-Primitive data types:(decalred with the var,let,const + new keyword)
+    -> Arrays, Class&objects, functions(it is logic also a datatypes) 
+
+NOTE: js is dynamically beacuse it wating for assinging the data then only we can find the datatypes of the variable 
+NOTE: "new" is used for dynamic memory allocations (for creating objects and arrays). 
+
+typeof: 
+-> typeof is one of reversed word, it's used to identify datatype of a variable or value. 
+        Syn:     typeof  var-name      
+        typeof  value
+
+-->
+
+<!-- example on JS variables-->
+<h3> Demo on primitive data types</h3>
+<script>
+    //int a; // js not support datatypes but in backend it use datatypes
+    var a=100;
+    var b=20.56;
+    let c="ecma";
+    let d='j';
+    const E=true;
+    var f;
+    let g=null;
+    let h=100n; // bigInt
+
+    document.write(a," => ", typeof a,"<br>");
+    document.write(b," => ", typeof b,"<br>");
+    document.write(c," => ", typeof c,"<br>");
+    document.write(d," => ", typeof d,"<br>");
+    document.write(E," => ", typeof E,"<br>");
+    document.write(f," => ", typeof f,"<br>");
+    document.write(g," => ", typeof g,"<br>");
+    document.write(h," => ", typeof h,"<br>");
+    
+</script>

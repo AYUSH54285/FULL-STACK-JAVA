@@ -1,0 +1,41 @@
+<!-- example on regular expressions with data validation -->
+<!DOCTYPE html>
+<html>
+ <head>  
+   <title>Registration Page</title>
+   <style>
+	  span{ color:#ff0000; }
+   </style>
+ </head>
+ <body>
+	<div>
+		<h2 id="head1"> <u>Registration Form</u> </h2>
+		<form id="f1" action="register.html" method="post" autocomplete="off">
+			<label>FullName</label> <br>
+			<input type="text" id="fna" name="fna"> 
+			<br> 
+			<span id="errfna"></span>
+			<br>
+			<label>Password</label> <br>
+			<input type="password" id="pwd" name="pwd"> <br>
+			<span id="errpwd"></span>
+			<br> 
+			<label>Email Id</label> <br>
+			<input type="email" id="mail" name="mail"
+			 >
+			<br>
+			<label>Mobile</label> <br>
+			<input type="text" id="ph" name="ph"> 
+			<span id="errph"></span>
+			<br>
+			<label>PinCode</label> <br>
+			<input type="text" id="pin" name="pin">
+			<span id="errpin"></span>
+			<br>
+			<button type="submit" id="sb"> Submit </button>
+		  </form>
+		</div>
+		
+	<script src="validation.js"></script>
+  </body>
+</html>

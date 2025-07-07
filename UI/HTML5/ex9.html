@@ -1,0 +1,49 @@
+<!-- example on a tag-->
+<!--
+a tag
+=> anchor used to create hyperlinks
+=> hyperlinks are used to move from one wp to another wp (NAVIGATIONS)
+=> paired tag & inline element(elements that don't start on a new line 
+and only take up as much width as necessary for their content.)
+
+NOTE: we can switch to any other webpage using a tag, that webpage can be made up of any web 
+technologies like html, spring , django, adv java, flask, any frontend and backend technologies(except programming lang like python, core java).
+
+NOTE:if we want to align any inline element like (img , a) then we need to use any block level element(p) to use algin. and put
+that inline element in block element
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My 9th page</title>
+	<link rel="icon" href="logo.png">
+</head>
+<body>
+	<h3 id="top">Demo on hyperlink(interval)</h3>
+	<p align="center">  <!-- we put all the hyperlinks inside the p because p is block level element 
+	and we want to put all hyperlinks in centre. (a is inline element which does not support the align attribute) -->
+	<a href="#gnt" target="">Guntur</a> <!-- href is mandatory if we remove this then tag will useless , target is optional -->
+	<a href="#hyd" target="">Hyderabad</a>  <!-- calling the id using -> href="#hyd"-->
+	<a href="#vez" target="">Vezag</a>
+    </p>
+
+
+	<h1 id="gnt">Guntur City</h1>
+	place some data about vizag
+
+	<a href="#top">TOP</a>  <!--If no id is specified (like #section1), it defaults to the very top.-->
+
+
+	<h1 id="hyd">Hyderabad City</h1><!-- executing the id after calling -->
+	place some data about vizag
+
+	<a href="#top">TOP</a>
+
+
+	<h1 id="vez">Vezag City</h1>
+	place some data about vizag
+
+	<a href="#top">TOP</a>
+</body>
+</html>

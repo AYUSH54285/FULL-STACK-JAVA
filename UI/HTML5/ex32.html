@@ -1,0 +1,87 @@
+<!--
+option groups:
+
+> "optgroup" tag is used to group-up some options/items inside 
+the "select" tag. 
+> one "select" tag can contain many "optgroup" tags, the 
+"optgroup" tag contains many "options". 
+>its paired tag 
+> "optgroup" tag is the sub tag of "select" tag. 
+Syn:  
+<select> 
+<optgroup label="Text"> 
+<option> ..</option> 
+<option> ..</option> 
+<option> ..</option> 
+</optgroup> 
+<optgroup> 
+... 
+</optgroup> 
+</select>
+
+
+
+list box :
+
+>using the "select" tag we can create a list box. 
+>list box is used to display some options/items to the user and 
+allows the user to select any one of them (by default). 
+> "option" sub tag of "select" tag. 
+> "option" tag used to create/to add items/options to the list 
+box. 
+> "size" attribute used to change DDB into List box. 
+Syn: <select size="N" attributes> 
+<option attributes> Text </option> 
+<option> Text </option> 
+<option> Text </option> 
+... 
+</select> 
+Note: by default DDB is displaying 1st added option 
+attributes: 
+selected : this attribute of "option" tag, used to change default 
+selected option/item of DDB 
+multiple :it allows user to select more than one option @time 
+size :attribute used to change DDB into List box and no.of 
+options to display @time
+
+Datalist :
+
+Syn: 
+<datalist attributes> 
+<option>text</option> 
+OR 
+<option value=”text”> 
+…. 
+</datalist> 
+Mapping: <input type=”text” list=”datalist-id”/>
+
+| Feature             | Description                             |
+| ------------------- | --------------------------------------- |
+| `<input list="id">` | Connects input with the datalist        |
+| `<datalist>`        | Defines a set of predefined options     |
+| `<option>`          | Represents each item in the list        |
+| Searchable          | Yes, based on what's typed in the input |
+| Custom Entry        | Yes, user can type their own value      |
+| JavaScript          | Not needed for basic use                |
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>32th Webpage</title>
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <h3>Demo on datalist(search box)</h3>
+    <input type="text" list="mylist"> <!--for linking we mention list -->
+    <datalist id="mylist">  <!--for linking we mention id -->
+        <option >Red Apple</option>
+        <option >Green Apple</option>
+        <option >Blue Apple</option>
+        <option >Yellow Apple</option>
+        <option >Black Apple</option>
+    </datalist>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!--  CSS animations  :
+  tansition - control the transition speed
+  transform - change the apperance 
+  animations not applied in inline CSS.
+
+  
+  -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="logo.png">
+        <meta charset="UTF-8">
+        <style>
+            img{
+                width:200px;
+                height:200px; 
+                margin:100px
+            }
+            .i1:hover{
+                transform: scaleX(1.5);
+            }
+            .i2:hover{
+                transform: scaleY(1.5);
+            }
+            .i3:hover{
+                transform: scale(1.3);
+            }
+
+            .i4:hover{
+                transform: skewX(-20deg);  /* bending of image*/
+            }
+            .i5:hover{
+                transform: skewY(40deg);
+            }
+            .i6:hover{
+                transform: skew(-15deg,-35deg);
+            }
+
+            .i7:hover{
+                transform: translateX(100px);  /* translate-> type of animation and move animation from one posistion to another position*/
+            }
+            .i8:hover{
+                transform: translateY(100px);  
+            }
+            .i9:hover{
+                transform: translate(50px,50px);  
+            }
+            
+
+            .i10:hover{
+                transform: rotateX(145deg);  
+            }
+            .i11:hover{
+                transform: rotateY(180deg);  
+            }
+            .i12:hover{
+                transform: rotate(-13360deg); /* rotate-> rotate the image in clockwise(+deg)*/
+            }
+
+            .i13:hover{
+                transform: rotate(360deg)  scale(2.2);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>demo on transform</h1>
+        <img src="images/abc.jpeg" class="i1">
+        <img src="images/abc.jpeg" class="i2">
+        <img src="images/abc.jpeg" class="i3">
+
+        <img src="images/abc.jpeg" class="i4">
+        <img src="images/abc.jpeg" class="i5">
+        <img src="images/abc.jpeg" class="i6">
+        <img src="images/abc.jpeg" class="i7">
+        <img src="images/abc.jpeg" class="i8">
+        <img src="images/abc.jpeg" class="i9">
+        <img src="images/abc.jpeg" class="i10">
+        <img src="images/abc.jpeg" class="i11">
+        <img src="images/abc.jpeg" class="i12">
+
+        <img src="images/abc.jpeg" class="i13">
+
+        <img src="images/abc.jpeg" class="i14  ">
+
+        <button>Submit</button>
+    </body>
+</html>

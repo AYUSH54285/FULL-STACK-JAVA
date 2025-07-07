@@ -1,0 +1,29 @@
+<!-- example on JS Objects -->
+<!DOCTYPE html>
+<html lang="en">   
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>
+  <body>
+		<h2>demo on prototype</h2>		
+		<script>
+			//object declaration
+			const ob1 = {  }	//empty object
+			//prototyping object
+			ob1.a=100;	//adding a new prop a to ob1
+			ob1.b=200;	//adding a new prop b to ob1
+			document.write(`a	:${ob1.a}<br>b	:${ob1.b}<br>`);
+
+			const ob2={ }	//empty object
+			//prototyping object
+			ob2.x=101;	//adding a new prop x to ob2
+			ob2.y=202;	//adding a new prop y to ob2			
+			document.write(`x	:${ob2.x}<br>y	:${ob2.y}<br>`);
+
+			//prototyping class
+			Object.prototype.n=123;	//adding new prop to both ob1 & ob2
+			document.write(`ob1.n	:${ob1.n}<br>ob2.n	:${ob2.n}<br>`);
+		</script>
+   </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+	<style>	
+		/* custom animation for Shake Effect 
+		  you can change x-value as per your need */
+		@keyframes shake
+		{
+		  0%, 100% {
+			transform: translateX(0);
+		  }
+		  25% {
+			transform: translateX(-20px);
+		  }
+		  50% {
+			transform: translateX(20px);
+		  }
+		  75% {
+			transform: translateX(-20px);
+		  }
+		}
+
+		.shake1 {
+		  animation: shake 500ms;
+		}
+		.shake2 {
+		  animation: shake 500ms reverse;
+		}		
+	</style>
+  </head>
+  <body align="center">
+	<h1 class="shake1">Shake Effect</h1>
+	<img src="images/rose.jpeg" class="shake2">
+  </body>
+</html>  

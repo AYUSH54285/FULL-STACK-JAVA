@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 1) it will store rest of the values using "..."
+    2) "..." is a unary operator and every unary operator used before the parameter 
+    3) in background rest operator using array for storing the elements
+    4) (...x,...y ) is not allowed, only one para is allowed in rest-->
+    <script>
+        const sum = function(...n){
+            let tot=0;
+            n.forEach(function(e){
+                tot+=e;
+            });
+            return tot;
+        }
+    </script>
+</head>
+<body>
+    <h3>demo on rest operator(JS6)</h3>
+    <script>
+        document.write(`${sum(1,2,3,4,5,6,7,8,9,10)}<br>`);
+        document.write(`${sum(0)}<br>`);
+        document.write(`${sum(8,9,10)}<br>`);
+    </script>
+</body>
+</html>

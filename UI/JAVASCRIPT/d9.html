@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div align="center">
+        <textarea id="data" style="width:50%; height:150px; font-size:20px;"></textarea>
+        <br>
+        <button id="bbt">B</button>
+        <button id="ibt">I</button>
+        <button id="ubt">U</button>
+        <button id="sbt">S</button>
+        <button id="lbt">Left</button>
+        <button id="cbt">Center</button>
+        <button id="rbt">Right</button>
+        <input type="color" id="clr">
+    </div>
+    <script>
+   /*   const ta=docuemnt.querySelector("#data");
+        ta.style.prop     */   //here we have to write all the styles on object and we have to write many times, so for reducing the code we will use the next code
+
+        const ta=document.querySelector("#data").style;
+        // ta.prop;
+
+        // Bold button
+        document.querySelector("#bbt").onclick=()=>{
+            if(ta.fontWeight==="bold"){ //font-weight not allow
+                ta.fontWeight="normal"
+            }
+            else{
+                ta.fontWeight="bold";
+            }
+        }
+        //Italic button
+        document.querySelector("#ibt").onclick=()=>{
+            if(ta.fontStyle==="italic"){
+                ta.fontStyle="normal"
+            }
+            else{
+                ta.fontStyle="italic";
+            }
+        }
+        //Underline button
+        document.querySelector("#ubt").onclick=()=>{
+            ta.textDecoration = ta.textDecoration==="underline"?"none":"underline";
+        }
+        //strike button
+        document.querySelector("#sbt").onclick=()=>{
+            ta.textDecoration = ta.textDecoration==="line-through"?"none":"line-through";
+        }
+        //left button
+        document.querySelector("#lbt").onclick=()=>{
+            ta.textAlign='left';
+        }
+        //center button
+        document.querySelector("#cbt").onclick=()=>{
+            ta.textAlign='center';
+        }
+        //right button
+        document.querySelector("#rbt").onclick=()=>{
+            ta.textAlign='right';
+        }
+        //color button
+        document.querySelector("#clr").onchange=()=>{ //onchange for color
+            ta.color=clr.value;
+        }
+    </script>
+</body>
+</html>

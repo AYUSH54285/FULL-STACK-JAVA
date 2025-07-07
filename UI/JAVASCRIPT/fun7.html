@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n=100,x=200; //global variable
+    </script>
+</head>
+<body>
+    <h3> demo on var shadowing</h3>
+    <script>
+        function myfun(x){ // its shadow
+            let n=111; //it is shadow variable
+            document.write(`n =>${n}<br>`);
+            document.write(`n =>${x}<br>`);
+
+            // to solve the shadow problem and access gloabl variable in this scope we use window or this
+            document.write(`global n ${this.n}<br>`);  // here we can also use window.n but this.n is recommended
+            document.write(`global x ${this.x}<br>`); 
+        }
+        myfun(222);
+        document.write(`${n}<br>`);
+        document.write(`${x}<br>`);
+        
+    </script>
+</body>
+</html>

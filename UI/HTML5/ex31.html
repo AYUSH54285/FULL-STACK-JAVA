@@ -1,0 +1,87 @@
+<!--
+Label:
+
+> label tag is used to create heading/prompting messages for 
+elements or controls. 
+> label providing description for controls, it gives an idea to user 
+what we have to type. 
+> when the user clicks on the label, the cursor will appear in the 
+associated control automatically. 
+>its paired tag. 
+SYn:   <label attributes> text </label> 
+attributes 
+for : used to specify the id of the control that is associated with 
+the control 
+Note: labels are not sent to the server while submitting the 
+form.
+
+
+
+progress:
+The <progress> tag is used to visually display the progress of a task (like file upload, loading, etc.).
+It's a paired tag: <progress>...</progress>.
+To dynamically update it, we use JavaScript.
+
+| Tag          | Description                       |
+| ------------ | --------------------------------- |
+| `<progress>` | Visual representation of progress |
+| `value`      | Current amount completed          |
+| `max`        | Total amount to complete task     |
+| JS Required  | Yes, for dynamic behavior         |
+
+
+-->
+<!-- implementation -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>31th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<div>
+	  <h2>Registration Form</h2>
+	  <form id="f" action="reg.html" autocomplete="off">
+		<label for="fna">Fullname</label> <br>
+		<input type="text" id="fna" name="fna" autofocus required>
+		<br> 
+		<label for="ph">Contact number</label> <br>
+		<input type="number" id="ph" name="ph" min="6000000000" max="9999999999" required>
+		<br>
+		<label for="em">EmailId</label> <BR>
+		<input type="email" id="em" name="em" required>
+		<br>
+		<label for="dob">Select Date of Birth</label> <br>
+		<input type="date" id="dob" name="dob" min="1995-01-01" max="2010-12-31">
+		<br>
+		<label>Gender:</label> <Br>
+		<input type="radio" id="g1" name="g" value="m"> <label for="g1">Male</label> &nbsp; 
+		<input type="radio" id="g2" name="g" value="f"> <label for="g2">Female</label> &nbsp; 
+		<input type="radio" id="g3" name="g" value="o"> <label for="g3">Others</label>
+		<br>
+		<label for="course">Which Course?</label> <br>
+		<select id="course" name="course">
+		  <option value="jfs">Java Full Stack</option>
+		  <option value="pfs">Python Full Stack</option>
+		  <option value="dnfs">Dot.Net Full Stack</option>
+		  <option value="uifs">UI Full Stack</option>
+		  <option value="tfs">Testing Full Stack</option>
+		</select>
+		<br>
+		<label for="mot">Mode of Training</label> <br>
+		<select id="mot" name="mot">
+		  <option value="">Choose type of training</option>
+		  <option value="ct">Classroom Training</option>
+		  <option value="ot">Online Training</option>
+		  <option value="pmt">Placement Training</option>
+		  <option value="inter">Internship</option>
+		  <option value="pt">Project Training</option>
+		</select>
+		<br>
+		<input type="checkbox" id="tc" name="tc" value="true" required> <label for="tc">I Accepted all Terms & Conditions</label>
+		<br>
+		<button type="submit">Register Now</button>	
+	  </form>
+	</div>
+  </body>
+</html>

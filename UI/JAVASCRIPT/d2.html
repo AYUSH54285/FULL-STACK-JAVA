@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #i{
+            color:red;
+        }
+        .c{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h3>Demo on document object methods</h3>
+    <h2 id="i">Welcome</h2>
+    <span class="c">html</span>
+    <p class="c">css</p>
+    <div class="c">JavaScript</div>
+    <script>
+        const ob1 =document.querySelector("#i");
+        document.write(`${ob1}=> ${ob1.tagName}<br>`);
+
+        const ob2=document.querySelector(".c");
+        document.write(`${ob2}=> ${ob2.tagName}<br>`);
+
+        const ob3 = document.querySelectorAll(".c");
+        document.write(`${ob3}<br>`)
+
+        for(let e of ob3){
+            document.write(`${e} => ${e.tagName}<br>`);
+        }
+    </script>
+</body>
+</html>

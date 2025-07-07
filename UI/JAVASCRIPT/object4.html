@@ -1,0 +1,40 @@
+<!-- example on JS Objects -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>  
+  <body>
+		<h3>demo on nested objects</h3>		
+		<script>
+			let emp = {
+				id:101,
+				name:"Ayush",
+				Job:"Software Developer",
+				address:{
+					area:"Jagriti Vihar",
+					city:"Meerut",
+					pincode:250004
+				},
+				getAddress:function(){
+					return this.address.area+","+this.address.city+","+this.address.pincode;
+				}
+			}
+
+			document.write(`${emp.id} &nbsp; &nbsp; ${emp.name} &nbsp; &nbsp; ${emp.job}<br>`);
+			document.write(`Address		:${emp.getAddress()}`); 
+		</script>		 
+   </body>
+</html>
+<!-- 
+			let emp = { 
+						id:101, name:"siva", job:"sse", 
+					address:{area:"ameerpet",city:"hyd",pin:500021},
+						getAddress:function(){
+							return this.address.area+","+this.address.city+","+this.address.pin;
+						}
+					};
+
+			document.write(`${emp.id} &nbsp; &nbsp; ${emp.name} &nbsp; &nbsp; ${emp.job}<br>`);
+			document.write(`Address		:${emp.getAddress()}`); -->

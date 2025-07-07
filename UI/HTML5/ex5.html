@@ -1,0 +1,37 @@
+<!-- example on HTML Attributes -->
+<!-- four types of attributes present
+ 
+General purspose attributes => "optional attribute - not compulsory to write
+                                specific attribute -> specific for some tag, not for all tags
+                                global attribute -> can be use wth any tag"
+
+ex-> id, name, class, style, height, src, type, href, lang
+
+dynamic attributes => "event attribute -> prefix is "on" in the attribute, dynamic attributes(used with js)"
+
+ex-> onclick, ondblclick, onload, oninput, onchange, onsubmit, onmouseover, onmouseout, oncopy, onpaste
+
+-->
+<!DOCTYPE html>
+<html lang="en">  <!-- optional --> <!-- we can change any language hindi,telugu,arabic-->
+   <head></head>
+   <body bgcolor="yellow">  <!-- specific --> <!-- bgcolor is used for background colour of webpage-->
+      <h3 align="center">Maruti Suzuki Ertiga</h3> <!--align -> it is used for alignment of the content, left/right/center/justify(uniformly left to right)--> 
+      <p align="justify">
+	The demand for 7-seater cars has been rapidly increasing among Indian customers, especially families who enjoy long journeys. In such a scenario, there are many options in the market, but the Maruti Suzuki Ertiga has proven to be an excellent choice due to its affordable price and great mileage. In this post, we provide you with information about some of the key 7-seater diesel cars available in 2025, including a comparison of the Ertiga's features with other options.</p>
+       <!-- global -->
+      <h1  id="h01">Hello World</h1> <!-- id is a global attribute-->
+
+      <!-- event -->
+      <h1 onclick="alert('event executed')">Click here</h1> <!-- onclick is a event which call js-->
+ 
+      <!--there is no order for using mutlitple attributes -->
+      <h1 id="h03" onmouseover="h03.style.color='red'" onmouseout="h03.style.color='blue'"> <!-- onmouseover -> when cursor move on this it apply js on the content, syntax is -> id.style.attribute='value'-->
+        Frontend Tech
+      </h1>
+	
+      <h2 id="x" onmouseover="x.innerText='Welcome'" onmouseout="x.innerText='Hello'"><!-- innerText is used to chnge the content/text-->
+            Hello
+      </h2>
+  </body>
+</html>

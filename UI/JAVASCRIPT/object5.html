@@ -1,0 +1,48 @@
+<!-- example on JS Objects -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>   
+  <body>
+	<h3>demo on array of objects</h3>	
+	<script>
+		//array object
+		const imgs = [
+										{src:"a.jpg", width:200, height:200 },
+										{src:"b.png", width:200, height:150 },
+										{src:"c.png", width:150, height:150}
+								 ];
+
+		document.write(`${imgs}<br>`);
+		
+		// imgs.forEach( (i)=>{
+		// 					document.writeln(`${i.src} &nbsp; ${i.width} &nbsp; ${i.height}<br>`)
+		// 				} );
+
+		imgs.forEach((i)=>{
+			document.writeln(`${i.src} &nbsp; ${i.width} &nbsp; ${i.height}<br>`)
+		});
+
+		//OR
+		for(let i of imgs)
+			document.writeln(`${i.src} &nbsp; ${i.width} &nbsp; ${i.height}<br>`)
+		//OR		
+			document.write("<table border>");
+			document.write("<tr>	<th>Image</th> <th>Width</th> <th>Height</th> </tr>");
+			for(let i  in imgs) {
+				document.write(`<tr>
+								<td>${imgs[i].src}</td>
+								<td>${imgs[i].width}</td>										
+								<td>${imgs[i].height}</td>
+								</tr>`);
+			}
+			document.write("</table>");
+	 
+		//OR	
+		console.table(imgs);
+	</script> 
+		</script>
+   </body>
+</html>

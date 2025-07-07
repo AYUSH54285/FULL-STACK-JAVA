@@ -1,0 +1,43 @@
+<!--
+file: 
+=> file used to upload or attachment  
+=> we can upload or attach any type of file, but @time a only one 
+file 
+Syn   <input type="file" attributes> 
+attributes: 
+multiple => it allows multiple to upload @time 
+accept => filtering type of file 
+Note: 
+while uploading file method should be "post" and enctype is 
+"multipart/form-data" 
+
+color:
+=> used to select color by user, selected color we can apply on any 
+control using JS 
+Syn:    <input type="color">
+
+
+-->
+<!-- example on "input" tag -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>28th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on file fields(uploading file)</h3>
+	
+	<form action="upload.php" method="post"	enctype="multipart/form-data">
+	  <input type="file">
+	  <br>
+	  <input type="file" multiple>
+	  <br>
+	  <input type="file" accept=".pdf,.docx">
+	  <br>
+	  <button type="submit">Upload</button>	
+	</form>
+ 
+  </body>
+</html>
+

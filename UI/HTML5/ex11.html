@@ -1,0 +1,64 @@
+<!--
+list tags
+ ol, ul, dl
+
+ol
+=> ordered list(ol) used to print slno for data(points)
+ 1,2,3...  i,ii,iii...	I,II,III...	 A,B,C...  a,b,c...
+  (def)
+=> li (list item) used to print the data in points wise
+=> ol is parent & li is child
+=> both are paired tags & block level elements
+Syn:-
+	<ol>
+	   <li>data</li>
+	   <li>data</li>
+	   ...
+	</ol>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My 11th webpage</title>
+</head>
+<body>
+	<h3>Demo on ordered list</h3>
+	<h4>List of Frontend Tech: </h4>
+	<ol>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>Bootstrap</li>
+		<li>Angular</li>
+		<li>ReactJs</li>
+	</ol>
+
+	<hr> <!--  it draws a line horizontally -->
+
+	<h4>List of Backed Tech: </h4>
+	<ol type="A" reversed start="78">
+		<li>Servlet</li> <li>CSS</li> 
+		<li>DJango</li>  <li>Bootstrap</li>
+		<li>PHP</li>     <li>NodeJs</li>
+		<li>Vue.js</li>
+	</ol>
+
+	<hr color="Blue" size="3" width="50%">
+
+	<!-- Nested List -->
+	<ol>       <!--main-->
+		<li>Samsung     
+			<ol type="i">     <!--sub-->
+				<li>Galaxy Z Fold5</li>
+				<li>Galaxy Z Flip5</li>
+			</ol>
+		</li>
+		<li>Vivo  <!--sub-->
+			<ol type="i">
+				<li>X200</li> <li>V50</li> <li>T4X</li>
+			</ol>
+		</li>
+	</ol>
+</body>
+</html>

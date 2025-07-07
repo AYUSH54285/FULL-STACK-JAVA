@@ -1,0 +1,153 @@
+<!--
+What is Scripting? 
+=> A script program code that doesn't need pre-processing (eg. compiling) before running. 
+=> In the context of web browser, scripting usually refers to program code written in js that is executed by the browser when a page is loaded,
+or in response to an event triggered by the user.
+
+Type of script:
+Script are classified into two types
+1. Client-side script
+2. Server-side script
+
+Client-side script:  
+=> These script are getting executed within the web browser(client)
+=> Here we don't need any software
+=> These script are used for client side validations(data verification and data validations)
+    Ex-JS,VBScript,typescript etc.
+
+Server-side script:
+A script which executes in server machine with support of the web-server/app-server software's like IIS(internet Information Service), Tomcat, JBOSS etc.
+These scripts are used for server side validations(authentication and authorization).
+    ex-> php, asp.net, VueScript, Express Script, NodeJS, cgi, perl etc.
+
+Script:
+weekly and loosely type programming and lighweight
+Easy to understand compare to PL
+External librarires not required
+No special compiler required.
+Client side validation
+ex: js , VBscript, Typescipt, perl, shell etc.
+
+Language:
+strong and closely programming and hw.
+complex to understand compare to script
+external librarires required
+special compiler mandatory
+server/clint side validation/verifications
+ex: c,c++,vb.net,java etc.
+
+
+
+JavaScript Introduction:
+✔ In 1995, JavaScript was created by a Netscape (Mozilla) developer named “Brendan Eich”. 
+            Mocha(1995)  LiveScript    JavaScript(1997-dec) 
+✔ Netscape first introduced a JavaScript interpreter in Navigator2. 
+Why is it called JavaScript? 
+When JavaScript was created, it initially had another name: “LiveScript”. But Java 
+was very popular at that time, so it was decided that positioning a new language 
+as a “younger brother” of Java would help. 
+But as it evolved, JavaScript became a fully independent language with its own 
+specification called ECMAScript, and now it has no relation to Java at all.  
+✔ Later JavaScript became an ECMA (European Computer Manufacturers 
+Association Script) standard in 1997. ECMAScript is the official name of the 
+language.  
+✔ JavaScript is implementation of ES;  ES is the specification of JavaScript. 
+RBI  SBI, HDFC, ICICI customer 
+ES JS  Programmer 
+✔ JavaScript is a Speed, light weight, Interoperability, Extended Functionality, 
+dynamic, loosely typed, cross platform, free ware and open-source. 
+Speed  js applications runs faster than ... 
+Light weight  less code more operations 
+Interoperability Javascript they have the capability to work within other 
+web technologies. 
+Ext Fun    js supports to access/to call other lib  
+Dynamically typed  w/o declaring vars we use can directly 
+loosely typed  defined any var in JS, that allows to store any type value 
+cross platform  cross platform compatible  
+✔ Its single threaded programme 
+✔ JavaScript is an object-based or prototype-based programming. 
+▪ OOPS => object-oriented, object base 
+✔ JavaScript is client-side (browser-side) programming. That means it executes on 
+the browser.    
+✔ It can also be used in server-side by using Node, ASP, PHP, Dj … 
+✔ JavaScript is a case sensitive programme (mixed case) 
+✔ To work with JavaScript, we don’t need to install any software. 
+✔ JavaScript is “interpreter-based” programming, means the code will be converted 
+into machine language line-by-line. JavaScript interpreter is already embedded in 
+Browsers. 
+JS Parser: 
+JS code (high)->JS parser->  machine code 
+JS Engine (VM): 
+V8  Chrome, Edge and Opera 
+SpiderMonkey  Firefox 
+Chakra IE  
+SquirrelFish  Safari 
+What is the use of javascript? 
+1. Javascript used to develop interactive webpages 
+2. Also used to add some functionalities to webpage 
+JS used  web dev, mobile app, gaming, animations, networking app, AI ... 
+Why we Use JavaScript? 
+Using HTML/CSS, we can only design a web page but it’s not supported to perform 
+logical operations such as calculations, decision making and repetitive tasks, 
+dynamically displaying output, reading inputs from the user, and updating content 
+on webpage at client side. Hence to perform these entire tasks at client side we 
+need to use JavaScript. 
+What is used? 
+There are so many web applications running on the web that are using JavaScript like 
+Google, Facebook, twitter, amazon, YouTube etc. 
+It is used to create interactive webpages.  
+JS used to add functionality to webpages 
+It is mainly used for:         
+1. Client-side verifications and validations 
+2. Dynamic drop-down menus   
+3. Displaying date and time 
+4. Build forms that respond to user input without accessing a server. 
+5. Displaying popup windows and dialog boxes (like alert dialog box, confirm dialog 
+box and prompt dialog box) 
+6. Manipulate HTML "layers" including hiding, moving, and allowing the user to 
+drag them around a browser window. 
+etc... 
+Limitations of JavaScript 
+Client-Side JavaScript has some limitations which are given below; 
+1. Client-side JavaScript does not allow reading and writing of files. 
+2. It doesn't have any multithreading or multiprocessing capabilities. 
+3. it doesn't support db connections.
+
+
+3 ways to implements js
+1. Inline scripting
+2. internal scripting
+3. external scripting
+
+1. Inline scripting:
+=> writing code within the tag, by using event/dynamic attributes for this we need tag & event attributes 
+        onclick, onsubmit, onfocus, oninput, onload etc..
+      syn:  <tag event=" " event="js" ......>  //multiple events are allowed but not same attributes 
+2. Internal scripting      
+3.
+-->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1>Demo on inline script</h1>
+    <button type="button" onclick="alert('button pushed')">push here</button> <!-- event name is onclick where we use alert function -->
+    <button type="button" onclick="alert('button pulled')">pull here</button> <!-- onclick is action and alert is reaction-->
+    <h2 ondblclick="alert('hey, you clicked 2 times')"> double click here</h2>
+</body>
+</html>
+<!--
+onclick='alert("single click")'  -> it works on single click 
+ondblclick ='alert("double click")' -> it works on double click 
+-->

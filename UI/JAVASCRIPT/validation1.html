@@ -1,0 +1,43 @@
+<!-- example on form validations -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Validations</title>
+  </head>
+  <body>
+	<!-- validation @typing -->
+	<h2>Registration Form</h2>
+	<form>
+	  <label>Fullname</label> <bR>
+	  <input type="text" id="fullName" name="fullName"/>
+	  <br>
+	  <label>Email Id</label>  <br>
+	  <input type="email" id="em" name="em"/>
+	  <br>
+	  <label>Contact number</label> <br>
+	  <input type="text" id="phone" name="phone" maxlength="10"/>
+	  <br>
+	  <input type="submit" name="sb"/>
+	</form>
+ 	<script>
+		//checking fullname
+	   document.querySelector("#fullName").onkeypress=function(fullName){
+		let ch=fullName.which;
+		console.log(ch);
+		//if the char/key is not alphabet, stop that char/key
+		if(!((ch>=65&&ch<=90)||(ch>=97&&ch<=122)||ch===32))
+			fullName.preventDefault();
+		}
+
+		//checking phone number
+	   document.querySelector("#phone").onkeypress=function(phone){
+		let ch=phone.which;
+		console.log(ch);
+		//if the char/key is not digit, stop that char/key
+		if(!(ch>=48&&ch<=57))
+			phone.preventDefault();
+		}
+	</script> 
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+	<style>	
+		/* custom animation for Pulse Effect 
+		  you can change scale as per your need */
+		@keyframes pulse 
+		{
+		  0% {
+			transform: scale(1);
+			opacity: 1;
+		  }
+		  50% {
+			transform: scale(3);
+			opacity: 0.5;
+		  }
+		  100% {
+			transform: scale(1);
+			opacity: 1;
+		  }
+		}
+
+		.pulse {
+		  animation: pulse 2s infinite;
+		}
+	</style>
+  </head>
+  <body align="center">
+	<h1 class="pulse" style="display:inline-block;">	&#x1F496;</h1>
+	<br> <br> <br>
+	<div class="pulse" style="display:inline-block;">Pulse Effect</div>
+  </body>
+</html>  

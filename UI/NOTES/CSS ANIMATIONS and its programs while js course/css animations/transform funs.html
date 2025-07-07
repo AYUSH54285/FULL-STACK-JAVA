@@ -1,0 +1,54 @@
+<!-- example on transform -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<style>
+	  img{
+	    width:250px;
+		height:250px;
+		margin:80px;
+		transition:600ms;
+	  }
+	  /*
+	  .a1{ transform:scaleX(1.5); } */
+	  .a1:hover{ transform:scaleX(1.5); }
+	  .a2:hover{ transform:scaleY(1.5); }
+	  .a3:hover{ transform:scale(1.2); }
+
+	  .a4:hover{ transform:skewX(-15deg); }
+	  .a5:hover{ transform:skewY(-10deg); }
+	  .a6:hover{ transform:skew(15deg, 15deg); }
+	  
+	  .a7:hover{ transform:translateX(50px); }
+	  .a8:hover{ transform:translateY(-100px); }	  
+	  .a9:hover{ transform:translate(100px,100px); }
+	  
+	  .a10:hover{ transform:rotateX(180deg); }
+	  .a11:hover{ transform:rotateY(180deg); }
+	  .a12:hover{ transform:rotate(360deg); }
+	  
+	  .a13:hover{
+	    transform:scale(0.5) rotate(-360deg);
+	  }	  
+	</style>
+  </head>
+  <body>
+	<h1>demo on animation functions</h1>
+	<img src="images/baby.png" class="a1">
+	<img src="images/ocean.webp" class="a2">
+	<img src="images/spring.jpg" class="a3">
+	<img src="images/waterfalls.jpg" class="a4">
+	<img src="images/rose.jpeg" class="a5">
+	<img src="images/moon.jpg" class="a6">
+	<img src="images/building.jpg" class="a7">
+	<img src="images/abc.webp" class="a8">
+	<img src="images/snow.jpg" class="a9">
+	<img src="images/river.jpg" class="a10">
+	<img src="images/bridge.jpg" class="a11">
+	<img src="images/tenor.gif" class="a12">
+    
+	<img src="images/mb.png" class="a13">	
+  
+  </body>
+</html>

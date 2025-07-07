@@ -1,0 +1,89 @@
+<!-- Registration Form -->
+<!DOCTYPE html>
+<html lang="en">  
+  <head>
+	<title>Application</title>
+	<link rel="icon" href="logo1.png">  
+	<link rel="stylesheet" href="regform.css">
+  </head>		
+  <body>	
+	<div class="main-container">
+		<h1>Registration Form</h1>
+		<form action="register.html">
+			<div>
+				<label for="fna">Fullname</label>  <span>*</span> <br>
+				<input type="text" id="fna" name="fna" required autofocus>
+			</div>
+			<div>
+				<label for="phone">Contact number</label> <span>*</span> <br>
+				<input type="text" id="phone" name="phone" required maxlength="10">
+			</div>
+			<div>
+				<label for="em">Email Id</label> <span>*</span> <br>
+				<input type="email" id="em" name="em" required>
+			</div>
+			<div>
+				<label for="dob">Date of Birth</label> <br>
+				<input type="date" id="dob" name="dob" min="1990-01-01" max="2023-11-08">
+			</div>
+			<div>
+				<label for="gen1">Gender:<label> <br>
+				<input type="radio" id="gen1" name="gender" value="m"> 
+				<label>Male</label> &nbsp;
+				<input type="radio" id="gen2" name="gender" value="f"> 
+				<label>FeMale</label> &nbsp;
+				<input type="radio" id="gen3" name="gender" value="o"> 
+				<label>Others</label> 
+			</div>
+			<div>
+				<label for="course">Which Course?</label> <br>
+				<select id="course" name="course">
+					<option value="c">C Language</option>
+					<option value="cpp">C++ Language</option>
+					<option value="cj">Corejava</option>
+					<option value="aj">Advjava</option>
+					<option value="spring">Spring</option>
+					<option value="fsj">Full Stack Java</option>
+					<option value="c#">C#.net</option>
+					<option value="asp">ASP.net</option>
+					<option value="fsdn">Full Stack .Net</option>
+					<option value="python">Python</option>
+					<option value="dj">Django</option>
+					<option value="flask">Flask</option>
+					<option value="html-js">HTML-JavaScript</option>
+					<option value="angular">Angular</option>
+					<option value="react">ReactJS</option>
+					<option value="node">NodeJS</option>
+					<option value="php">PHP</option>
+					<option value="dev">DevOps</option>
+					<option value="xml-ws">XML-Webservices</option>
+					<option value="aws">AWS</option>
+					<option value="oracle">Oracle</option>
+					<option value="mysql">MySQL</option>
+					<option value="mssql">MS SQL Server</option>
+					<option value="mongo">MongoDB</option>
+					<option value="unix">Unix/Linux</option>
+				</select>
+			</div>
+			<div>
+				<label for="mot">Mode of Training</label> <bR>
+				<select id="mot" name="mot">
+					<option value="classroom">Classroom Training</option>
+					<option value="online ">Online Training</option>
+					<option value="placement">Placement Training</option>
+					<option value="project">Project Training</option>
+					<option value="weekend">Weekend Training</option>
+					<option value="internship">Internship</option>
+				</select>
+			</div>
+			<div>
+				<input type="checkbox" id="tc" name="tc" value="true"> &nbsp;
+				<label>I Accepted Terms & Condition</label>
+			</div>
+			<div align="center">
+				<button type="submit" name="sb">Register Now</button>
+			</div>
+		</form>
+	</div>
+  </body>
+</html>

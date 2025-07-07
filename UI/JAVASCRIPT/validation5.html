@@ -1,0 +1,41 @@
+<!-- example on form validations -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Validations</title>
+ </head>
+ <body>
+		<h3>demo on file size validation</h3>
+		<form id="f" action="upload.jsp" method="post" enctype="multipart/form-data">
+			<label>Select resume</label><bR>
+			<input type="file" id="f1" name="f1"/> <br> <br>
+
+			<label>uplado photos</label><bR>
+			<input type="file" id="f2" name="f2" multiple/> <br> <br>
+			<button>Upload</button>
+		</form>
+
+		<script>
+				//file size checking
+				document.querySelector("#f1").onchange=function() 
+				{
+					if(this.files[0].size>1048576)	//max size is 1mb
+					{
+						alert("Sorry, File size tooooo big")
+						this.value="";		//delete file
+					}
+				}
+
+				//file count checking 
+				document.querySelector("#f2").onchange=function() 
+				{
+					if(this.files.length>5)	//no.of files 5 
+					{
+						alert("Sorry, Toooo many ("+this.files.length+") files")
+						this.value="";
+					}
+				}
+		</script>
+ </body>
+</html>

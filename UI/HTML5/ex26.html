@@ -1,0 +1,97 @@
+<!-- Form Teg
+ => from tag is used to create html forms 
+      html form = application form
+      
+=> from is group of input elements and it is a container so it is not visible
+=> from are collection of the data from users and submitting to server
+=> It is a paired tag and block level element 
+=> form is used to submit input values (user’s data) to a 
+server-side program.
+=> form is a paired tag & block level 
+=> form tag is sub tag of body tag 
+=> after submit in form all the info first verified by browser then it will be verified by server side pogrammer using JS 
+=> 1. action attribute -> action is server side URL who is receiving the information of form like url of adv java or python
+"" -> self-calling (its calling/sending data to current prog) 
+"." -> home of current application 
+=> 2. method attribute -> it represents the way of sending data from client to 
+server
+it supports two ways, those are   
+
+get: 
+> it displaying data in address bar 
+https://www.redbus.in/search ? 
+fromCityName=Hyderabad&toCityName=Guntur&onward=10-Jan-2022
+ &opId=0&busType=Any 
+=> get method stores user inputs in browser history 
+=> it’s less secured  
+=> get is a default method 
+=> we can bookmark these pages 
+=> get methods max data limit is 5.7kb 
+=> get is faster than post 
+=> it supports to send text data only 
+use-case's   search page, retrieving data from db, ... 
+
+
+Post: 
+=> it not displaying any data in address bar 
+https://www.redbus.in/search 
+https://www.irctc.co.in/nget/booking/train-list 
+=> post method doesn’t store user inputs in browser 
+history 
+=> it's more secured 
+=> we can't bookmark these pages 
+=> post method data no limit 
+=> post method slower than the get  
+use-case's  login page, sign-up page, registration pages, ... 
+
+
+=>3. target : its rep where to open destination page, 
+_self, _blank, parent, framename ..   
+default is _self 
+
+=>4. enctype : it rep in which format we are sending data to 
+server 
+html support two types, those are 
+>application/x-www-form-urlencoded   
+If you want to send data to the server without 
+attachment and file uploading use this method. 
+It is default option 
+>multipart/form-data 
+if u want send data to server with attachment and 
+file uploading 
+
+=>5. autocomplete : it automatically saves data while typing in the 
+UI (textbox, password, address, pincode, ....) 
+on/off 
+on is default 
+
+=>6. novalidate : while submitting html perform some basic 
+validation, if u don't do those validations, switch off this.
+
+-->
+
+
+<!-- example on "form" tag -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>26th webpage</title>
+ </head>
+ <body>
+    <form id="f1" action="" method="get"> <!-- -->
+        <input type="text" id="fna" name="fna" placeholder="Full Name">
+        <br>
+        <input type="number" id="ph" name="ph" placeholder="Contact Number">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <form id="f2" action="" method="post">
+        <input type="text" id="una" name="una" placeholder="Username">
+        <br>
+        <input type="password" id="pw" name="pw" placeholder="Password">
+        <br>
+        <button type="submit">Log in</button>
+    </form>   
+ </body>
+ </html>

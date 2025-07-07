@@ -1,0 +1,51 @@
+<!--
+=> if we want to communicate whole browser window then use window object.
+=> if we want to communicate with webpage/webdocument then use document object.
+=> if want to communicate with console then use console object
+
+=> In window object all details of browser is stored
+=> In document object all detials of webpage is stored
+=> In console obbject all details of console is stored
+
+NOTE: all the obejcts are sub object of window object.
+
+window.document
+window.console
+NOTE: but here window is optional because we are already inside the window.
+
+=> “console” object used for interacting with browsers console to perform some 
+operations.  
+Syn:  
+window.console  or console 
+Press F12 key  or  Ctrl+Shift+J
+
+JS Printing methods 
+write() method : write data on webpage, without line breaking
+    syn: window.document.write(val1,val2...);  // we can also use '+' instead of comma
+
+writeln() method : write data on webpage, with line breaking
+    syn: window.document.writeln(val1,val2...);
+
+log() method: write the js code on browser console with line break
+    syn: window.console.log(val);     
+
+NOTE : these are using in practice only in original project we are not using these 3 methods, in original project we are using html only.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<script>, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h3>Demo on printing methods</h3>
+    <script>
+        window.document.write("HTML","Bootstrap");
+        window.document.writeln("CSS"+"Jquery"); //
+        window.console.log("JavaScript","ecma")
+    </script>
+</body>
+</html>

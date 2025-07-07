@@ -1,0 +1,38 @@
+<!-- Direct Child Selector
+=> used to defined/ to apply same styles for all direct child positioned elements only.
+
+syn:
+    gpatg > ptag > ctag {
+        prop: val;
+    } -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div > a{                  /*adding div before a tag for making it child tag and this child tag applied only on child anchor tag*/
+            color: #f00;
+            text-decoration: none;  /*   remove the underline of the tag  */
+        }
+        div > p > a{            /* extra tag is okay but removing of tag hit the sequence so it is not okay*/
+            color: rgb(0, 240, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Demo on child selector</h3>
+    <a href="">goto page1</a>
+    <a href="">goto page2</a>
+    <div>
+        <a href="">goto page3</a>
+        <a href="">goto page4</a>
+        <p>
+            <a href="">goto page5</a>
+            <a href="">goto page6</a>
+        </p>
+    </div>
+    
+</body>
+</html>

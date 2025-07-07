@@ -1,0 +1,115 @@
+<!--
+submit button:
+>submit is one type of button, used to submit/send the html 
+forms/page/UI to a server-side program. 
+>while submitting the html form, all input parameters (enter by 
+user), hidden parameter (by programmer) are prepared as a 
+"Query String" 
+ex:  
+https://www.redbus.in/search.aspx ? 
+param-name=value&param-name=value &... 
+  param-name => name of text box or name of password field or 
+name of button... 
+  value => value of text box or value of password field or value 
+of button... 
+>outside the form, if we design anything that is not submitted 
+to the server and without name attribute also not submittable. 
+>submit button value also sent to server 
+Syn: 
+<input type="submit" value="VAL" attributes> 
+<form action=”search.jsp”>
+
+
+
+  date & time controls 
+date:
+>used to create a date box (date picker/popup calendar), where 
+the user can select a date. 
+>the browser by default provides a built-in date picker. 
+Syn:  <input type="date" attributes> 
+time :
+>used to create a time box, where the user can enter/select 
+time (in the form of hours, minutes and seconds) 
+Syn: <input type="time" attributes> 
+datetime: 
+>used to create a date-cum-time control 
+Syn:  <input type="datetime-local" attributes> 
+month:
+>used to create a month box, where the user can select a 
+month. 
+Syn:   <input type="month" ...> 
+week: 
+>used to create a week box, where the user can select a week. 
+Syn:   <input type="week" ...> 
+email:
+>used to create an email textbox, where the user can enter a 
+valid email id only. 
+>it displays an error message automatically (built-in validation), 
+if the user enters other than email id (should contain @ and .). 
+Syn:   <input type="email" attributes> 
+url:
+>used to create an url box, where the user can enter a valid url 
+for downloading files or playing videos. 
+>it displays an error message automatically (built-in validation), 
+if the user enters other than url. 
+Syn:   <input type="url" attributes> 
+range :
+>used to create a slider bar, based on the specific range. 
+>this control req min value and max value, if we are not 
+specified then browser takes default values. 
+Syn:   <input type="range" attributes> 
+attributes 
+min => it sets min value of slider 
+max => it sets max value of slider 
+step => it sets increment value 
+value => sets indicator init position 
+appearance: slider-vertical; 
+search :
+> used to create a search box, where the user can enter some 
+search text, it also displays a clear button to clear the text inside 
+the search box. 
+Syn:    <input type="search" ... >
+
+-->
+
+<!-- example on "input" tag -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>25th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on email, url, date, time, week, month, color, button fields(html5)</h3>
+
+	<form>
+        <label for="em">enter emailid</label>
+        <input type="email" id="em" name="em">
+        <br>
+        <label for="u">enter url</label>
+        <input type="url" id="u" name="u">
+        <br>
+        <label for="d">select date</label>
+        <input type="date" id="d" name="d" min="2015-01-01" max="2025-04-19"><!-- enter date in yyy-mm-dd format only-->
+        <Br>
+        <label for="t">select time</label> <!----not in 24hr foramt---->
+        <input type="time" id="t">
+        <br>
+        <label for="dt">date & time</label>
+        <input type="datetime-local" id="dt">
+        <br>
+        <label for="w">select week</label>
+        <input type="week" id="w">
+        <br>
+        <label for="m">month</label>
+        <input type="month" id="m">
+        <br>
+        <label for="c">colour</label>
+        <input type="color" id="c">
+        <br>
+        <button type="submit">submit</button> <!--new method to use submit button---> 
+	  <br>
+	  <input type="submit">   <!-- // old method for use button -->
+	</form> 
+  </body>
+</html>

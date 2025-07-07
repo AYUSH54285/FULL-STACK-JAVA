@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <scirpt>
+
+        </scirpt>
+    </head>
+    <body>
+        <h3>demo on Immediate Invoking or Immediate execution functions</h3> <!-- in last examples we have to define and call in two steps, but here definition and execution both done at same time.
+        2) for using this II or IE ,anonymous function should be used here also
+        3) this is used and throw function, only one time use after calling
+        4) it is in the memory during execution and after execution completed it will delete from the memeory -->
+        <script>
+            (function(){
+                document.write(`hi, I am expression<br>`)
+            }) ();  // () this last step is calling the anonymous function and this is Immediate Invoking.
+
+            (() => {
+                document.write(`Hi, I am arrow funciton<br>`)
+            }) (); 
+
+
+            ((x,y)=>{
+                document.write(`sum is ${x+y}<br>`)
+            })(10,20); // we can perform anything but it is one time execution function, used for memory saving
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!--
+Spread Operator:
+-> "..." is unary Operator,we should use this operator as prefix
+-> its spread operator
+-> the spread operator represents all remaining values.
+-> this we can use in arrays and collections
+                    ...array 
+                    ...collection
+-> It can substitute the array
+
+
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="logo.png">
+        <meta charset="UTF-8">
+    </head>
+    <body align="center">
+        <h3>demo on spread operator</h3>
+        <script>
+            const a = [11,22,33];
+            //cosnt b=a;  //ref copies
+            const b = [...a]; //it copies elements of one array to another array
+            document.write(`a  =>${a}<br>`);
+            document.write(`b   =>${b}<br>`);
+
+            const ft=['html','css','js','bs'];
+            const bt=['java','python','dotnet'];
+            const db=['oracle','mysql','mongo'];
+
+            const fs=[...ft,...bt,...db]; //merge arrays
+            document.write(`fs   =>${fs}<br>`);
+
+            const n=[...ft,'reactJs',...bt]; // we can add elements
+            document.write(`n   =>${n}<br>`);
+
+        </script>
+    </body>
+</html>

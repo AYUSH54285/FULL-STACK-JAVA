@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            display:inline-block;
+            border:2px solid gray;
+        }
+        button,input{
+            width:40px;
+            height:40px;
+            border:none;
+            outline:none;
+            text-align:center;
+            font-size:20px;
+            background:none; 
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>Implementation of DOM </h3>
+    <img src="images/dosa.jpeg" width="200" height="200" alt="Dosa">
+    <h3>Good Food Restaturant</h3>
+    <strong> Masala Ghee Dosa &#8377;150</strong>
+    <div class="container">
+        <button id="decrement">-</button>
+        <input type="text" id="qty" value="0" readonly></input>
+        <button id="increment">+</button>
+    </div>
+    <br>
+    <h4>Bill Details</h4>
+    <span>Item Total</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<output id="itemTot">&#8377;0</output>
+    <br>
+    <span>GST & Charges</span>&nbsp;<output id="gst">&#8377;0</output>
+    <br>
+    <strong>TO PAY</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<output id="totAmt">&#8377;0</output>
+    <script>
+        const qt=document.querySelector("#qty");
+
+        //increment button logic
+        document.querySelector("#increment").onclick=()=>{
+            qt.value++;
+
+            compute()
+        }
+        //decrement button logic
+        document.querySelector("#decrement").onclick=()=>{
+            if(+qt.value>0){
+                qt.value--;
+                compute();
+            }
+        }
+        function compute(){
+            let itot,gt,tAmt,up=150;
+            itot=qt.value*up;
+            gt=itot*8/100;
+            tAmt=itot+gt;
+            itemTot.innerHTML=`&#8377;${itot}`;
+            gst.innerHTML=`&#8377;${gt}`;
+            totAmt.innerHTML=`&#8377;${tAmt}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!-- 
+pseudo Selector 
+=>  1. classes   :
+    2. elements  ::
+
+name predefined
+when applying predefined
+what to apply (don't know)
+
+pseudo classes => hover,active,visited,focus,blur,first-child,last-child,nth-child,is..   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        /* follow the order that is visited -> hover -> active otherwise styling is not working properly*/
+        :visited{  /*we don't need to mention the combinators becuase visiting is done for only anchor tag*/
+            color:blue;
+        }
+
+        a,h3:hover{  /* we need to mention selectors before classes that is called "combinators". If we don't use combinators then it will applied on all page */
+            color: hotpink;
+        }
+
+        :active{
+            color: green;
+        }
+
+        input:focus{
+            outline: 2px solid blue;
+        }
+
+    /* input:blur{
+            outline: 2px solid green;
+        } */
+
+        
+        ol li:nth-child(odd){
+		color:blue;
+        }
+
+        ol li:nth-child(even){
+        color:teal;
+        }	
+
+        ol li:first-child{
+        color:red;
+        }
+
+        ol li:last-child{
+        color:green;
+        }
+    </style>
+</head>
+<body>
+    <h3>demo on pseudo classes</h3>
+    <a href="">google</a>
+    <a href="">Youtube</a>
+    <a href="">facebook</a>
+    <a href="">instagram</a> <br>
+    <br>
+    <input type="text"> <br>
+    <input type="text"> <br>
+    <br>
+    <ol>
+        <li>Microsoft</li>
+        <li>Oracle</li>
+        <li>AMD</li>
+        <li>Apple</li>
+        <li>intel</li>
+        <li>Salesforce</li>
+        <li>Google</li>
+        <li>Nvidia</li>
+        <li>Opentext</li>
+        <li>ADP</li>
+        <li>SAP</li>
+        <li>Cisco</li>
+    </ol>
+</body>
+</html>

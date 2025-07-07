@@ -1,0 +1,34 @@
+<!-- JS Arrays-->
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>Demo on nested arrays</h3>
+        <script>
+            const A = [
+                        [10,20,30],
+                        [11,22,33]
+                      ];
+
+            document.write(`A   =>  ${A}<br>`);
+            document.write(`A[0]    => ${A[0]}<br>`);
+            document.write(`A[1]    => ${A[1]}<br>`);
+
+            document.write(`${A.length}<br>`);
+            document.write(`${A[0].length} <br>`);
+            document.write(`${A[1].length} <br>`);
+
+
+            for(let i=0;i<A.length ;i++){
+                for(let j=0; j<A[i].length ; j++){
+                    document.write(`${A[i][j]}&nbsp;`);
+                }
+                document.write(`<br>`);
+            }
+
+            console.table(A); // it will used for nested array and it show elemtns in table format in the console
+        </script>
+    </body>
+ </html>

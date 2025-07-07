@@ -1,0 +1,65 @@
+<!--
+Functional Inheritance : 
+=> The process of creating a new object based on another object 
+(exists) is called "Functional inheritance". 
+  OR 
+=> The process of creating a new constructor based on another 
+constructor (exists) is called "Functional inheritance". 
+ 
+=> used to build the relationship between multiple constructors 
+ 
+=> used to extending functionalities of existing constructor 
+without modifying source code. 
+ 
+=> Hence all the properties and methods of the 1st constructor 
+(parent) is inherited into the 2nd constructor (child). 
+ 
+=> sharing   
+=> by calling 1st constructor from 2nd constructor function using call().
+=> call() is a predefine function, it's used to call parent constructor 
+from child constructor to build inheritance.   
+
+=> extends keyword is not used in Functional Inheritance
+
+Syn: 
+function Constructor_name(params)    //Parent 
+{ 
+  Prop init 
+  Methods   } 
+function Constructor(params)    //Child 
+{ 
+  Constructor_name.call()  or  Constructor_name.call(this, params)  //writing this is compusory while using parameters
+  Prop init 
+  Methods 
+} 
+ 
+refvar = new Constructor();  
+ 
+-->
+
+exmaple on OOPs
+<html>
+  <head>
+  <script>
+	function Parent()  //constructor function 
+    {
+      document.write(`parent constructor<br>`);
+	}
+
+	function Child()  //constructor function
+    {
+		Parent.call();  //inheritance
+		document.write(`child constructor<br>`);
+		//Parent.call();	
+ 	}
+  </script>
+ </head>
+<body>
+  <h2> demo on single level inheritance </h2>
+  <script>
+    const ob= new Child();  //its allocates memory for both C & P
+	new Child();	//its allocates memory for both C & P
+   //new Parent();  its valid, but it creates only P
+  </script>
+</bodY>
+</html>

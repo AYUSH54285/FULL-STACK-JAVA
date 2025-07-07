@@ -1,0 +1,52 @@
+<!--
+data minipulations:
+// used in paired tags
+eleobj.innerText
+eleobj.innerHTML  
+// used in input elements
+eleobj.value
+
+
+settings/attributes manip:
+    eleobj.attribute or getAttribute("attr")
+    eleobj.attrbute = val   or getAttribute("attr",value)
+                               removeAttribute("attr")
+styles manip:
+    eleobj.style.prop
+    eleobj.style.prop=value
+
+events:
+    //both are callbacks or anonymous 
+    eleobj.event-name= code(write function)
+    eleobj.addEventListener("event", code(write function))
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>demo on data manipulation</h3>
+    <h1 id="heading">Hello</h1>
+    <input type="text" id="tb" value="1000">
+    <hr>
+    <script>
+        const h= document.getElementById("heading");
+        document.write(`${h.innerText}<br>`);//printing the innerText of the tag using getElementbyId 
+        // h.innerText = ""; // data is deleted , tag not deleted
+        h.innerText+="World"; //appending the data 
+
+        //Inside innerText we can not use the HTML while in innerHTML we can use HTML
+        h.innerHTML+="&nbsp;World" //here we can use html tag with the innerHTML for manipulating the content
+
+        const t = document.getElementById("tb"); 
+        document.write(`${t.value}<br>`);
+
+        // t.value=""; // for deleting the textbox
+        // t.value="apples"//modifying the data
+        t.value += "apples"//appending the data
+    </script>
+</body>
+</html>

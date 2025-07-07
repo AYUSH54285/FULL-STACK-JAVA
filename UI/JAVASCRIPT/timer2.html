@@ -1,0 +1,48 @@
+<!-- start at 38 minute of video. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>demo on digital clock and changing background color</h3>
+    <div style="display:flex; justify-content:space-between">
+    <h1 id="d">Date</h1>
+    <h1 id="t">Time</h1>
+    </div>
+
+
+    <script>
+        //displaying date
+        document.querySelector("#d").innerText=new Date().toLocaleDateString();
+
+        //displaying digital time
+        setInterval(function(){
+            const dt = new Date();
+            document.querySelector("#t").innerText = dt.toLocaleTimeString();
+        },"1000");
+    </script>
+
+    <br>
+
+    <button id="start">&nbsp; Start  &nbsp; </button> &nbsp; &nbsp; &nbsp;
+    <button id="stop"> &nbsp; Stop &nbsp; &nbsp;</button>
+
+    <script>
+        let t; 
+        //changing color
+        document.querySelector("#start").onclick = ()=>{
+            t = setInterval(function(){
+                const c = '#'+parseInt(Math.random()*1000000);
+                document.querySelector("div").style.background=c;
+            },"200");
+        }
+
+        //stopping changing color
+        document.querySelector("#stop").onclick=()=>window.clearInterval(t);
+    </script>
+
+</body>
+</html> 

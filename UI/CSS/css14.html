@@ -1,0 +1,69 @@
+<!--
+pseudo elements		
+	::
+ 
+eles => before, after, selected, first-letter, first-line, marker, placeholder ...
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="icon" href="logo.png">
+	<meta charset="UTF-8">
+	<style>
+	  h2::before{
+		content:'hi ';
+	  }
+	  h2::after{
+		content:'\01F44D';
+	  }
+	  p::first-letter{
+	    background:rgb(0,0,0);
+		color:#FFF;
+		font-size:26px;
+	  }
+	  p::first-line{
+	    color:orange;
+	  }
+	  ::placeholder{
+	    color:lime;
+		text-align:center;
+	  }
+	  ol li::marker{
+	    color:blue;
+	  }
+	  ul li::marker{
+	    color:red;
+		font-size:20px;
+	  }
+	  ::selection{
+	    background:yellow;
+		color:red;
+	  }
+	</style>	
+  </head>
+  <body>
+	<h3>demo on pseudo elements</h3>
+ 	<h2>Oracle</h2> 
+	<h2>Micorsoft</h2>  	
+	<h2>Google</h2>	
+	<input type="text" placeholder="enter username">
+	<br>
+	<input type="text" placeholder="enter password">
+	<br>
+	<p>Royal Enfield has recently updated its most affordable motorcycle in the Indian market. It is the Hunter 350 that now gets several enhancements over the outgoing model. There are cosmetic as well as a few mechanical upgrades to the Hunter 350 now.</p>
+	<p>For 2025, Royal Enfield has added three new colours. There is Rio White, Tokyo Black, and London Red. The brand has retained the Dapper Grey and Rebel Blue colour schemes because of their popularity. Apart from these colours, the base variant continues to come with a Factory Black colour.</p>
+	
+	<ol>
+	  <li>Oracle</li> <li>Micorsoft</li>  	
+	  <li>AMD</li> 	<li>Intel</li>
+	  <li>Google</li>	<li>Apple</li>	
+	</ol>  
+	
+	<ul>
+	  <li>Cisco</li>	  <li>Salesforce</li>
+	  <li>SAP</li>	<li>ADP</li>	<li>Opentext</li>
+	  <li>IBM</li>
+	</ul>	
+	
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .c{
+        background:red;
+        color:white;
+        width:50%;
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+    <h3>demo on dom style manipulation</h3>
+    <input type="color" id="clr">
+    
+        <h1>Hello World </h1>
+        <button id="bt1">Apply Style</button>
+        <button id="bt2">Remove style</button>
+    <script>
+        document.querySelector("#clr").onchange=()=>{
+            document.body.style.background=clr.value;
+        }
+
+        /*
+        document.querySelector("#bt1").onclick=()=>{
+            const h = document.querySelector("h1");
+            h.style.color="red";
+            h.style.background="blue";
+            h.style.width="red";
+        }
+
+        document.querySelector("#bt2").onclick=()=>{
+            const h = document.querySelector("h1");
+            h.style.color="black";
+            h.style.background="white";
+            h.style.width="100%";
+        }
+        */
+        // another way is to use of class selector for simplicity.
+        document.querySelector("#bt1").onclick=()=>{
+            document.querySelector("h1").classList.add("c");  // using add we can easily add new attributes in tag
+        }
+        document.querySelector("#bt2").onclick=()=>{
+            document.querySelector("h1").classList.remove("c"); // using remove we can easily remove the attributes
+        }
+
+        //For adding the more class in same tag like this <h1 class="c1 c2 c3">
+        document.querySelector("#bt1").onclick=()=>{
+            document.querySelector("h1").classList.add("c1");
+            document.querySelector("h1").classList.add("c2");
+            document.querySelector("h1").classList.add("c3");
+        }
+    </script>
+</body>
+</html>

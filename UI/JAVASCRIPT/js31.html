@@ -1,0 +1,53 @@
+<!--
+Interpolation:
+You can create strings using Template Literals. Template literals allow you to embed expressions within backticks (`)
+ for dynamic string creation, making it more readable and versatile.
+
+
+Interpolation used in 2 ways  
+1. printing some data:
+    -> in interpolation backticks are used not single and double quotes and for putting elemets in string we used ${} for this
+2. assigning the data:
+    -> let st = `Hi ${n}`;
+
+
+
+-->
+
+<!-- HTML with JS -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>demo on interpolation</h3>
+        <!-- in interpolation backticks are used not single and double quotes and for putting elemets in string we used ${} for this-->
+        <script>
+            let n="ecma";
+            document.write(n+"<br>"); // old style
+            document.write(`${n}<br>`) //using new style that is interpolation 
+            document.write("${n}<br>")// invalid due to double quotes not work in interpolation
+
+            document.write("sum is 10+20 <br>"); // no dynamic changes
+            document.write(`sum is ${10+20}<br>`);
+            document.write(`res is ${45>20}<br>`);
+
+            let tn=10;
+            for(let i=1 ; i<=10 ; i++){
+                document.write(`${tn}*${i}=${tn*i}<br>`)
+            }
+
+            let st = `Hi ${n}`; // can assign using interpolation
+            document.write(st+"<br>");
+
+            let x=15,y=9,res; 
+            res = `sum is ${x+y}<br>
+                   product is ${x*y}<br>
+                   mod is ${x%y}`;
+
+            document.write(res);
+        </script>
+    </body>
+
+</html>

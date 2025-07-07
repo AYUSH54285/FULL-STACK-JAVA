@@ -1,0 +1,92 @@
+<!-- Group Selector
+=> it is group of selectors
+=> it is used to define the same styles for multiple type of selectors
+=> and it is used to minimise the code repeatations
+syn:
+    tag1,tag2,tag3...{   // defining the same styles for all these tags hence it is a group selector
+        prop:val;
+    }
+    
+    #i1,#i2,#i3{
+        prop:val;
+        ....
+    }
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="icon" href="images/logo.png">
+    <style>
+        /* h1{
+            color:red;
+            background: yellow ;
+            width: 50%;
+        }
+        h2{
+            color:red;
+            background: yellow ;
+            width: 50%;
+        }
+        h3{
+            color:red;
+            background: yellow ;
+            width: 50%;
+        }
+        h4{
+            color:red;
+            background: yellow ;
+            width: 50%;
+        }
+        p{
+            color:red;
+            background: yellow ;
+            width: 50%;
+        } */
+
+        /*instead of these multiple lines use group selector*/
+        h1,h2,h3,h4,p{
+            color:red;
+            background: yellow ;
+            width: 50%;
+        }
+
+
+        /* 
+        Applying group tag in all type of selectors
+
+        .c1,.c2,.c3{
+            color: blue;
+        }
+        ul li,ol li{
+            color: red;
+        }
+        nav > a,footer>a{
+            color: green;
+        }
+        [width],[height]{
+            color: red;
+        }
+        #i1,#i2{
+            color: green;
+        } 
+        
+        #i1,.c1,p,ul li{
+            color:green;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h3>demo on group selector</h3>
+
+    <h1>HTML</h1>
+    <h2>CSSS</h2>
+    <h3>JavaScript</h3>
+    <h4>Bootstrap</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ad voluptatibus praesentium, in suscipit labore magni ex
+         eos maiores voluptas perspiciatis dolorem inventore necessitatibus distinctio 
+         dignissimos ea! Expedita, vel itaque?</p>
+</body>
+</html>

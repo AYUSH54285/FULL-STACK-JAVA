@@ -1,0 +1,24 @@
+/*defining style for grade*/
+
+table{
+    background:black;
+    color:white;
+    width:340px;
+    margin:auto;
+}
+caption{
+    color:black;
+    text-decoration:2px wavy underline;
+}
+input{
+    outline: none;
+    font-size:18px;
+}
+th{
+    text-align: right;
+    font-size:18px;
+}
+output{
+    color:yellow;
+    font-size:18px;
+}

@@ -1,0 +1,64 @@
+<!--
+console uses:
+
+=> we can see all the errors in console only
+=> we can do any arithematic opertions
+=> used as a editor
+=> use as o/p screen.
+
+NOTE: js internal provide the semicolon after the code 
+
+errors:
+Document.writeln("apple")  -> TypeError in console
+document.writel("Apple");  -> TypeError in console
+docuemnt.writeln("apple)   -> SyntaxError in console
+
+=> when we are running js program then it will not give same errors like other programs
+=> In js total 6 errors in which 6th is outdated/deprecated
+  
+  1.TypeError                                                                                                           
+  2.ReferenceError                                              
+  3.RangeError
+  4.URIError
+  5.EvalError
+
+  <script>
+    step1
+    step2
+    step3 (error comes in this line then js skip all the script after this line and execute the remaining code)
+    step4
+    step5
+    step6
+  </script>
+
+  reamining code
+
+
+  6.SyntaxError -> different behaviour then other errors
+
+  <script>
+    step1
+    step2
+    step3 (error comes in this line then js skip all the script tag including already checked scripts(like step1 and step2) and execute the remaining code)
+    step4
+    step5
+    step6
+  </script>
+
+  reamining code
+
+ 
+-->
+
+<script>
+    document.writeln("orange");
+    document.writel("Apple");  // tyep error
+    document.writeln("Mango");
+</script>
+<h3>hi</h3>
+<script>
+    document.writeln("Google");
+    document.writeln("Miscrosoft);  // syntax error
+    document.writeln("Netflix");
+</script>
+<h3>hello</h3>

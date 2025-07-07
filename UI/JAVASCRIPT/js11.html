@@ -1,0 +1,46 @@
+<!--
+var -> we can do re-definition, we can use it again for different purpose 
+let -> we can not re-define, we can not use the old variable and re-define it
+var n=10;
+let n="not possible" // redefine not allowed for let and const
+
+HOISTING : 
+-> it means first utilize the variable then declaration of the variable
+-> it works for only "var" keyword
+-> we can not initialize(var x=10;) the varible after the utilization.  
+
+NOTE: if we want to utilize this feature then go for "var" otherwise go with "let"
+
+--> 
+
+
+
+
+<!--example on JS variables-->
+<h3>demo on var VS let</h3>
+<script>
+    var n=100;  // definition
+    document.write(n,' ',typeof n,'<br>');
+
+    var n="ecma"; //re-definition
+    document.write(n,' ',typeof n,'<br>');
+
+    //let n=true ;   // error: in let and const we can not provide redefinition to the variable
+    var n=true;
+    document.write(n,' ',typeof n,'<br>');
+
+    //hoisting
+    x=100;
+    document.write(x,"<br>");
+    document.write(x*5,'<br>');
+    var x;  // x is hoisted and it only works for var keyword
+
+    y='js';
+    document.write(y,'<br>');
+    // let y; // it will give error because hoisting only work in the case of 'var' not let and const
+    var y;
+
+    document.write(z);
+    var z=200; // initializtion after the using of variable is not work for hoisting
+
+</script>

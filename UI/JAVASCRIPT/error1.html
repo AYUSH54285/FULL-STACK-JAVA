@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>demo on error handling</h3>
+    <script>
+        //these error not shown in Console beacuse we are handling the error using error handling, for displaying the error in console remove catch block
+        try{
+            document.writ('try block<br>');
+        }
+        catch(e){         //good practice and mandatory, e= new TypeError() in backend 
+            document.write('catch block<br>');
+            console.error(e);
+        }
+        finally{      //optional
+            document.write('finally block<br>')
+        }
+    </script>
+</body>
+</html>

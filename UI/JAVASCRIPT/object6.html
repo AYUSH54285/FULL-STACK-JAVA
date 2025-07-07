@@ -1,0 +1,31 @@
+<!-- example on JS Objects 
+keys() => it returns all keys 
+			Syn:-			Object.keys(obj-ref)
+values() => it returns all values
+			sYN:-		Object.values(obj-ref)
+entries() => it returns key alogn with values
+			Syn:		    Object.entries(obj-ref)  
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>
+  <body>
+		<h3>demo on objects</h3>		
+		<script>
+			const ob = {		x:10,		//key:value
+										y:20,
+										z:30
+									}
+	
+			document.write(`keys	=>	${Object.keys(ob)}<br>`);
+			document.write(`values	=>	${Object.values(ob)}<br>`);
+			/*		OR
+				 const vals=Object.values(ob);
+				const keys = Object.keys(ob);
+				const a = Object.entries(ob);	*/
+		</script>
+   </body>
+</html>

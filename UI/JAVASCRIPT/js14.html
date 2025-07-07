@@ -1,0 +1,79 @@
+<!--
+JavaScript Operators: 
+-> Operator is a symbol (special char) and it is used to perform certain operation (task). 
+-> Every operator is a symbol, but every symbol is not an operator. 
+-> Every operator requires some values, those are called operands. 
+Ex:    a+b   "a,b"->operands  "+"->operator
+Expression :
+-> Its combination of one operator and some operands
+
+Operator Categories :
+1. Unary  it requires one operand 
+->increment 
+->decrement 
+2.Binary   it requires two operands 
+-> Arithmetic 
+-> Relational 
+-> Logical 
+-> Assignment 
+    ● Concatenation 
+    ● Bitwise  
+3. Ternary   it requires three operands 
+-> Conditional 
+
+Special operators: 
+Parse operator, spread operator, rest operator, arrow ope, destructuring, regexp, 
+member ope
+-->
+
+<!-- example on JS   -->
+<h3>demo on JS Operators</h3>
+<script> 
+  let x=23, y=9;
+  //let a=10, b=true, c="ram";  valid dec
+  
+  //arithmetic ope	+, -, *, /, %, **
+  document.write( x+y, `<br>`);
+  document.write( y*3, `<br>`);
+  document.write( y**3, `<br>`);
+  document.write( x/3, `<br>`);
+  document.write( (x/3).toFixed(2), `<br>`);
+  
+  //relational ope	>, <, >=, <=, ==, !=, ===, !==
+  document.write( x>=0, '<br>');
+  let z="9";
+  document.write( y==z, '<br>'); //9=="9" =>"9"=="9" => T
+  document.write( y===z, '<br>'); //9==="9" => F
+  document.write( y!=z, '<br>'); //9!="9" =>"9"!="9" => F
+  document.write( y!==z, '<br>'); //9!=="9" => T
+  
+  //logical ope	 &&, ||, !
+  document.write( x>=0 && x<=10, '<br>');
+  document.write( !(y<0), '<bR>');
+  
+  /* assignment ope		=
+	shorthand ope	+=,	-=,	*=,	/=,	%=,	**=		*/
+  x+=40;	//x=x+40;
+  y*=10;	//y=y*10;
+  document.write( x, '<br>', y, '<br>');
+  
+  //concate ope		+
+  document.write( "rama"+"rao"+"<br>" )
+  document.write( 100+" mangos<br>" );
+  document.write( 20+true, '<br>' );
+  
+  /*  increment ++		++var		var++
+	decrement	--		--var		var--
+						(pre)		(post)	*/
+   x++;   //post
+   document.write(x, '<br>');
+   ++x;		//pre
+   document.write(x, '<br>');   
+   //let res=10*x++;		//66	650
+   let res=10*++x;			//66	660
+   document.write(x, '<br>', res, '<br>');
+ 
+   /*	condition ope	?:
+			condi ? statement1 : statement2	*/
+   document.write( y%2===0? "Even number" : "Odd number");
+</script>

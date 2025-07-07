@@ -1,0 +1,43 @@
+<!-- example on select & option tags -->
+<!--
+dropdown(combo box) control
+=> using "select" tag we can create a dropdown list/Control Box
+=> dropdown list is used to display some options/items to the user allows the user to select any one of them
+=> multiple size="3" ->  Makes the dropdown box display 3 rows at once like a list box.
+=> "option" tag is sub tag of "select" tag
+=> "option" tag used to create/to add items/options to dropdown list.
+=> both are paired tags
+=> select is inline element and option is block level element
+=> Syn: <select attributes> 
+			<option attributes> Text </option> 
+			<option> Text </option> 
+		</select>
+new Syn: 
+<option> Text </option> 
+	<option value="ws" > text </option> 
+Note: by default, DDB is displaying 1st added option/item 
+attributes: 
+selected : this attribute of "option" tag, used to change default selected option/item of DDB
+value :  This is the value sent to the server if the option is selected.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>29th Webpage</title>
+	<link rel="icon" href="logo.png">
+  </head>
+  <body>
+	<h3>demo on dropdopwn element</h3>
+	
+	<label>Which College:</label> 
+	<select id="c" name="c" multiple size="3"> <!--multiple size="3" -->
+	  <option value="VCE">Vardhaman College of Engineering</option>
+	  <option value="GRIET">Gokaraju Rangaraju Institute of Engineering & Technology</option>
+	  <option value="MLRIT">MLR Institute of Technology</option>
+	  <option value="IITH" selected>Indian Institute of Technology Hyderabad</option>
+	  <option value="ANU">Anurag University</option>
+	  <option value="VJIT">Vidya Jyothi Institute of Technology</option>
+	</select>
+	
+  </body>
+</html>

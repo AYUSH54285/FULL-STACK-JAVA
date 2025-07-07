@@ -1,0 +1,95 @@
+<!-- Detailed Explanation of CSS Units
+1. Percentage (%)
+The percentage unit is used to set values relative to the current font-size or the size of the parent element. This unit is highly flexible and allows for responsive design adjustments.
+
+Example: Setting the font-size relative to the current font-size.
+font-size: 150%;
+
+2. em:
+The em unit is relative to the font-size of the element it is used on. For example, 2em means two times the size of the current font.
+
+Example: Setting the font-size relative to the current font-size.
+font-size: 2em;
+Note: Here, 2em means 2 times the size of the current font.
+
+3. rem:
+The rem unit is relative to the root element (usually the <html> element) font-size, making it consistent across the entire document.
+
+Example: Setting the font-size relative to the browser base font-size.
+font-size: 1.5rem
+
+4. Pixles(px):
+The pixel unit is an absolute unit used to define sizes in terms of pixels. It ensures consistent size across different screens.
+
+Example: Setting the font-size in pixels.
+font-size: 16px;
+
+5. Viewport Height (vh)
+The vh unit is relative to 1% of the viewport’s height, making it useful for setting sizes based on the height of the browser window.
+
+Example: Setting the height relative to the viewport height.
+height: 50vh;
+
+6. Viewport Width (vw)
+The vw unit is relative to 1% of the viewport’s width, making it useful for setting sizes based on the width of the browser window.
+
+Example: Setting the width relative to the viewport width.
+width: 50vw;
+-->
+
+<!-- CSS properties  -->
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		html{
+		  font-size:10px;
+		}
+	   .c1{	
+		 font-size:30px;
+	   }
+	   .c2{	
+		 font-size:1.5em;
+		 /* 1em is equal to the current font size of main/parent/contianer element. for most of tags default size is 16px.
+			1.5em=>24px	*/
+	   }
+	   .c3{	
+		 font-size:2vw; 
+		 /*Responsive Font Size:
+		 Viewport is calculated based on the browser window size.
+		 1vw = 1% of browse size. 
+		 for ex viewport is 100cm wide, 1vw is 1cm */
+	   }
+	   .c4{	
+		 font-size:125%;
+	   }
+	   .c5{	
+		 font-size:2rem;
+		 /*the rem unit is only relative to the document's root element(html tag)*/
+	   }
+	   p{
+		  font-size:30px;
+		  font-style:italic;	/* nomral */
+		  font-weight:bold;		/* nomral */
+		  font-family:'Bradley Hand ITC',Magneto,Papyrus;
+		  /* browser checks the supported models from LEFT => RIGHT order */
+	   }
+	   h2{
+	     font: italic bold 24px Georgia;
+	   }
+	</style>
+  </head>
+  <body> 
+   	<h2>demo on font settings</h2>
+	<div class="c1">font size in pixel</div>
+	<div class="c2">font size in em</div>
+	<div class="c3">font size in 2vw</div>
+	<div class="c4">font size in %</div>
+	<div class="c5">font size in rem</div>
+	
+	<p>This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. see the gnu general public license for more details.</p>
+	
+		
+  </body>
+</html>

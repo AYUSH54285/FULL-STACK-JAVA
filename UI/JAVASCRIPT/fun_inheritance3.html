@@ -1,0 +1,31 @@
+<!-- exmaple on inheritance -->
+<html>
+	<head>
+		<script>
+			function Parent()  //constructor function (parent )
+			{
+			  document.write(`Parent constructor<br>`);
+			}
+
+			function Child1()   //constructor function  
+			{
+				Parent.call();	//inheritance
+			  document.write(`Child1 constructor<br>`);
+			}
+
+			function Child2()   //constructor function 
+			{
+				Parent.call();	//inheritance
+				document.write(`Child2 constructor<br>`);
+			}
+		</script>
+	</head>
+<body>
+  <h1>demo on inheritance</h1>
+  <script>
+    //creating objects
+	new Child1();	//memory for C1&P
+    new Child2();		//memory for C2&P
+  </script>
+</bodY>
+</html>
