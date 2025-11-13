@@ -1,3 +1,119 @@
+<!--
+ex: 
+<head> 
+  <script type='text/javascript'> 
+    alet("welcome to exceptions"); 
+    alert("Thank you"); 
+  </script> 
+</head> 
+No o/p 
+ 
+In the above example we need to apply the try catch block 
+ 
+ex: 
+<head> 
+  <script type='text/javascript'> 
+    try{ 
+      alrt("welcome to exceptions");  
+    } 
+    catch(e){ 
+      alert(e.description); 
+    } 
+  </script> 
+</head> 
+ 
+above script get executed successfully 
+ 
+eval(): It is a global function stands for evaluate.It evaluates anumerical values. 
+syntax: eval(expression) 
+ex: 
+<head> 
+  <script type='text/javascript'> 
+    var x=prompt("Enter value to evaluate"); 
+    alert(eval(x)); 
+    alert("Next"); 
+  </script> 
+</head> 
+In  the  above  script  if  you  enter  the  numerical value script get executedsuccessfully otherwise script 
+unable to run. That time we should implement try catch block. 
+eg: 
+<head> 
+  <script type='text/javascript'> 
+    try{ 
+      var x=prompt("Enter value to evaluate"); 
+      alert(eval(x)) ; 
+    } 
+    catch(e) { 
+      alert("sorry alpha-invalid:"+e.description) 
+    } 
+    alert("next") 
+  </script> 
+</head> 
+. 
+ 
+finally block: This block gets executed regardless of an exceptionoccurring. this block sep used for 
+writing some common code for try & catch block. 
+finally block should be follower of either try block or catch block. 
+syntax: 
+<script> 
+  try{ 
+    code to run[break;]          
+  }catch(e){ 
+    code to run if an exception occurs 
+    [break;] 
+  }finally{ 
+    code that is always executed regardless of an exceptionoccurring   
+  } 
+</script> 
+ 
+eg: 
+<head> 
+  <script type='text/javascript'> 
+    try{ 
+      var x=prompt("Enter value to evaluable"); 
+      alert(eval(x)); 
+    }catch(e){ 
+      alert("sorry Alpha-Invalid:"+e.description);  
+    }finally{ 
+      alert("This Block Always get executed");                                 } 
+      alert("next") 
+    } 
+  </script> 
+</head> 
+     
+Throw statement: This statement allows to you create an exception. If you use this statement together 
+with  try  catch  statement,  you  can  control  program  flow  and  generate  accurate  error  message.  The 
+exception can be String,  integer, boolean or an object.  
+Syn: 
+    throw excepobj;      // for throw existing object or predefined object 
+    throw "text";       //error message
+    throw new Error(msg);  //using anonymous object 
+ 
+Throw Exception      
+<body> 
+  <script type='text/javascript'> 
+    var x=prompt("Enter Any number") 
+    try{ 
+      if(x>10) { 
+        throw "Err1"; 
+      } 
+      else if(x<=10){ 
+        throw "Err2"; 
+      } 
+      else if(isNaN(x)){  
+        throw "Err3"; 
+      } 
+    }catch(err){ 
+      if(err=="Err1"){ 
+        document.write("Error:The value is too height"); 
+      } 
+      if(err=="Err3"){ 
+        document.write("Error:The value is not a number"); 
+      } 
+    } 
+  </script> 
+</body> 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,5 +129,22 @@
         <button onclick="add()">Addition</button>
         <br>
         <output id="op"></output>
+
+        <script>
+            function add(){
+                try{
+                    let x=eval(fn.value); //evaluate 
+                    let y=eval(sn.value);
+                    let res = x+y;
+                    op.value=`sum is ${res}`;
+                }catch(err){
+                    op.value=`Invalid data`;
+                    console.error(err);
+                }
+
+            }
+        </script>
+
 </body>
 </html>
+

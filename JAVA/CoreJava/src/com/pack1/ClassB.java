@@ -160,8 +160,7 @@
 //	public static void main(String[] args) {
 //		ClassB bobj = new ClassB();
 //		bobj.meth1();
-//	}
-//	
+//	}	
 //}
 
 
@@ -298,11 +297,11 @@ public class ClassB extends ClassA{
 //	public void meth3(int i, String msg) {
 //		System.out.println(30);
 //	}
-//	static void meth4() { //we can not override
+//	static void meth4() { //we can not override the static method
 //		System.out.println(40);
 //	}
 //	@Override
-//	ClassB meth5() {
+//	ClassB meth5() { //here we can override because the return type is not primitive it is object of different class and it is called co-varient concept
 //		System.out.println(50);
 //		return new ClassB();
 //	}
@@ -340,7 +339,7 @@ public class ClassB extends ClassA{
 //		return "Java".equalsIgnoreCase("java");
 //	}
 //	public static void main(String[] args) {
-//		ClassA aobj = new ClassB();
+//		ClassA aobj = new ClassB(); 
 //		aobj.meth2();
 //		aobj.meth1();
 //		System.out.println("msg() is returning : "+aobj.msg());
@@ -421,7 +420,7 @@ public class ClassB extends ClassA{
 //	public void run() {
 //		String name = Thread.currentThread().getName();
 //		System.out.println(name+" has entered criticalResource()");
-//		synchronized (this) {
+//		synchronized (this) { //from here only one thread execute and this(locked current object that is bobj)
 //			for(int i=1 ;i<=5 ;i++) {
 //				System.out.println(name+"===>"+i);
 //			}
@@ -443,7 +442,7 @@ public class ClassB extends ClassA{
 
 //17/6/25
 //Interthread Communication : wait(),notify(),notifyAll()
-
+//package com.pack1;
 //public class ClassB{
 //	public static void main(String[] args) {
 //		ClassA aobj = new ClassA();

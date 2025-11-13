@@ -19,14 +19,14 @@
     <p class="c">css</p>
     <div class="c">JavaScript</div>
     <script>
-        const ob1 =document.querySelector("#i");
+        const ob1 =document.querySelector("#i"); //for getting the object with selector type, while using querySelector("we have to mention the selector name with symbol otherwise it will treat as tag name") and it will return the only one first tag which is using that selector.
         document.write(`${ob1}=> ${ob1.tagName}<br>`);
 
-        const ob2=document.querySelector(".c");
+        const ob2=document.querySelector(".c"); 
         document.write(`${ob2}=> ${ob2.tagName}<br>`);
 
-        const ob3 = document.querySelectorAll(".c");
-        document.write(`${ob3}<br>`)
+        const ob3 = document.querySelectorAll(".c"); // it will return all tags 
+        document.write(`${ob3}<br>`) //it will return the NodeList(collections is of two types nodelist and sets)
 
         for(let e of ob3){
             document.write(`${e} => ${e.tagName}<br>`);

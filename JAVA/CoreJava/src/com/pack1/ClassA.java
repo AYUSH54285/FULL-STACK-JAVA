@@ -3844,7 +3844,8 @@ present inside the strings.
 
 //28/5/25
 //Understanding encapsulation 
-// check ClassB
+//check ClassB
+
 //package com.pack1;
 //
 //public class ClassA{
@@ -3876,7 +3877,7 @@ present inside the strings.
 
 
 
-//Task-1
+//Task-1 => if the emp has experience more than 10 years then employese will get hike
 //package com.pack1;
 //
 //public class ClassA{
@@ -4050,7 +4051,7 @@ public class ClassA{
 //		System.out.println("ClassA default constructor");
 //	}
 //	ClassA(int x){
-//		System.out.println("ClassA parameterized constructor"+x);
+//		System.out.println("ClassA parameterized constructor "+x);
 //
 //	}
 //}
@@ -4059,6 +4060,8 @@ public class ClassA{
 
 //2/6/25
 //Understanding Function overriding
+//check classB and     
+//check ClassC (for different example) 
 //package com.pack1;
 //public class ClassA{
 //	void meth1() { // it is Overidden method
@@ -4084,6 +4087,7 @@ public class ClassA{
 
 //3/6/25
 //Understanding Abstraction
+//check classB
 //package com.pack1;
 //public abstract class ClassA{
 //	abstract void meth1();
@@ -4234,8 +4238,8 @@ public class ClassA{
 //		try {
 //			System.out.println("try block executed");
 //			System.out.println("enter a number");
-//			System.out.println("===>"+20/sc.nextInt()); 
-//			System.out.println("length() : "+arr[0].length());
+//			System.out.println("===>"+20/sc.nextInt()); //ArithmeticException
+//			System.out.println("length() : "+arr[0].length()); //NullPointerException
 //			System.out.println("Hello World"); //Always try to write less code in "try" block because if any exception occur then automatically our code go to the catch block and remaining line not executed 
 //		}
 //		/*
@@ -4261,14 +4265,14 @@ public class ClassA{
 //	
 //	void meth2() throws Exception{
 //		System.out.println("meth2() called");
-//		try(FileInputStream fis=new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\file1.txt")){ //try with resources can write solely
+//		try(FileInputStream fis=new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\Java\\file1.txt")){ //try with resources can write solely
 //			System.out.println("connection Created");
 //		}
 //	}
 //	public static void main(String[] args)throws Exception {
 //		ClassA aobj = new ClassA();
-////		aobj.meth1();
-//		aobj.meth2();
+//		aobj.meth1();
+//		//aobj.meth2();
 //
 //	}
 //}
@@ -4295,14 +4299,14 @@ public class ClassA{
 //	}
 //	void meth2() throws Exception{ //it is used for "escaping" from exception and if any exception occur in our program then for this we need to use blocks(try-catch-finally) 
 //		System.out.println("meth2 called");
-//		FileInputStream fis = new FileInputStream("D:\\\\STUDY\\\\JAVA FULL STACK\\\\file1.txt"); // compiler don't know the file is present so it detecting an exception,
+//		FileInputStream fis = new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file1.txt"); // compiler don't know the file is present so it detecting an exception,
 //		// this is an checked exception and compiler will not proceed until it will handle, for escaping this exception we can use throws Exception in method name
 //		System.out.println("connection created");
 //	}
 //	public static void main(String[] args) throws Exception { // for escaping from exception here also we use throws
 //		ClassA aobj = new ClassA();
-//		// aobj.withdraw(4000);
-//		aobj.meth2();
+//		//aobj.withdraw(4000);
+//		//aobj.meth2();
 //	}
 //}
 
@@ -4329,8 +4333,8 @@ public class ClassA{
 //		t1.start(); 
 //		t1.run(); 
 //		
-//		t2.start();
-//		t2.run();
+//		t2.start();//there is nothing in thread class run method hence it will print nothing
+//		t2.run(); //there is nothing in thread class run method hence it will print nothing
 //		
 //	       //t1.start();
 //		   /*    In this case a new thread will be created and that
@@ -4360,12 +4364,12 @@ public class ClassA{
 
 
 //13/6/25
-//single thread and multi thread and thread life cycle
+//single thread, multi thread and thread life cycle
 //package com.pack1;
 //public class ClassA extends Thread{
 //	@Override
 //	public void run() {
-//		String name=Thread.currentThread().getName();
+//		String name = Thread.currentThread().getName();
 //		int priority = Thread.currentThread().getPriority();
 //		
 //		System.out.println(name+" has entered run()");
@@ -4382,10 +4386,10 @@ public class ClassA{
 //		Thread t2=new Thread(aobj);
 //		
 //		t1.setName("First Thread");
-//		t1.setName("Second Thread");
+//		t2.setName("Second Thread");
 //
 //		t1.setPriority(Thread.MIN_PRIORITY);//t1.setPriority(1);
-//		t2.setPriority(10);//t1.setPriority(MAX_PRIORITY);
+//		t2.setPriority(10);//t2.setPriority(MAX_PRIORITY);
 //		
 //		t1.start();
 //		t2.start();
@@ -4419,6 +4423,7 @@ public class ClassA{
 //check ClassB
 
 //join()
+//check ClassB
 //package com.pack1;
 //public class ClassA extends Thread{
 //	@Override
@@ -4470,8 +4475,25 @@ public class ClassA{
 //	}
 //}
 
+// Interrupt flow here:
+//t.start();
+//→ New thread starts and executes run().
+//
+//t.interrupt(); (called immediately after start)
+//→ Sends an interrupt signal to t.
+//
+//Inside run():
+//	Prints:
+//		
+//Then it hits Thread.sleep(20000);.
+//Since the thread was already interrupted before sleep,
+//when it reaches Thread.sleep(20000), Java immediately throws an InterruptedException.
+//Catch block runs:
+
+
 
 //yield()
+//check ClassB
 //package com.pack1;
 //public class ClassA extends Thread{
 //	@Override
@@ -4486,6 +4508,7 @@ public class ClassA{
 //16/6/25
 //synchronous
 //check classB
+// Since criticalResource() is declared synchronized, only one thread at a time can enter this method on the same object (aobj).
 //package com.pack1;
 //public class ClassA extends Thread{
 //	public void run() {
@@ -4504,13 +4527,13 @@ public class ClassA{
 //		Thread t1 = new Thread(aobj,"Tom-Thread");
 //		Thread t2 = new Thread(aobj,"Jerry-Thread");
 //		
-////		t1.setName("Tom-Thread");
-////		t2.setName("Jerry-Thread");
+//		//t1.setName("Tom-Thread");
+//		//t2.setName("Jerry-Thread");
 //		
 //		t1.start();
 //		t2.start();
 //	}
-	
+//	
 //}	
 	
 	
@@ -4543,6 +4566,9 @@ public class ClassA{
 
 //Deadlock
 //Thread 1 holding obj-1 and it need obj-2 for complete its execution so that it can release current object(obj-1) and vice versa.
+
+//why we use sleep() -> You force the thread to pause after locking the first resource.
+                     // This pause gives the other thread a chance to start, lock its first resource, and then both will wait for each other’s lock → deadlock happens.
 //package com.pack1;
 //public class ClassA {
 //	public static void main(String[] args) {
@@ -4567,12 +4593,10 @@ public class ClassA{
 //						System.out.println("Thread 1 locked on B");
 //					}
 //					System.out.println("no dead Lock");
-//
 //				}
-//
 //			} 
-//		};//Anonymous Inner Class Ends Here
-//
+//		}; //Anonymous Inner Class Ends Here
+//		
 //		Thread t2 = new Thread()
 //		{
 //			@Override
@@ -4601,10 +4625,10 @@ public class ClassA{
 
 //17/6/25
 //Interthread Communication : wait(),notify(),notifyAll()
-
+// Check B
 //package com.pack1;
 //public class ClassA{
-//	int amount=10000;
+//	int amount=1000;
 //	synchronized void with_draw(int amount) throws InterruptedException{
 //		if(this.amount<amount) {
 //			System.out.println("Insufficient balcance");
@@ -4637,28 +4661,28 @@ public class ClassA{
 // check ThreadPoolDemo class
 
 //daemon thread
-//package com.pack1;
-//public class ClassA extends Thread{
-//	public void run() {
-//		int i=1;
-//		while(true) {
-//			System.out.println("run() "+i);
-//			i++;
-//		}
-//	}
-//	public static void main(String[] args) {
-//		ClassA aobj = new ClassA();
-//		Thread t= new Thread(aobj);
-//		
-//		t.setDaemon(true);
-//		
-//		t.start();
-//		
-//		for(int i=1; i <=20 ; i++) {
-//			System.out.println("main Thread : "+i);
-//		}
-//	}
-//}
+package com.pack1;
+public class ClassA extends Thread{
+	public void run() {
+		int i=1;
+		while(true) {
+			System.out.println("run() "+i);
+			i++;
+		}
+	}
+	public static void main(String[] args) {
+		ClassA aobj = new ClassA();
+		Thread t= new Thread(aobj);
+		
+		t.setDaemon(true);
+		
+		t.start();
+		
+		for(int i=1; i <=20 ; i++) {
+			System.out.println("main Thread : "+i);
+		}
+	}
+}
 
 
 

@@ -32,7 +32,7 @@
 //	}
 //	public static void main(String[] args) {
 //		ClassC cobj = new ClassC();
-//		System.out.println(cobj);
+//		System.out.println(cobj); //When you pass an object to System.out.println(obj);, Java internally calls obj.toString() on it
 //		System.out.println(cobj.toString());
 //	}
 //}

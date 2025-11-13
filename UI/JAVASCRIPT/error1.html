@@ -1,8 +1,107 @@
+<!--
+Error Handling:
+-> In javascript there is no exceptions, so there is no exception handling
+-> In js due to some errors there is no abnormality in code.
+-> we use error handling only beacuse to show the message to the user.
+
+
+=> Types of errors in JavaScript: 
+JavaScript supports the following list of errors, these are divided into 
+✔  syntax error 
+✔  runtime error 
+✔  logical error 
+ 
+ 
+=> Syntax Error: 
+-> Is called as parsing errors, occurs at compile time for traditional programming languages at 
+interpret  time  for  JavaScript.  Following example causes a syntax error because it is missing a closing      
+parenthesis.                                                              
+
+    document.write(; //syntax error
+
+ 
+=> Runtime Errors: 
+These are called exceptions and these errors occurred at execution time. The following 
+example causes a run time error because here syntax is correct but at run time it is trying to call a non 
+existed method. 
+ 
+    document.writeli("hello welcome"); 
+
+ 
+=> Logical errors: 
+These can be most difficult error to find.These errors occurred if you make a mistake in the 
+business logic.These errors unable to handle. 
+<script> 
+//finding area of circle 
+     var r=10; 
+                  var area=3.14*r*2; 
+     alert(area); 
+</script>
+ 
+ 
+Error handling in JavaScript: 
+to work with error/exceptions use try, catch, finally, throw keywords. 
+-> try, catch and finally are blocks. 
+-> throw is statement.     
+ 
+Try catch statement: This statement allows you to test a block of code for errors. The try block contains 
+the code to be run & the catch block contains the code to be executed if an error occurs. 
+ 
+Syntax:  
+try {    
+    The try block contains the code to be run and there is chance to come error
+} 
+catch(refvar) { 
+    code to run if an exception occurs 
+}  
+finally { 
+    Statements 
+} 
+
+Possible Combinations
+try->catch      
+try->finally       //NOT useful
+try->catch->finally
+
+NOTE: in every try block there is implicit throw which throw the error which is received by the catch block
+
+=>Error Object Properties 
+Property          Description 
+name ->           Sets or returns an error name 
+message ->        Sets or returns an error message (a string) 
+ 
+NOTE: for getting the complete details of predefined error then use refvar
+
+=> But if we want only name or message then use below :
+Syn:  excep.name 
+  excep.message 
+ 
+List of Errors: 
+Error Name   Description 
+EvalError    An error has occurred in the eval() function (old ver) 
+RangeError    A number "out of range" has occurred 
+ReferenceError  An illegal reference has occurred 
+SyntaxError   A syntax error has occurred  
+TypeError    A type error has occurred 
+URIError    An error in encodeURI("uri") has occurred 
+ 
+Note:  
+> writing only try is not allowed. 
+> writing only catch is not allowed. 
+> writing only finally is not allowed. 
+> we can write any no.of try-catch blocks, and anywhere(within the script tag or 
+external js). 
+> try block is successfully executed then catch block not executed. 
+>if try block is faired/thrown an error then only catch block is executed. 
+>Order of writing is 1st try block and then catch block.Meansdon't change order 
+writing (otherwise it becomes error); 
+>One try is allowing only one catch block. 
+ 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -12,9 +111,10 @@
         try{
             document.writ('try block<br>');
         }
-        catch(e){         //good practice and mandatory, e= new TypeError() in backend 
+        catch(e){       // e is refernece varaible and it store any error object  //good practice and mandatory, e= new TypeError() in backend 
             document.write('catch block<br>');
-            console.error(e);
+            console.error(e); //for displaying the error message we use console.error()
+            console.log(e); // same error comes but without red colour
         }
         finally{      //optional
             document.write('finally block<br>')

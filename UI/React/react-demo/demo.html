@@ -1,0 +1,101 @@
+<!-- 31/7/25 -->
+
+
+<!-- Event Arguments -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Player(songId, title, loop, obj){
+            console.log(`SONG ID: ${songId} \n SONG TITLE:{title} \n Loop : ${loop} \n BUTTON VALUE:${obj.value}`)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="Player(1, 'Rahman Hits', true, this)" value="play" id="btnPlay">Play</button>
+    <button onclick="Player()" value="Pause" id="btnPause">Pause</button>
+</body>
+</html> -->
+
+
+
+<!-- event listners can not have mutiple arguments so we use 'target' -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            document.getElementById("btnPlay").addEventListener("click",function(e){
+                console.log(`X=${e.ClientX} \n Button Value:${e.target.value}`)
+            })
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <button value="Play" id="btnPlay">Play</button>
+</body>
+</html> -->
+
+
+
+<!-- Propogation and Bubbling -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function NavClick(){
+            alert('Navbar Clicked')
+        }
+        function SearchClick(e){
+            e.stopPropogation();
+            alert('Search Clicked')
+        }
+    </script>
+</head>
+<body>
+    <nav onclick="NavClick()" style="border:1px solid black; padding:10px ;">
+    <h1>Amazon</h1>
+        <button onclick="SearchClick(event)">Search</button>
+    </nav>
+</body>
+</html>
+-->
+
+
+
+<!-- Event Loop -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function SubmitClick(){
+            console.log('Start Request');
+
+            setTimeout(()=>{
+                console.log("Asynchronous task");
+            },0)
+
+            Promise.resolve().then(()=>{
+            console.log('Micro Task');
+            })
+
+            console.log('End Request');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="SubmitClick()">Submit</button>
+</body>
+</html>

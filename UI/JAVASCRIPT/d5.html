@@ -1,3 +1,11 @@
+<!--
+
+=> settings/attributes manip:
+    eleobj.attribute or eleobj.getAttribute("attr")
+    eleobj.attribute = val   or eleobj.setAttribute("attr",value)
+                               eleobj.removeAttribute("attr")
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +19,7 @@
         // we want to change the image
         // const i=document.images[0]; 
         // or
-        const i=document.querySelector("img");
+        const i=document.querySelector("img"); //tag selector
         i.onmouseover=()=>{
                             i.src="images/xyz.jpeg";
                             i.border="10";
@@ -23,7 +31,7 @@
 
 
         //for accsssing the data
-        console.log(i.src);
+        console.log(i.src,i.width,i.height);
         //for removing the attribute
         i.removeAttribute("height");
     </script>

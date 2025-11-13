@@ -1,3 +1,13 @@
+<!--
+=> styles manip:
+    eleobj.style.prop
+    eleobj.style.prop=value
+    eleobj.style.prop=0/none/"" ( for deletion )
+
+
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +26,9 @@
     <h3>demo on dom style manipulation</h3>
     <input type="color" id="clr">
     
-        <h1>Hello World </h1>
-        <button id="bt1">Apply Style</button>
-        <button id="bt2">Remove style</button>
+    <h1>Hello World </h1>
+    <button id="bt1">Apply Style</button>
+    <button id="bt2">Remove style</button>
     <script>
         document.querySelector("#clr").onchange=()=>{
             document.body.style.background=clr.value;
@@ -41,7 +51,7 @@
         */
         // another way is to use of class selector for simplicity.
         document.querySelector("#bt1").onclick=()=>{
-            document.querySelector("h1").classList.add("c");  // using add we can easily add new attributes in tag
+            document.querySelector("h1").classList.add("c");  // using add we can easily add new attributes in tag and we can add any number of tag
         }
         document.querySelector("#bt2").onclick=()=>{
             document.querySelector("h1").classList.remove("c"); // using remove we can easily remove the attributes

@@ -18,6 +18,10 @@
         //displaying date
         document.querySelector("#d").innerText=new Date().toLocaleDateString();
 
+        //manually creating date and time, by using parameterized constructor
+        //const dt = new Date("30-aug-2025");
+        const dt1 = new Date(2025,7,30,6,30);
+
         //displaying digital time
         setInterval(function(){
             const dt = new Date();

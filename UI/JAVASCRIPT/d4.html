@@ -1,3 +1,18 @@
+<!--
+        EVENT HANDLING
+                    //both are callbacks or anonymous 
+                    -> eleobj.event-name= code(write function)        ->  eleobj.addEventListener("event", code(write function))
+
+| Feature                    | Static Event Handling                | Dynamic Event Handling           |
+| -------------------------- | ------------------------------------ | -------------------------------- |
+| Attached via               | HTML or element property (`onclick`) | JavaScript (`addEventListener`)  |
+| Flexibility                | ❌ One handler at a time              | ✅ Multiple handlers possible     |
+| Better for                 | Simple cases                         | Reusable, modular, scalable code |
+| Removes easily?            | By setting to `null`                 | `removeEventListener()` needed   |
+| Works on dynamic elements? | ❌ Not usually                        | ✅ Yes (after creating element)   |
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

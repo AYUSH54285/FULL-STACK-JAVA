@@ -22,7 +22,7 @@
 	</form>
  	<script>
 		//checking fullname
-	   document.querySelector("#fullName").onkeypress=function(fullName){
+	    document.querySelector("#fullName").onkeypress=function(fullName){
 		let ch=fullName.which;
 		console.log(ch);
 		//if the char/key is not alphabet, stop that char/key
@@ -31,12 +31,12 @@
 		}
 
 		//checking phone number
-	   document.querySelector("#phone").onkeypress=function(phone){
-		let ch=phone.which;
+	    document.querySelector("#phone").onkeypress=function(phone){ //whenever the user presses a key that produces a character while the phone field is focused.
+		let ch=phone.which;//reads the numeric code of the character typed (legacy property).
 		console.log(ch);
 		//if the char/key is not digit, stop that char/key
 		if(!(ch>=48&&ch<=57))
-			phone.preventDefault();
+			phone.preventDefault(); // no character other than this -> (ch>=48&&ch<=57) wil print 
 		}
 	</script> 
   </body>

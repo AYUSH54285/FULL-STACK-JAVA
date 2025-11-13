@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" type="image/x-icon" href="../react-web-app/public/images/netflix icon.png">
+    <!-- Custom styles -->
+    <style type="text/css">
+        body{
+            background-size:cover;
+        }
+        .shade{
+            height:100vh;
+            background-color:rgba(0, 0, 0,0.7);
+        }
+        .input-group{
+            height: 30px;
+        }
+        section{
+            padding-top:60px
+        }
+        .section-title{
+            font-size:60px;
+            font-weight:bold;
+        }
+        .section-subtitle{
+            font-size:20px;
+            font-weight:bold;
+        }
+
+    </style>
+    <!--Bootstrap modules-->
+    <link rel="stylesheet" href="../react-web-app/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../react-web-app/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../react-web-app/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!--React modules-->
+    <script src="../react-web-app/node_modules/react/umd/react.development.js"></script>
+    <script src="../react-web-app/node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../react-web-app/node_modules/@babel/standalone/babel.js"></script>
+
+    <script type="text/babel">
+        function NetflixIndex(){
+            return (
+                <div className="shade">
+                    <NetflixHeader />
+                    <NetflixSection />
+                </div>
+            )
+        }
+        function NetflixHeader(){
+            return (
+                <header className="d-flex p-4 justify-content-between">
+                    <div className="h1 text-danger fw-bold">NETFLIX</div>
+                    <div className="d-flex">
+                        <div className="input-group bg-black ">
+                            <span className="bi bi-translate input-group-text bg-black text-white border-0"></span>
+                            <select className="form-select bg-black text-white border-0">
+                                <option>English</option>
+                                <option>Hindi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button className="btn btn-danger text-nowrap mx-4">Sign In</button>
+                        </div>
+                    </div>
+                </header>
+            )
+        }
+        function NetflixSection(){
+            return (
+                <section className="text-white text-center">
+                    <div className="section-title">Unlimited movies, <br/> TV shows and more</div>
+                    <div className="section-subtitle">Starts at ₹149. Cancel at any time.</div>
+                    <NetflixMain />
+                </section>
+            )
+        }
+        function NetflixMain(){
+            return (
+                <main className="mt-4">
+                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                    <div className="d-flex justify-content-center">
+                        <div>
+                            <div className="input-group input-group-lg">
+                                <input type="email" className="form-controller" placeholder="Your email address" />
+                                <button className="btn btn-danger mx-2">Get Started<span className="bi bi-chevron-right" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            )
+        }
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(
+            <NetflixIndex />
+        )
+    </script>
+</head>
+<body background="../react-web-app/public/images/netflix banner.jpg">
+    <noscript>Please enable the js in your browser</noscript>
+    <div id="root"></div>
+</body>
+</html>

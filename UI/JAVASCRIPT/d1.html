@@ -1,3 +1,25 @@
+<!--
+DOM(Document Object Model):
+-> For performing any operation on webpage we need DOM because, we can not perform the opertion direclty on webpage 
+we have to use DOM for dynamically access and updates the content, structure and style of documents.
+
+-> DOM is work like intermediate for HTML and JS
+-> DOM is the tree structure of html elements(tags) that are present in the webpage.
+-> DOM will follow the same hirearchy
+-> DOM will have same like tags but the difference is html has tag and DOM has Classes.
+-> DOM will automaticlly creating the object in webpage(when the page load and opened in browser)
+        ex-> 30tags => 30 objs
+-> In DOM for perfoming any opertaions we have to collect the object.
+
+=> we generally deal with DOM in two ways using "document" and "element"
+1. Using document object (applied on web page)
+2. Using individual element objects (group of tags)
+
+
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,36 +36,36 @@
     <img src="images/pqr.jpeg" width="200">
 
     <script>
-        document.write(`${document}<br>`);
+        document.write(`${document}<br>`); // it will come from HTMLDocument class(which is also child of Object class) and its type is object
 
-        const ob1 = document.getElementById("head1");
-        document.write(`${ob1} =>${ob1.tagName}<br>`);
+        const ob1 = document.getElementById("head1");// here it returning the the object , but actually it is getting the the address
 
-        const ob2 = document.getElementsByTagName("img");
-        document.write(`${ob2}<br>`);
+        // if we want to create own new object then we have to use new keyword => ob1 = new HTMLHeadingElement();
+        document.write(`${ob1} =>${ob1.tagName}<br>`); // it will print object HTMLHeadingElement and this ob1 contains all information related with h1 tag
+        // for knowing the tag Name => ob1.tagName
 
+        const ob2 = document.getElementsByTagName("img"); // if we don't have id then we can get object with the help of tag name // if tag is not available then it return NULL // and notice here it has elements not element        document.write(`${ob2}<br>`);
+        // getElementsByTagName is collection of obejcts
         for(let i of ob2){
             document.write(`${i}<br>`);
         }
 
-        // only these 5 tags are available with document properties, remaining with document methods
+        //NOTE: only these 5 tags(head,body,images,forms,links) are available with document properties(document.propertiesName), remaining with document methods
 
-        const ob3=document.head;
+        const ob3=document.head; //This will return the entire <head> element as an object, which you can inspect or modify.
         document.write(`${ob3} =>${ob3.tagName}<br>`);
 
         const ob4=document.body;
         document.write(`${ob4} =>${ob4.tagName}<br>`);
 
-        const ob5 = document.images;
+        const ob5 = document.images; // all imag tags
         document.write(`${ob5}<br>`);
 
-        const ob6 = document.forms;
+        const ob6 = document.forms; // all forms tags
         document.write(`${ob6}<br>`);
 
-        const ob7 = document.links;
+        const ob7 = document.links; // all anchors tags links
         document.write(`${ob7}<br>`);
-
-
     </script>
 </body>
 </html>

@@ -1,24 +1,23 @@
 <!--
-data minipulations:
-// used in paired tags
-eleobj.innerText
-eleobj.innerHTML  
-// used in input elements
-eleobj.value
+=> data minipulations(reteriving , modifying, deleting of data):
+=> used in paired tags(output elements)                   => used in input elements
+-> eleobj.innerText                                    ->  eleobj.value
+-> eleobj.innerHTML  
+                                           
 
-
-settings/attributes manip:
-    eleobj.attribute or getAttribute("attr")
-    eleobj.attrbute = val   or getAttribute("attr",value)
-                               removeAttribute("attr")
-styles manip:
+=> settings/attributes manip:
+    eleobj.attribute or eleobj.getAttribute("attr")
+    eleobj.attribute = val   or eleobj.setAttribute("attr",value)
+                               eleobj.removeAttribute("attr")
+=> styles manip:
     eleobj.style.prop
     eleobj.style.prop=value
+    eleobj.style.prop=0/none/"" ( for deletion )
 
-events:
+=> events manip:
     //both are callbacks or anonymous 
-    eleobj.event-name= code(write function)
-    eleobj.addEventListener("event", code(write function))
+ -> eleobj.event-name= code(write function)        ->  eleobj.addEventListener("event", code(write function))
+
 -->
 
 <!DOCTYPE html>
@@ -35,6 +34,7 @@ events:
     <script>
         const h= document.getElementById("heading");
         document.write(`${h.innerText}<br>`);//printing the innerText of the tag using getElementbyId 
+        // h.value is not worked beacuse h it output element not input element and value only work for input element
         // h.innerText = ""; // data is deleted , tag not deleted
         h.innerText+="World"; //appending the data 
 
@@ -42,7 +42,7 @@ events:
         h.innerHTML+="&nbsp;World" //here we can use html tag with the innerHTML for manipulating the content
 
         const t = document.getElementById("tb"); 
-        document.write(`${t.value}<br>`);
+        document.write(`${t.value}<br>`); //t.value only work on input elements 
 
         // t.value=""; // for deleting the textbox
         // t.value="apples"//modifying the data

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="../react-web-app/node_modules/react/umd/react.development.js"></script>
+    <script src="../react-web-app/node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../react-web-app/node_modules/@babel/standalone/babel.js"></script>
+
+    <!-- enabling babel compiler for using react  -->
+    <script type="text/babel">
+        /*
+        creating virtual DOM upto react 17x versions
+        ReactDOM.render("Welcome to React 17",document.getElementById("root"));  // it render virtual DOM into actual DOM
+        */
+
+        // Creating virtual DOM - upto React 18x & 19x versions
+        function Login(){
+            return(
+                <>
+                    <h2>User login</h2>
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd> <input type="text"/></dd>
+                        <dt>Password</dt>
+                        <dd> <input type="password"/></dd>
+                        <button>Login</button>
+                    </dl>
+                </>
+            )
+        }
+       const root = ReactDOM.createRoot(document.getElementById("root"));
+       root.render(<section>
+                        <Login />
+                        <Login> </Login>
+                    </section>        
+        );
+    </script>
+</head>
+<body>
+    <noscript>Please enable javascript on your browser</noscript>
+    <div id="root"></div>
+</body>
+</html>

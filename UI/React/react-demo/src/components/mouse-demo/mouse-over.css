@@ -1,0 +1,7 @@
+.border-style{
+    border:2px solid-gray;
+}
+.border-style:hover{
+    border:4px solid blue;
+    cursor:grab;
+}

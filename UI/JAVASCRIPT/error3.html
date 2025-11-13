@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Demo on Throw </h3>
+    <label>First number</label><br>
+    <input type="text" id="fn"><br>
+    <label>Second number</label><br>
+    <input type="text" id="sn"><br>
+    <button onclick="div()">division</button>
+    <br>
+    <output id="op"></output>
+
+    <script>
+        function div(){
+            try{
+                let x,y,res;
+                x=+fn.value;
+                y=+sn.value;
+                if(isNaN(x) || isNaN(y)){
+                    throw "please enter the number only";
+                }
+                if(y===0){
+                    throw new Error("Divisor should not 0");  // where class name is Error 
+                }
+                res=x/y;
+                op.value=`Result ${res}`;
+            }catch(err){
+                op.value=err;
+                console.error(err);
+            }
+        }
+    </script>
+</body>
+</html>

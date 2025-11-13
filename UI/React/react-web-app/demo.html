@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Bootstrap modules-->
+    <link rel="stylesheet" href="../react-web-app/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../react-web-app/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../react-web-app/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!--React modules-->
+    <script src="../react-web-app/node_modules/react/umd/react.development.js"></script>
+    <script src="../react-web-app/node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../react-web-app/node_modules/@babel/standalone/babel.js"></script>
+
+    <!--custom script-->
+    <script type="text/babel">
+        function Login(){
+            return (
+                <div className="d-flex justify-content-center mt-5">
+                    <form className="border border-2 alert alert-dismissible alert-warning p-4 rounded rounded-2">
+                        <h2 className="bi bi-person-circle"> User Login</h2>
+                        <button data-bs-dismiss="alert" className="btn btn-close "/>
+                        <dl>
+                            <dt>Name</dt>
+                            <dd><input type="text" className="form-control" /></dd>
+                            <dt>Password</dt>
+                            <dd><input type="password" className="form-control" /></dd>
+                            <dd className="form-switch"><input className="form-check-input" type="checkbox"/>Keep Signed In</dd>
+                        </dl>
+                            <button type="submit" className="btn btn-warning w-100">Login</button>
+
+                    </form>
+                </div>
+            );
+        }
+
+        
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(
+            <Login />
+        )
+    </script>
+</head>
+<body>
+    <noscript>Please enable js in your computer</noscript>
+    <div id="root"></div>
+</body>
+</html>
