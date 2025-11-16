@@ -16,4 +16,5 @@ public class AppTest {
     public void shouldAnswerWithTrue() {
         assertTrue(true);
     }
+  //changes made by dev1 in b1 branch 
 }
