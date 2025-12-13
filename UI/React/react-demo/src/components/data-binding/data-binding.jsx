@@ -2,13 +2,19 @@
 // export function DataBinding(){
 //     // var name = 'John';
 
-//     const [getName,setName] = useState('John');
+//     const [getName] = useState('John'); // it is 1 way binding
+//     //const [getName,setName] = useState('John'); // it is 2 Way Binding
+
 //     return (
 //         <div className="container-fluid">
 //             <h2>Data Binding</h2>
             
 //             <p>Hello! {getName}</p>
-//             <input type="text" value={getName}/>
+//             <input type="text" value={getName} readOnly/>
+
+//             {/* it is 2 way binding process and here we use the onchange method defined in react */}
+//             {/* <input type="text" value={getName} onChange={(e) => setName(e.target.value)}/>  */}
+
             
 //         </div>
 //     )
@@ -128,7 +134,6 @@
 //                     </div>
 //                 </div>
 //             </div>
-
 //         </div>
 //     )
 // }
@@ -178,45 +183,45 @@
 
 
 //using axios
-import {useEffect, useState} from "react";
-import axios from "axios";
+// import {useEffect, useState} from "react";
+// import axios from "axios";
 
-export function DataBinding(){
-    const [product,setProduct] = useState({title:null,price:0,image:null,rating:{rate:0,ratings:0,reviews:0},offers:[]});
+// export function DataBinding(){
+//     const [product,setProduct] = useState({title:null,price:0,image:null,rating:{rate:0,ratings:0,reviews:0},offers:[]});
 
-    useEffect(()=>{
-        axios.get("db.json")
-        .then(response => {
-            setProduct(response.data); // the actual data (usually JSON)
-            console.log(response);
-        })
-    },[]) //A dependency is a variable (like a piece of state or prop) that the useEffect depends on — meaning, if that value changes, the useEffect should run again.
+//     useEffect(()=>{
+//         axios.get("db.json")
+//         .then(response => {
+//             setProduct(response.data); // the actual data (usually JSON)
+//             console.log(response);
+//         })
+//     },[]) //A dependency is a variable (like a piece of state or prop) that the useEffect depends on — meaning, if that value changes, the useEffect should run again.
 
-    return(
-        <div className="container-fluid">
-            <div className="row mt-2">
-                <div className="col-3">
-                    <img src={product.image} width="100%" />
-                </div>
-                <div className="col-9">
-                    <div className="fs-4">{product.title}</div>
-                    <div className="mt-2">
-                        <span className="badge bg-success text-white rounded"> {product.rating.rate} <span className="bi bi-star-fill"></span> </span>
-                        <span className="text-secondary fw-bold"> {product.rating.ratings.toLocaleString()} ratings & {product.rating.reviews} reviews </span>
-                    </div>
-                    <div className="mt-3">
-                        <div className="h1">{product.price.toLocaleString('en-in', {style:'currency', currency:'INR', minimumFractionDigits:0})}</div>
-                    </div>
-                    <div className="mt-3">
-                        <h5>Available Offers</h5>
-                        <ul  className="list-unstyled">
-                            {
-                                product.offers.map(offer=><li className="bi bi-tag-fill my-3 text-success" key={offer}> <span className="text-secondary">{offer}</span> </li>)
-                            }
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+//     return(
+//         <div className="container-fluid">
+//             <div className="row mt-2">
+//                 <div className="col-3">
+//                     <img src={product.image} width="100%" />
+//                 </div>
+//                 <div className="col-9">
+//                     <div className="fs-4">{product.title}</div>
+//                     <div className="mt-2">
+//                         <span className="badge bg-success text-white rounded"> {product.rating.rate} <span className="bi bi-star-fill"></span> </span>
+//                         <span className="text-secondary fw-bold"> {product.rating.ratings.toLocaleString()} ratings & {product.rating.reviews} reviews </span>
+//                     </div>
+//                     <div className="mt-3">
+//                         <div className="h1">{product.price.toLocaleString('en-in', {style:'currency', currency:'INR', minimumFractionDigits:0})}</div>
+//                     </div>
+//                     <div className="mt-3">
+//                         <h5>Available Offers</h5>
+//                         <ul  className="list-unstyled">
+//                             {
+//                                 product.offers.map(offer=><li className="bi bi-tag-fill my-3 text-success" key={offer}> <span className="text-secondary">{offer}</span> </li>)
+//                             }
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }

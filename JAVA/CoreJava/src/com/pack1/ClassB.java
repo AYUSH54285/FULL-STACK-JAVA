@@ -174,7 +174,7 @@ public class ClassB extends ClassA{
 		System.out.println("ClassB method called");
 	}
 	public static void main(String[] args) {
-		ClassA aobj1 = new ClassA(); // 1st point ==> Has-A-Relation
+		ClassA aobj1 = new ClassA(); // 1st point ==> Has-A-Relation // It is composition or aggregation
 		aobj1.meth1();
 		//aobj1.meth2();
 		
@@ -186,7 +186,7 @@ public class ClassB extends ClassA{
          // Note:The reference type controls what is accessible at compile time.
          //  To solve this -> aobj2.meth2();  we can do downcasting -> ((ClassB)aobj2).meth2();
 		
-		ClassB bobj1 =new ClassB(); // 3rd point ---> IS-A-Relation
+		ClassB bobj1 =new ClassB(); // 3rd point ---> IS-A-Relation // It is inheritance
 		bobj1.meth1();
 		bobj1.meth2();
 		
@@ -208,6 +208,7 @@ public class ClassB extends ClassA{
 
 //30/5/25
 // hierarchical Inheritance & Hybrid Inheritance
+// check class C
 //package com.pack1;
 //public class ClassB extends ClassA{
 //	public static void main(String[] args) {
@@ -216,7 +217,9 @@ public class ClassB extends ClassA{
 //}
 
 //  Multiple Inheritance 
+// check class C
 //package com.pack1;
+//
 //public class ClassB{
 //	public void meth1() {
 //		System.out.println("ClassB method");
@@ -382,7 +385,7 @@ public class ClassB extends ClassA{
 //package com.pack1;
 //public class ClassB{
 //	public static void main(String[] args) throws InterruptedException{
-//		ClassA aobj = new ClassA();
+//		ClassA aobj = new ClassA(); //aobj is an object, aobj is also a Thread (because it extends Thread)
 //		aobj.start();  // we don't need to use inheritance here , we are just using the ClassA object here.
 //		
 //		aobj.join();//we want to execute the ClassA thread before ClassB thread hence we are using Join()
@@ -410,10 +413,19 @@ public class ClassB extends ClassA{
 //	}
 //}
 
+//yield() does not pause or stop a thread.
+//
+//yield() does not guarantee any order.
+//
+//yield() only suggests giving chance to other ready threads.
+//
+//Thread scheduler may ignore yield() completely.
+
 
 
 //16/6/25
 //synchronous
+//synchronized block 
 //package com.pack1;
 //public class ClassB extends Thread{
 //	@Override
@@ -514,26 +526,26 @@ public class ClassB extends ClassA{
 
 
 //26/6/25
-//package com.pack1;
-//import java.util.ArrayList;
-//import java.util.Vector;
-//
-//public class ClassB{
-//	Vector<ClassA> meth1(ArrayList<Object> al){
-//		//Print the elements in ArrayList by using Vector
-//		return new Vector<ClassA>();
-//	}
-//	public static void main(String[] args) {
-//		//If there is any employee name matches which is palindrome 
-//		//then count how many names are like that and Print them
-//		ClassB obj = new ClassB();
-//		ArrayList<Object> al= new ArrayList<Object>();
-//		
-//		Object ol1 = new Object("ayush",101,"CSE");
-//		al.add(al);
-//		obj.meth1(al);
-//	}
-//}
+package com.pack1;
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class ClassB{
+	Vector<ClassA> meth1(ArrayList<Object> al){
+		//Print the elements in ArrayList by using Vector
+		return new Vector<ClassA>();
+	}
+	public static void main(String[] args) {
+		//If there is any employee name matches which is palindrome 
+		//then count how many names are like that and Print them
+		ClassB obj = new ClassB();
+		ArrayList<Object> al= new ArrayList<Object>();
+		
+		Object ol1 = new Object("ayush",101,"CSE");
+		al.add(al);
+		obj.meth1(al);
+	}
+}
 
 
 //1/7/25

@@ -1029,6 +1029,27 @@ Finalize():
 //}
 
 
+//package com.pack1;
+//public class ClassA{
+//	// it is compulsory to initialize the static final variable manually because static final will not initialize automatically by the compiler
+//	public static final String name = "Ayush";
+//	
+//	// here we initialize the static final variable in the static block when the code execute then static block initialize the variable before the execcution of any method(ex-main)
+//	public static final int roll_no ;
+//	static {
+//		roll_no = 10;
+//		//roll_no+=10; // we can not modify the final variable with static or without static
+//	}
+//	public void meth1() {
+//		System.out.println(name+" "+roll_no);
+//	}
+//	public static void main(String[] args) {
+//		new ClassA().meth1();
+//		new ClassA().meth1();
+//	}
+//}
+
+
 // 29/4/25
 
 //package com.pack1;
@@ -3440,7 +3461,7 @@ Finalize():
 //		char arr[] = {'J','a','v','a'};
 //		String s3 = new String(arr);
 //		
-//		String s4 = new String(arr,1,2); //av
+//		String s4 = new String(arr,1,2); // o/p -> av
 //		System.out.println("s1 : "+s1+"("+s1.length()+")");
 //		System.out.println("s2 : "+s2+"("+s2.length()+")");
 //		System.out.println("s3 : "+s3+"("+s3.length()+")");
@@ -3711,8 +3732,8 @@ present inside the strings.
 ////		String s = "java";
 ////		StringBuffer s = "java";   
 ////		StringBuilder s="java";   
-////  Note :   we can not create sting using StringBuffer and StringBuilder because 
-////		String constant is not available for both hence we use new keyword
+////  Note :   we can not create string using StringBuffer and StringBuilder because 
+////		String constant is not available for both hence we use "new" keyword (shows in below example)
 //		
 //		 System.out.println("meth1() called");
 //		 
@@ -3916,17 +3937,18 @@ present inside the strings.
 
 //29/5/25
 //Understanding of Inheritance
+//check class B
 
-/*
-package com.pack1;
-public class ClassA{
-	void meth1() {  // even we are using inheritance we can not access the methods private methods, so while using inheritance we need to focus on access modifier also. 
-		System.out.println("ClassA method called");
-	}
-}*/
+//package com.pack1;
+//public class ClassA{
+//	void meth1() {  // even we are using inheritance we can not access the methods private methods, so while using inheritance we need to focus on access modifier also. 
+//		System.out.println("ClassA method called");
+//	}
+//}
 
 
-// multilevel inheritance
+// multilevel inheritance 
+// check class X
 //package com.pack1;
 //public class ClassA{
 //	public void meth1() { // made it public for accessing from different package 
@@ -3937,6 +3959,7 @@ public class ClassA{
 
 //30/5/25
 // hierarchical Inheritance & Hybrid Inheritance
+// check class C and X
 //package com.pack1;
 //public class ClassA{
 //	public void meth1() {
@@ -3945,7 +3968,9 @@ public class ClassA{
 //}
 
 //  Multiple Inheritance 
+// check class C 
 //package com.pack1;
+//
 //public class ClassA{
 //	public void meth1() {
 //		System.out.println("ClassA method");
@@ -3953,6 +3978,7 @@ public class ClassA{
 //}
 
 //Note: Constructor does not participate in Inheritance
+// check class B
 //package com.pack1;
 //public class ClassA{
 //	void meth1() {
@@ -4061,7 +4087,7 @@ public class ClassA{
 //2/6/25
 //Understanding Function overriding
 //check classB and     
-//check ClassC (for different example) 
+//check ClassC (for different example) and for new concept
 //package com.pack1;
 //public class ClassA{
 //	void meth1() { // it is Overidden method
@@ -4271,8 +4297,8 @@ public class ClassA{
 //	}
 //	public static void main(String[] args)throws Exception {
 //		ClassA aobj = new ClassA();
-//		aobj.meth1();
-//		//aobj.meth2();
+//		//aobj.meth1();
+//		aobj.meth2();
 //
 //	}
 //}
@@ -4306,7 +4332,7 @@ public class ClassA{
 //	public static void main(String[] args) throws Exception { // for escaping from exception here also we use throws
 //		ClassA aobj = new ClassA();
 //		//aobj.withdraw(4000);
-//		//aobj.meth2();
+//		aobj.meth2();
 //	}
 //}
 
@@ -4491,6 +4517,13 @@ public class ClassA{
 //Catch block runs:
 
 
+//NOTES : interrupt() does NOT stop the thread
+//
+//It only sets an interrupt flag
+//
+//If the thread later calls sleep(), wait(), or join(),
+//→ Java immediately throws InterruptedException
+
 
 //yield()
 //check ClassB
@@ -4505,9 +4538,12 @@ public class ClassA{
 //}
 
 
+
+
 //16/6/25
 //synchronous
 //check classB
+//synchronized method
 // Since criticalResource() is declared synchronized, only one thread at a time can enter this method on the same object (aobj).
 //package com.pack1;
 //public class ClassA extends Thread{
@@ -4535,7 +4571,7 @@ public class ClassA{
 //	}
 //	
 //}	
-	
+//	
 	
 
 //NOTE : Inner Classes and its types -> nested, static, method local and anonymous InnerClass
@@ -4561,6 +4597,76 @@ public class ClassA{
 //		};
 //	}
 //}
+
+
+
+//package com.pack1;
+//
+//public class ClassA {
+//
+//    // 1. Member Inner Class (Non-static)
+//    public class InnerClassA {
+//        void showA() {
+//            System.out.println("Inside Member Inner Class A");
+//        }
+//    }
+//
+//    // 2. Static Inner Class
+//    public static class InnerClassB {
+//        void showB() {
+//            System.out.println("Inside Static Inner Class B");
+//        }
+//    }
+//
+//    // Method containing Method-Local Inner Class
+//    void meth1() {
+//
+//        // 3. Method Local Inner Class
+//        class InnerClassC {
+//            void showC() {
+//                System.out.println("Inside Method Local Inner Class C");
+//            }
+//        }
+//
+//        InnerClassC cobj = new InnerClassC();
+//        cobj.showC();
+//    }
+//
+//    public static void main(String[] args) {
+//
+//        // -------------------------------
+//        // 1. Creating Member Inner Class
+//        // -------------------------------
+//        ClassA outer = new ClassA();
+//        ClassA.InnerClassA aobj = outer.new InnerClassA();
+//        aobj.showA();
+//
+//        // -------------------------------
+//        // 2. Creating Static Inner Class
+//        // -------------------------------
+//        ClassA.InnerClassB bobj = new ClassA.InnerClassB();
+//        bobj.showB();
+//
+//        // -------------------------------
+//        // 3. Calling Method Local Inner Class
+//        // -------------------------------
+//        outer.meth1();
+//
+//        // -------------------------------
+//        // 4. Anonymous Inner Class
+//        // -------------------------------
+//        ClassA anonymousObj = new ClassA() {
+//            void display() {
+//                System.out.println("Inside Anonymous Inner Class");
+//            }
+//        };
+//
+//        // Calling method of anonymous class
+//        anonymousObj.meth1();  
+//        // Note: display() can’t be called using reference type ClassA
+//    }
+//}
+
 
 
 
@@ -4633,7 +4739,7 @@ public class ClassA{
 //		if(this.amount<amount) {
 //			System.out.println("Insufficient balcance");
 //			//wait(30000); // always use insisde the synchronised context otherwise got exception not an error
-//			//Thread.sleep(30000); //30sec
+//			Thread.sleep(30000); //30sec
 //			
 //			System.out.println("Amount credited");
 //			this.amount-=amount;
@@ -4661,28 +4767,28 @@ public class ClassA{
 // check ThreadPoolDemo class
 
 //daemon thread
-package com.pack1;
-public class ClassA extends Thread{
-	public void run() {
-		int i=1;
-		while(true) {
-			System.out.println("run() "+i);
-			i++;
-		}
-	}
-	public static void main(String[] args) {
-		ClassA aobj = new ClassA();
-		Thread t= new Thread(aobj);
-		
-		t.setDaemon(true);
-		
-		t.start();
-		
-		for(int i=1; i <=20 ; i++) {
-			System.out.println("main Thread : "+i);
-		}
-	}
-}
+//package com.pack1;
+//public class ClassA extends Thread{
+//	public void run() {
+//		int i=1;
+//		while(true) {
+//			System.out.println("run() "+i);
+//			i++;
+//		}
+//	}
+//	public static void main(String[] args) {
+//		ClassA aobj = new ClassA();
+//		Thread t= new Thread(aobj);
+//		
+//		t.setDaemon(true);
+//		
+//		t.start();
+//		
+//		for(int i=1; i <=20 ; i++) {
+//			System.out.println("main Thread : "+i);
+//		}
+//	}
+//}
 
 
 
@@ -4698,7 +4804,7 @@ public class ClassA extends Thread{
 
 
 //Garbage Collector -> mark and sweep algorithm used by garbage collector, whenever an object is going to be destroyed before destroying the garbage collector call finalise method internally for terminate all connections with object
-
+// note -> JVM may call finalize() before garbage collecting an object, but it is NOT guaranteed.
 //package com.pack1;
 //public class ClassA{
 //	void meth1(){
@@ -4757,7 +4863,7 @@ public class ClassA extends Thread{
 //public class ClassA{
 //	void fileOpertion1() throws Exception{
 //		System.out.println("Reading the data from a file");
-//		FileInputStream fis = new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\file1.txt"); // it wll throw exception so we have to use either try-catch-finally or throws
+//		FileInputStream fis = new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file1.txt"); // it wll throw exception so we have to use either try-catch-finally or throws
 //		System.out.println("Connection created");
 //		int i;
 //		while(((i=fis.read())!=-1)) {
@@ -4768,7 +4874,7 @@ public class ClassA extends Thread{
 //	}
 //	void fileOpertaions2() throws Exception{
 //		System.out.println("writing the data into a file");
-//		FileOutputStream fos = new FileOutputStream("D:\\\\STUDY\\\\JAVA FULL STACK\\file2.txt",true); // if we don't use true then it will overwrite the new data, for appending the data we use true
+//		FileOutputStream fos = new FileOutputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file2.txt",true); // if we don't use true then it will overwrite the new data, for appending the data we use true
 //		System.out.println("Connection created");
 //		String msg = ",because it is awesome";
 //		byte arr[] = msg.getBytes(); //write only accept getbytes and int parameter
@@ -4779,10 +4885,10 @@ public class ClassA extends Thread{
 //	void fileOpertaions3() throws Exception{
 //		System.out.println("Coping the into a file");
 //		
-//		//FileInputStream fis = new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\file2.txt");
-//		//FileOutputStream fos = new FileOutputStream("D:\\STUDY\\JAVA FULL STACK\\file3.txt");
-//		FileInputStream fis = new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\image.png"); // here we copy the image
-//		FileOutputStream fos = new FileOutputStream("D:\\STUDY\\JAVA FULL STACK\\image1.jpeg"); 
+//		//FileInputStream fis = new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file2.txt");
+//		//FileOutputStream fos = new FileOutputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file3.txt");
+//		FileInputStream fis = new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\image.png"); // here we copy the image
+//		FileOutputStream fos = new FileOutputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\image1.jpeg"); 
 //		System.out.println("Connection created");
 //		
 //		int i;
@@ -4798,7 +4904,6 @@ public class ClassA extends Thread{
 //		//obj.fileOpertion1();
 //		//obj.fileOpertaions2();
 //		obj.fileOpertaions3();
-//
 //	}
 //}
 
@@ -4813,7 +4918,7 @@ public class ClassA extends Thread{
 //public class ClassA {
 //	void fileOpertion1()throws Exception{
 //		System.out.println("reading the data from file");
-//		FileReader fr = new FileReader("D:\\\\STUDY\\\\JAVA FULL STACK\\\\file4.txt");
+//		FileReader fr = new FileReader("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file4.txt");
 //		System.out.println("connection created");
 //		int i;
 //		while((i=fr.read())!=-1) {
@@ -4824,7 +4929,7 @@ public class ClassA extends Thread{
 //	}
 //	void fileOpertion2()throws Exception{
 //		System.out.println("writing the data into file");
-//		FileWriter fw = new FileWriter("D:\\\\STUDY\\\\JAVA FULL STACK\\\\file5.txt",true);
+//		FileWriter fw = new FileWriter("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file5.txt",true);
 //		System.out.println("connection created");
 //		String msg = "and date is 21th june";
 //		fw.write(msg);
@@ -4833,8 +4938,8 @@ public class ClassA extends Thread{
 //	}
 //	void fileOpertion3()throws Exception{
 //		System.out.println("Coping the data into file");
-//		FileReader fr = new FileReader("D:\\\\STUDY\\\\JAVA FULL STACK\\\\file5.txt");
-//		FileWriter fw = new FileWriter("D:\\\\STUDY\\\\JAVA FULL STACK\\\\file6.txt");
+//		FileReader fr = new FileReader("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file5.txt");
+//		FileWriter fw = new FileWriter("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file6.txt");
 //
 //		System.out.println("connection created");
 //		int i;
@@ -4861,7 +4966,7 @@ public class ClassA extends Thread{
 //public class ClassA {
 //	void fileOpertion1()throws Exception{
 //		System.out.println("reading the data from file");
-//		BufferedInputStream bis = new BufferedInputStream( new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\file2.txt"));
+//		BufferedInputStream bis = new BufferedInputStream( new FileInputStream("D:\\STUDY\\JAVA FULL STACK\\JAVA\\file2.txt"));
 //		System.out.println("connection created");
 //		int i;
 //		while((i=bis.read())!=-1) {
@@ -4890,6 +4995,7 @@ public class ClassA extends Thread{
 //	void fileOperations() throws Exception{
 //		System.out.println("Implementing DataStreams");
 //		DataOutputStream dos = new DataOutputStream(new FileOutputStream("D:\\STUDY\\JAVA FULL STACK\\file7.txt"));
+//		//DataOutputStream dos = new DataOutputStream(new FileWriter("D:\\STUDY\\JAVA FULL STACK\\file7.txt")); //DataOutputStream → works with binary data → needs an OutputStream
 //		System.out.println("Connection created");
 //		
 //		dos.writeInt(1000);
@@ -4925,7 +5031,7 @@ public class ClassA extends Thread{
 //Check classB and ClassC
 //package com.pack1;
 //import java.io.Serializable;
-//public class ClassA implements Serializable{
+//public class ClassA implements Serializable{  // We use the Serializable interface to allow Java objects to be converted into a byte stream so they can be saved, transferred, or restored later. It is a marker interface with no methods and simply tells the JVM that the class is safe for serialization.
 //	transient int a =10;  // if we are using transient keyword then the original value of the variable will be ignored and the default value is taken
 //	int b= 20;
 //}
@@ -4942,8 +5048,10 @@ public class ClassA extends Thread{
 //
 //public class ClassA {
 //	void  meth1() {
-//		System.out.println("impleenting ArrayList");
-//		ArrayList<Integer> al = new ArrayList<Integer>(); // generics (all types of data is integer)
+//		System.out.println("implementing ArrayList");
+//		ArrayList<Integer> al = new ArrayList<Integer>(); // generics 
+//		//Without generics: ArrayList al = new ArrayList(); → heterogeneous is allowed (Object type).
+//		//With generics: ArrayList<Integer> → only Integer (and null) allowed.
 //		
 //		
 //		// these yellow lines shows your array list getting any types of data, for solving this we use generics 
@@ -4953,7 +5061,7 @@ public class ClassA extends Thread{
 //		al.add(10); // deuplicate elements are allowed
 //		al.add(32); // it is available from java 1.2v
 //		al.add(2); //its default capacity is 10
-//		al.add(55); // it size increases b y HALF ===> (current capactiy*3/2)+1
+//		al.add(55); // it size increases by HALF ===> (current capactiy*3/2)+1
 //		al.add(1); // It is not synchronized
 //		
 //		System.out.println("\nArrayList :"+al);
@@ -4971,10 +5079,11 @@ public class ClassA extends Thread{
 //			System.out.println(al.get(i)+" ");
 //		}
 //		
-//		System.out.println("\n Tereiving the data by using for each loop");
-//		for(Object data:al) { //for(Integer data:al) or for(int data:al)
+//		System.out.println("\n Retereiving the data by using for each loop");
+//		for(Object data:al) { //Prefered -> for(Integer data:al) or for(int data:al)
 //			System.out.println(data + " ");
 //		}
+//		
 //		System.out.println("\n\nReteriving the data by using Itertor Interface");
 //		Iterator<Integer> i = al.iterator();
 //		while(i.hasNext()) {  //check is there any next element or not if yes returns true or false
@@ -5076,19 +5185,17 @@ public class ClassA extends Thread{
 //		System.out.println("enter number of integer you want to enter");
 //		int n;
 //		n=sc.nextInt();
-//		sc.nextLine();
 //		for(int i=0 ; i<n ; i++) {
 //			al.add(sc.nextInt());
-//			sc.nextLine();
 //		}
 //		System.out.println(al);
 //		
 //		//You cannot safely remove elements from a list inside an enhanced for-each loop. Java will throw a ConcurrentModificationException.
 //		Iterator<Integer> it = al.iterator();
-//		while(it.hasNext()) {
-//			int data = it.next();
-//			if(data%2 == 0) {
-//				it.remove(); 
+//		while(it.hasNext()) { //it.hasNext() checks if another element exists in the list.
+//			int data = it.next(); //it.next() returns the current element and moves to the next one.
+//			if(data%2 == 0) { 
+//				it.remove(); //This removes the current element that was returned by it.next().
 //			}
 //		}
 //		System.out.println(al);
@@ -5150,7 +5257,7 @@ public class ClassA extends Thread{
 
 
 //26/6/25
-//How to pass used defined class object into the ArrayList
+//How to pass user defined class object into the ArrayList
 //check Employee class
 //package com.pack1;
 //import java.util.ArrayList;
@@ -5171,7 +5278,7 @@ public class ClassA extends Thread{
 //		al.add(emp3);
 //		al.add(new Employee("raju",103,"reactJs"));
 //		
-//		System.out.println("al : "+al+"\n");
+//		System.out.println("al : "+al+"\n"); // it will call toString method directly
 //		
 //		Iterator<Employee> i = al.iterator();
 //		while(i.hasNext()){
@@ -5259,7 +5366,7 @@ public class ClassA extends Thread{
 //import java.util.Vector;
 //import java.util.ArrayList;
 //import java.util.Enumeration;
-
+//
 //public class ClassA{
 //	void meth1() {
 //		System.out.println("Implementing vector");
@@ -5272,7 +5379,7 @@ public class ClassA extends Thread{
 //		v.add('A'); //It is available from java 1.0v[it is a legacy class]
 //		v.add(false); //Its default capacity is 10
 //		v.add(66); //Its size increase by DOUBLE
-//		v.add(2); //It is dynchronized by default
+//		v.add(2); //It is synchronized by default
 //		
 //		
 //		System.out.println(v);
@@ -5293,7 +5400,7 @@ public class ClassA extends Thread{
 //			System.out.println(e.nextElement()+" ");
 //		}
 //		
-        // Note: Every collection class object can be passed as a parameter for other collection class constructor
+//        // Note: Every collection class object can be passed as a parameter for other collection class constructor
 //		System.out.println("\n\nVector : "+v);
 //		System.out.println("ArrayList :"+new ArrayList<Object>(v));
 //	}
@@ -5306,26 +5413,26 @@ public class ClassA extends Thread{
 
 
 
-//Task-> vactorList
+//Task-> vectorList
 //pending
 //Check ClasssB
-//package com.pack1;
-//
-//public class ClassA{
-//	private String empName;
-//	private int empId;
-//	private String empDept;
-//	
-//	public ClassA(String empName, int empId, String empDept) {
-//		this.empName = empName;
-//		this.empId = empId;
-//		this.empDept = empDept;
-//	}
-//	@Override
-//	public String toString() {
-//		
-//	}
-//}
+package com.pack1;
+
+public class ClassA{
+	private String empName;
+	private int empId;
+	private String empDept;
+	
+	public ClassA(String empName, int empId, String empDept) {
+		this.empName = empName;
+		this.empId = empId;
+		this.empDept = empDept;
+	}
+	@Override
+	public String toString() {
+		
+	}
+}
 
 
 //27/6/25

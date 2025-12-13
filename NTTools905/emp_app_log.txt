@@ -1,0 +1,7 @@
+2025-12-11 21:08:54 [main] DEBUG com.nt.service.EmployeeSelectTest - start of the main(-) method , application - main 3032 
+2025-12-11 21:08:55 [main] INFO  com.nt.service.EmployeeSelectTest - Connection with DB s/w is established - main 3032 
+2025-12-11 21:08:55 [main] DEBUG com.nt.service.EmployeeSelectTest - PreparedStatement object is created - main 3032 
+2025-12-11 21:08:55 [main] DEBUG com.nt.service.EmployeeSelectTest - ResultSet obj is created - main 3032 
+2025-12-11 21:08:55 [main] WARN  com.nt.service.EmployeeSelectTest - Its better to process the ResultSet data directly with the getXXX() methods - main 3032 
+2025-12-11 21:08:55 [main] DEBUG com.nt.service.EmployeeSelectTest - ResultSet obj is processed - main 3032 
+2025-12-11 21:08:55 [main] DEBUG com.nt.service.EmployeeSelectTest - End of the main(-) method - main 3032 

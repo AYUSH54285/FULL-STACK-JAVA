@@ -33,6 +33,6 @@ import { FakeStoreIndex } from './components/fakestore-routing/fakestore-index.j
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FakeStoreIndex />
-  </StrictMode>,
+    <FakeStore />
+  </StrictMode>
 )

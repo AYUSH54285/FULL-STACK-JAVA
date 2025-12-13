@@ -28,7 +28,7 @@ public class ThreadPoolDemo extends Thread{
 		for(int i=1 ; i<=5 ; i++) { // 5 iterations => 5 task
 			ThreadPoolDemo tpdobj = new ThreadPoolDemo(""+i);
 			Thread t = new Thread(tpdobj);
-			executor.execute(t); //Here, t is a Thread object that wraps your ThreadPoolDemo. When you call execute(t), you’re submitting that Thread as a Runnable into the thread pool’s work queue.
+			executor.execute(t); //Here, t is a Thread object that wraps your ThreadPoolDemo object. When you call execute(t), you’re submitting that Thread as a Runnable into the thread pool’s work queue.
 		}
 		executor.shutdown();
 		while(!executor.isTerminated()); //!(true) ====> false  /   true → if all tasks are finished and the executor is fully shut down.
